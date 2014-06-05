@@ -1,0 +1,41 @@
+@import compass/css3
+
+.slides
+  .animate_fade_base
+    opacity: 0
+  //.fade_in
+    // nothing here yet
+  .animate_fade_right
+    +translateX(-20px)
+  .animate_fade_left
+    +translateX(20px)
+  .animate_fade_down
+    +translateY(-20px)
+  .animate_fade_up
+    +translateY(20px)
+
+.slides .active
+  .animate_seq_1
+    +transition-delay(.3s)
+  .animate_seq_2
+    +transition-delay(.5s)
+  .animate_seq_3
+    +transition-delay(.7s)
+  .animate_seq_4
+    +transition-delay(.9s)
+  .animate_seq_5
+    +transition-delay(1.1s)
+
+  .animate_fade_base  
+    opacity: 1
+    +transition-property(all)
+    +transition-duration(.3s)
+    +transition-timing-function(cubic-bezier(0.94, 0.06, 0.50, 0.95))
+    +translateX(0px)
+    +translateY(0px)
+  //.fade_right
+    // nothing here yet
+  //.fade_left
+    // nothing here yet
+  //.fade_in
+    // nothing here yet
