@@ -1,57 +1,23 @@
 ---
-title: Middleman is Watching
+title: The Suitcase
 body_class: index
 ---
 
 = partial "partials/navigation"
+
 #fullpage
 
-  .section{"data-menuanchor" => "firstPage", "class" => "active"} 
-    .slide
-      %h1 section header - p1
-    .slide p1_slide2
-    .slide p1_slide3
-    .slide p1_slide4
-    .slide p1_slide5
-    
+  %section.section.project_1{"data-menuanchor" => "firstPage", "class" => "active"} 
+    = partial "projects/project_1"
+
+  %section.section{"data-menuanchor" => "secondPage"} 
+    = partial "projects/project_2"
+
+  %section.section{"data-menuanchor" => "thirdPage"}
+    = partial "projects/project_3"
+
+  %section.section{"data-menuanchor" => "fourthPage"} 
+    = partial "projects/project_4"
   
-  .section{"data-menuanchor" => "secondPage"} 
-    .slide
-      %h1 section header - p2
-    .slide p2_slide2
-    .slide p2_slide3
-    .slide p2_slide4
-
-  .section{"data-menuanchor" => "thirdPage"} 
-    .slide
-      %h1 section header - p3
-    .slide p3_slide2
-    .slide p3_slide3
-    .slide p3_slide4
-    .slide p3_slide5
-    .slide p3_slide6
-
-  .section{"data-menuanchor" => "fourthPage"} 
-    .slide
-      %h1 section header - p4
-    .slide p4_slide2
-    .slide p4_slide3
-  
-
-  .section{"data-menuanchor" => "lastPage"} 
-    .slide
-      %h1 section header - p5
-    .slide p5_slide2
-    .slide p5_slide3
-    .slide p5_slide4
-    .slide p5_slide5
-    .slide p5_slide6
-    .slide p5_slide7
-
-
-
-
-/ .welcome
-/ %h1 Full page scroll
-/ %p.doc
-/   = link_to 'Read Online Documentation', 'http://middlemanapp.com/', title: 'Read Online Documentation', target: '_blank'
+  %section.section{"data-menuanchor" => "lastPage"} 
+    = partial "projects/project_5"
