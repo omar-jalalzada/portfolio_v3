@@ -1,13 +1,26 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
-      scrollingSpeed: 200,
+      
+      scrollingSpeed: 300,
+      cc3: true,
+      easing: 'easeInOutQuart',
+
       menu: true,
       anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
       menu: '#main_section_nav',
-      // navigation: true,
-      slidesColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#d2ffe3'],
-      verticalCentered: true,
+      slidesColor: ['#eee', '#ddd', '#ccc', '#bbb', '#aaa'],
+      // verticalCentered: true,
       resize : true,
       slidesNavigation: true,
+
+      // loopHorizontal: false,
+      // afterLoad: function(anchorLink, index){
+      //     //using index
+      //     if(index == '3'){
+      //         alert("Section 3 ended loading");
+      //     }
+
+      // }
+
     });
 });

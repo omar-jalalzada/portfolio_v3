@@ -54,7 +54,7 @@ html, body {
     float: left;
     position: relative;
 }
-.controlArrow {
+/*.controlArrow {
     position: absolute;
     top: 50%;
     cursor: pointer;
@@ -73,7 +73,7 @@ html, body {
     right: 15px;
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #fff;
-}
+}*/
 .scrollable {
     overflow: scroll;
 }
