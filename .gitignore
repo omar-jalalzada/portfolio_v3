@@ -1,2 +1,7 @@
-*.sass-cache
-*.DS_Store
+# Ignore everythign
+*
+
+# But not these files...
+!.gitignore
+!build
+# etc...
