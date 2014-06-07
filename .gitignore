@@ -1,7 +1,0 @@
-# Ignore everythign
-*
-
-# But not these files...
-!.gitignore
-!build
-# etc...
