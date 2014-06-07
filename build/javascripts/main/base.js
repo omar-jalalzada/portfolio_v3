@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#fullpage").fullpage({scrollingSpeed:300,cc3:!0,easing:"easeInOutQuart",menu:!0,anchors:["firstPage","secondPage","thirdPage","fourthPage","lastPage"],menu:"#main_section_nav",slidesColor:["#eee","#ddd","#ccc","#bbb","#aaa"],resize:!0,slidesNavigation:!0})});
