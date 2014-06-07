@@ -3,35 +3,46 @@
 #main_section_nav
   display: block
   position: absolute
-  top: 100px
+  height: 300px
+  top: 50%
   left: 0
+  margin-top: -150px
   z-index: 9999
   padding: 0
-  
-  height: 200px
-
   li 
-    background-color: #eee
-    margin-top: 2px
-    overflow: hidden
-    margin-left: 10px
-    border: 1px solid grey
+    margin-top: 7px
+    margin-left: 20px
     display: block
-    width: 10px
     height: 50px
-    overflow: hidden
-    white-space: nowrap
-    word-break: keep-all
+    width: 40px
     line-height: 0.7
     a
+      white-space: nowrap
+      word-break: keep-all
       text-decoration: none
-      padding: 20px
       display: block
+      background-color: #ddd
+      width: 5px
+      height: 100%
+      line-height: 3.3
+      overflow: hidden
+      text-indent: 10px
+      +transition-property(all)
+      +transition-duration(.4s)
+      +transition-timing-function(eastOut)
+      color: #555
+
     &.active
-      font-weight: bold
-      background-color: #aaa
+      a 
+        font-weight: bold
+        background-color: #aaa
+        color: #333
+
     &:hover 
-      +transition-property(width)
+      +transition-property(all)
       +transition-duration(.2s)
       +transition-timing-function(cubic-bezier(0.94, 0.06, 0.50, 0.95))
-      width: 200px
+      width: 180px
+      & > a 
+        width: auto
+        text-indent: 15px
