@@ -83,7 +83,7 @@ html, body {
     -o-transition: all 0.7s ease-out;
     transition: all 0.7s ease-out;
 }
-#fullPage-nav {
+/*#fullPage-nav {
     position: fixed;
     z-index: 100;
     margin-top: -32px;
@@ -165,3 +165,4 @@ html, body {
 .fullPage-tooltip.left {
     left: 20px;
 }
+*/

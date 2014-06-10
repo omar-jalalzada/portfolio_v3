@@ -15,6 +15,15 @@
     +translateY(20px)
 
 .slides .active
+  .animate_fade_base  
+    opacity: 1
+    +single-transition(all, .5s, cubic-bezier(.94, .06, .50, .99))
+    // +transition-property(all)
+    // +transition-duration(.5s)
+    // +transition-timing-function(cubic-bezier(.94, .06, .50, .99))
+    +translateX(0px)
+    +translateY(0px)
+
   .animate_seq_1
     +transition-delay(.3s)
   .animate_seq_2
@@ -26,16 +35,10 @@
   .animate_seq_5
     +transition-delay(1.1s)
 
-  .animate_fade_base  
-    opacity: 1
-    +transition-property(all)
-    +transition-duration(.5s)
-    +transition-timing-function(cubic-bezier(.94, .06, .50, .99))
-    +translateX(0px)
-    +translateY(0px)
-  //.fade_right
-    // nothing here yet
-  //.fade_left
-    // nothing here yet
-  //.fade_in
-    // nothing here yet
+
+//.fade_right
+  // nothing here yet
+//.fade_left
+  // nothing here yet
+//.fade_in
+  // nothing here yet
