@@ -8,7 +8,7 @@ $(document).ready(function() {
       menu: true,
       anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
       menu: '#main_section_nav',
-      slidesColor: ['#eee', '#ddd', '#ccc', '#bbb', '#aaa'],
+      slidesColor: ['#fff', '#eee', '#ddd', '#ccc', '#bbb'],
       // verticalCentered: true,
       // resize : true,
       slidesNavigation: true,
