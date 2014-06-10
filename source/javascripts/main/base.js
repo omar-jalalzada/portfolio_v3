@@ -10,7 +10,7 @@ $(document).ready(function() {
       menu: '#main_section_nav',
       slidesColor: ['#eee', '#ddd', '#ccc', '#bbb', '#aaa'],
       // verticalCentered: true,
-      resize : true,
+      // resize : true,
       slidesNavigation: true,
 
       // loopHorizontal: false,
