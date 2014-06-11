@@ -6,7 +6,6 @@ body_class: index
 = partial "partials/navigation"
 
 #fullpage
-
   %section.section.project_1{"data-menuanchor" => "firstPage", "class" => "active"} 
     = partial "projects/project_1"
 
@@ -21,3 +20,11 @@ body_class: index
   
   %section.section{"data-menuanchor" => "lastPage"} 
     = partial "projects/project_5"
+
+#main_header
+  .inner_main_header
+    %a.logo_anchor{"href" => "/#firstPage"} 
+      %span Omar Jalalzada's Portfolio
+
+    %a.bio{"href" => "/pages/bio.html"} 
+      %span Omar Jalalzada's Bio
