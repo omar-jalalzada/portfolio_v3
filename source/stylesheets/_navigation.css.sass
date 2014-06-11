@@ -14,7 +14,9 @@
     display: block
     height: 50px
     width: 40px
-    line-height: 0.7
+    line-height: .7
+    opacity: .7
+
     a
       white-space: nowrap
       word-break: keep-all
@@ -25,20 +27,27 @@
       height: 100%
       line-height: 3.3
       overflow: hidden
-      text-indent: 10px
-      +single-transition(all, .4s, eastOut)
+      text-indent: 8px
       color: #555
+      +transition-property(text-indent, width)
+      +transition-duration(.3s)
+      +transition-timing-function(ease-out)
+
     &.active
+      opacity: 1
       a 
         font-weight: bold
         background-color: $oj_blue
-        color: #fff
+        color: #fff !important
         width: 4px
+        
     &:hover
-      +single-transition(width, .2s, cubic-bezier(0.94, 0.06, 0.50, 0.95))
+      opacity: 1
+      +single-transition(all, .3s, cubic-bezier(0.94, 0.06, 0.50, 0.95))
       width: 180px
       & > a 
-        width: auto
+        color: #555
+        width: 180px
         text-indent: 15px
 
 // Bottom slide navigation
@@ -83,11 +92,32 @@
           position: absolute
           z-index: 1
           +transition-property(all)
-          +transition-duration(.2s)
+          +transition-duration(.1s)
           +transition-timing-function(cubic-bezier(0.94, 0.06, 0.50, 0.95))
-        &.active span
+
+        &.active span, &.active:hover span
           background: $oj_blue
-          width: 12px
-          height: 12px
-          margin-top: -6px
-          margin-left: -6px
+          +scale(1.5)
+        &.active:hover span
+          background-color: darken($oj_blue, 5%)
+        &:hover span
+          background: $oj_grey
+          +scale(1.5)
+
+// Directional arrows on both sides
+.controlArrow
+  width: 20px
+  height: 20px
+  border: 1px solid transparent
+  border-bottom-color: $oj_grey
+  border-left-color: $oj_grey
+  position: absolute
+  bottom: 20px
+  cursor: pointer
+
+  &.prev
+    +rotate(45deg)
+    left: 20px
+  &.next
+    +rotate(-135deg)
+    right: 20px

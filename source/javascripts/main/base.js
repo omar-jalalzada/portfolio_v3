@@ -6,14 +6,17 @@ $(document).ready(function() {
       easing: 'easeInOutQuart',
 
       menu: true,
-      anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
       menu: '#main_section_nav',
-      slidesColor: ['#fff', '#eee', '#ddd', '#ccc', '#bbb'],
+      anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+      
+      // slidesColor: ['#fff', '#eee', '#ddd', '#ccc', '#bbb'],
+      slidesNavigation: true,
+      navigationTooltips: ['firstSlide', 'secondSlide'],
+
       // verticalCentered: true,
       // resize : true,
-      slidesNavigation: true,
+      loopHorizontal: false,
 
-      // loopHorizontal: false,
       // afterLoad: function(anchorLink, index){
       //     //using index
       //     if(index == '3'){
