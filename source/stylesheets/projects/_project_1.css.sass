@@ -1,24 +1,125 @@
 #fullpage
   .project_1
+
+
+
+    .slide_1
+      .iphone_container
+        overflow: hidden
+        border: 1px solid red
+        position: relative
+        max-width: 1024px
+        margin: 0 auto
+        .iphone_bcom_container
+          width: 45%
+          max-width: 310px
+          height: 480px
+          background-color: #ddd
+          margin: auto
+          z-index: 2
+          position: relative
+        .logo
+          width: 60%
+          height: 20px
+          background-color: red
+          position: absolute
+          top: 65%
+          left: 50%
+          margin-left: -25%
+          z-index: 1
+
+          // margin: -250px auto 0 auto
+
+
     .slide_2
-      .inner_slide_container 
+      +background(image-url("mcom_bcom/2_bg_cover.png"))
+      background-repeat: no-repeat
+      background-attachment: fixed
+      background-size: cover
+      .inner_slide_container
         height: 100%
-      .background_box
-        width: 60%
-        height: 100%
-        display: block
-        background-color: #777
-        padding: 1px
-        h1
-          color: white
-          font-weight: 700
-          margin-top: 30%
-          margin-right: 10px
+        .left_content_block
+          color: #fff
+          float: left
+          width: 340px
+          height: 480px
+          margin-left: 200px
+          overflow: hidden
+          ul.line
+            display: block
+            width: 40px
+            height: 100%
+            float: left
+            li
+              display: block
+              width: 40px
+              display: block
+              .line
+                height: 110px
+                width: 1px
+                margin-left: 19px
+                display: block
+                background-color: #fff
+              .circle 
+                width: 40px
+                height: 40px
+                display: block
+                border: 1px solid white
+                border-radius: 50%
+          ul.text
+            float: right
+            display: block
+            width: 270px
+            padding-top: 118px
+            padding-left: 10px
+            li 
+              height: 152px
+              .header 
+                text-transform: uppercase
+                display: block
+                font-size: 22px
+                margin-bottom: 10px
+              .body
+                font-size: 14px
+        .right_content_block
+          width: 650px
+          height: 500px
+          float: right
+          +background(image-url("mcom_bcom/2_iphone_isometric_bcom.png"))
+          background-repeat: no-repeat
+          background-size: 100%
+          margin-top: 250px
+          margin-right: 100px
+        
+
 
     .slide_3
-      .box 
-        width: 40px
-        height: 40px
-        display: block
-        background-color: red
-        margin: 10px auto
+      .inner_slide_container
+        max-width: 1024px
+        margin: 0 auto
+        ul
+          +display-box
+          +box-orient(horizontal)
+          +box-align(stretch)
+          +box-direction(reverse)
+          li
+            +box-flex(1)
+            padding: 0 10px
+            .circle 
+              padding: 25px
+              width: 10px
+              height: 10px
+              border: 1px solid #ddd
+              border-radius: 50%
+              margin-bottom: 20px
+            .title
+              font-size: 22px
+              font-weight: bold
+            .text
+              margin-bottom: 20px
+            .image
+              height: 300px
+              width: 100%
+              background-color: #eee
+
+      
