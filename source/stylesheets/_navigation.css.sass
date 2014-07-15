@@ -9,11 +9,11 @@
   z-index: 9999
   padding: 0
   li 
-    margin-top: 7px
-    margin-left: 20px
+    margin-top: 10px
+    margin-left: 30px
     display: block
-    height: 50px
-    width: 40px
+    height: 35px
+    width: 50px
     line-height: .7
     opacity: .7
 
@@ -23,11 +23,12 @@
       text-decoration: none
       display: block
       background-color: $oj_light_grey
-      width: 2px
+      width: 1px
       height: 100%
-      line-height: 3.3
+      font-size: 14px
+      line-height: 2.5
       overflow: hidden
-      text-indent: 8px
+      text-indent: 10px
       color: #555
       +transition-property(text-indent, width)
       +transition-duration(.3s)
@@ -39,15 +40,15 @@
         font-weight: bold
         background-color: $oj_blue
         color: #fff !important
-        width: 4px
+        width: 2px
         
     &:hover
       opacity: 1
       +single-transition(all, .3s, cubic-bezier(0.94, 0.06, 0.50, 0.95))
-      width: 180px
+      width: 160px
       & > a 
         color: #555
-        width: 180px
+        width: 160px
         text-indent: 15px
 
 // Bottom slide navigation
@@ -57,7 +58,7 @@
   left: 50%
   opacity: 1
   &.bottom
-    bottom: 17px
+    bottom: 0
   &.top
     top: 17px
   ul
@@ -83,8 +84,8 @@
           margin-top: -4px
           left: 50%
           margin-left: -4px
-          width: 8px
-          height: 8px
+          width: 5px
+          height: 5px
           background: $oj_light_grey
           -webkit-border-radius: 50%
           -moz-border-radius: 50%
