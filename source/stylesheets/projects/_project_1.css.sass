@@ -6,27 +6,31 @@
     .slide_1
       .iphone_container
         overflow: hidden
-        border: 1px solid red
         position: relative
         max-width: 1024px
         margin: 0 auto
         .iphone_bcom_container
           width: 45%
-          max-width: 310px
-          height: 480px
+          max-width: 255px
+          height: 590px
           background-color: #ddd
           margin: auto
           z-index: 2
           position: relative
+          +background(image-url("mcom_bcom/2_iphone_bcom_main.png"))
+          background-repeat: no-repeat
+          background-size: 100%
         .logo
-          width: 60%
-          height: 20px
-          background-color: red
+          width: 50%
+          height: 140px
           position: absolute
-          top: 65%
+          top: 55%
           left: 50%
-          margin-left: -25%
+          margin-left: -20%
           z-index: 1
+          +background(image-url("mcom_bcom/2_main_logo.png"))
+          background-repeat: no-repeat
+          background-size: 100%
 
           // margin: -250px auto 0 auto
 
@@ -101,25 +105,50 @@
           +display-box
           +box-orient(horizontal)
           +box-align(stretch)
-          +box-direction(reverse)
           li
             +box-flex(1)
-            padding: 0 10px
+            padding: 0 40px
+            font-size: 18px
             .circle 
               padding: 25px
               width: 10px
               height: 10px
-              border: 1px solid #ddd
               border-radius: 50%
-              margin-bottom: 20px
+              margin-bottom: 30px
+              background-color: $oj_blue
+              color: white
+              line-height: .8
+              font-size: 14px
             .title
-              font-size: 22px
+              font-size: $sh_fs
               font-weight: bold
+              text-transform: uppercase
+              margin-bottom: 10px
             .text
               margin-bottom: 20px
+              font-size: $p_fs
             .image
               height: 300px
               width: 100%
               background-color: #eee
 
       
+
+    .slide_4
+      .inner_slide_container
+        margin: 0 auto
+        display: block
+        max-width: 1224px
+        ul
+          +display-box
+          +box-orient(horizontal)
+          +box-align(stretch)
+          li
+            +box-flex(1)
+            .image 
+              max-width: 285px
+              height: 500px
+              margin: 0 auto
+              background-color: #eee
+
+
