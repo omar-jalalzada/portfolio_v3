@@ -17,18 +17,18 @@
 .slides .active
   .animate_fade_base  
     opacity: 1
-    +single-transition(all, .5s, cubic-bezier(.94, .06, .50, .99))
+    +single-transition(all, .5s, cubic-bezier(.5,0,.5,.99))
     +translateX(0px)
     +translateY(0px)
 
   .animate_seq_1
-    +transition-delay(.3s)
+    +transition-delay(.3s !important) 
   .animate_seq_2
-    +transition-delay(.5s)
+    +transition-delay(.5s !important)
   .animate_seq_3
-    +transition-delay(.7s)
+    +transition-delay(.7s !important)
   .animate_seq_4
-    +transition-delay(.9s)
+    +transition-delay(.9s !important)
   .animate_seq_5
     +transition-delay(1.4s)
   .animate_seq_6

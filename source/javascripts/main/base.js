@@ -27,3 +27,13 @@ $(document).ready(function() {
 
     });
 });
+
+
+$(".hover_container").hover(
+  function () {
+    $(this).find('.hover').addClass("active");
+  },
+  function () {
+    $(this).find('.hover').removeClass("active"); 
+  }
+);

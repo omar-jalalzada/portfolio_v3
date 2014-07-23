@@ -1,7 +1,7 @@
 body 
   font-family: "museo-sans",sans-serif
   color: #555
-
+  line-height: 1.5
   #main_header
     position: absolute
     width: 100%
@@ -28,7 +28,11 @@ body
         &.bio
           float: right
           span 
-            border: 2px solid $oj_red
+            +background(image-url("omar_jalalzada.jpeg"))
+            background-repeat: no-repeat
+            background-size: 100%
+            overflow: hidden
+            border-width: 0px
 
   #fullpage
     .section

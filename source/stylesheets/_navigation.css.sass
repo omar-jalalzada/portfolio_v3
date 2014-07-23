@@ -42,14 +42,22 @@
         color: #fff !important
         width: 2px
         
+        
     &:hover
       opacity: 1
       +single-transition(all, .3s, cubic-bezier(0.94, 0.06, 0.50, 0.95))
       width: 160px
+      &.first_project 
+        width: 210px
+      &.second_project 
+        width: 100px
+      &.third_project 
+        width: 290px
       & > a 
         color: #555
-        width: 160px
+        width: 100%
         text-indent: 15px
+
 
 // Bottom slide navigation
 .fullPage-slidesNav
