@@ -23,7 +23,7 @@
           width: 50%
           height: 140px
           position: absolute
-          top: 55%
+          top: 50%
           left: 50%
           margin-left: -24%
           z-index: 1
@@ -44,11 +44,11 @@
         .left_content_block
           color: #fff
           float: left
-          width: 340px
-          height: 480px
+          width: 450px
+          height: 620px
           margin-left: 200px
           overflow: hidden
-          ul.line
+          ul.line_container
             display: block
             width: 40px
             height: 100%
@@ -56,32 +56,33 @@
             li
               display: block
               width: 40px
-              display: block
               .line
-                height: 110px
+                height: 138px
                 width: 1px
                 margin-left: 19px
                 display: block
-                background-color: #fff
+                background-color: rgba(255,255,255,0.20)
+                &.l1
+                  height: 120px
               .circle 
                 width: 40px
                 height: 40px
                 display: block
-                border: 1px solid white
+                border: 1px solid rgba(255,255,255,0.20)
                 border-radius: 50%
           ul.text
             float: right
             display: block
-            width: 270px
-            padding-top: 118px
+            width: 390px
+            padding-top: 125px
             padding-left: 10px
             li 
-              height: 152px
+              height: 180px
               .header 
                 text-transform: uppercase
                 font-weight: bold
                 display: block
-                font-size: $sh_fs
+                font-size: $h_fs
                 margin-bottom: 10px
               .body
                 font-size: $p_fs
@@ -99,7 +100,7 @@
 
     .slide_3
       .inner_slide_container
-        max-width: 1024px
+        max-width: 1200px
         margin: 0 auto
         ul
           +display-box
@@ -109,30 +110,50 @@
             +box-flex(1)
             padding: 0 40px
             font-size: 18px
-            .circle 
-              padding: 25px
-              width: 10px
-              height: 10px
+            text-align: center
+            .circle
+              width: 350px
+              height: 350px
               border-radius: 50%
-              margin-bottom: 30px
-              background-color: $oj_blue
-              color: white
-              line-height: .8
-              font-size: 14px
+              background-color: #ddd
+              margin: auto auto 20px auto
+              position: relative
+              &.c1
+                +background(image-url("mcom_bcom/3_1_image_circle.png"))
+                background-repeat: no-repeat
+                background-size: 100%
+              &.c2
+                +background(image-url("mcom_bcom/3_2_image_circle.png"))
+                background-repeat: no-repeat
+                background-size: 100%
+              &.c3
+                +background(image-url("mcom_bcom/3_3_image_circle.png"))
+                background-repeat: no-repeat
+                background-size: 100%
+              .inner_circle
+                width: 40px
+                height: 40px
+                text-align: center
+                border-radius: 50%
+                background-color: $oj_blue
+                color: white
+                line-height: 3
+                font-size: 14px
+                position: absolute
+                bottom: -20px
+                left: 50%
+                margin-left: -30px
+                font-weight: bold
             .title
               font-size: $sh_fs
               font-weight: bold
               text-transform: uppercase
-              margin-bottom: 10px
+              margin: 60px auto 10px auto
             .text
               margin-bottom: 25px
               font-size: $p_fs
               color: $p_c
               line-height: 1.6
-            .image
-              height: 300px
-              width: 100%
-              background-color: #eee
 
       
 
@@ -159,35 +180,32 @@
                 width: 100%
                 background-color: rgba(255,255,255,0.98)
                 z-index: 1000
-                top: 10px
+                top: 6px
                 left: 0
                 opacity: 0
                 .feature
                   text-align: center
-                  margin-top: 60px
+                  max-width: 285px
+                  margin: 60px auto 0 auto
                   .circle
                     width: 40px
                     height: 40px
                     margin: 20px auto
                     border-radius: 50%
-                    border: 1px solid #ddd
-                    +translateY(10px)
-                    +single-transition(all, .2s, cubic-bezier(.5,0,.5,.99))
-                  .text
-                    padding: 0 50px
-                    font-size: 14px
-                    
-                    +translateY(10px)
+                    border: 1px solid $oj_red
+                    +translateY(6px)
                     +single-transition(all, .4s, cubic-bezier(.5,0,.5,.99))
-                  .first
-                  .second
-                    +transition-delay(.1s) 
-                  .third
-                    +transition-delay(.2s) 
+                    
+                  .text
+                    padding: 0 30px
+                    font-size: 14px
+                    +translateY(6px)
+                    +single-transition(all, .4s, cubic-bezier(.5,0,.5,.99))
+                    +transition-delay(.1s)
                 &.active 
                   top: 0
                   opacity: 1
-                  +single-transition(all, .3s, ease-in)
+                  +single-transition(all, .3s, cubic-bezier(.5,0,.5,.99))
                   .circle 
                     +translateY(0px)
                   .text
@@ -201,48 +219,49 @@
                 z-index: 50
                 position: relative
 
-    .slide_4 
+    .slide_4
       .inner_slide_container
         .hover_container
           .image
             &.image_4_1
-              +background(image-url("mcom_bcom/2_iphone_front_bcom.png"))
+              +background(image-url("mcom_bcom/4_1_bloomindales_homepage_iphone5s.png"))
               background-repeat: no-repeat
               background-size: 100%
             &.image_4_2
-              +background(image-url("mcom_bcom/2_iphone_front_bcom.png"))
+              +background(image-url("mcom_bcom/4_2_bloomindales_look_iphone5s.png"))
               background-repeat: no-repeat
               background-size: 100%
             &.image_4_3
-              +background(image-url("mcom_bcom/2_iphone_front_bcom.png"))
-              background-repeat: no-repeat
-              background-size: 100%
-            &.image_4_4
-              +background(image-url("mcom_bcom/2_iphone_front_bcom.png"))
+              +background(image-url("mcom_bcom/4_3_bloomindales_look_iphone5s.png"))
               background-repeat: no-repeat
               background-size: 100%
 
-    .slide_5
+            &.image_4_4
+              +background(image-url("mcom_bcom/4_4_bloomindales_inside_look_iphone5s.png"))
+              background-repeat: no-repeat
+              background-size: 100%
+
+
+
+    .slide_5 
       .inner_slide_container
         .hover_container
           .image
             &.image_5_1
-              +background(image-url("mcom_bcom/5_1_iphone_front_mcom.png"))
+              +background(image-url("mcom_bcom/5_1_macys_homepage_iphone5c.png"))
               background-repeat: no-repeat
               background-size: 100%
             &.image_5_2
-              +background(image-url("mcom_bcom/5_1_iphone_front_mcom.png"))
+              +background(image-url("mcom_bcom/5_2_macys_category_list_iphone5c.png"))
               background-repeat: no-repeat
               background-size: 100%
             &.image_5_3
-              +background(image-url("mcom_bcom/5_1_iphone_front_mcom.png"))
+              +background(image-url("mcom_bcom/5_3_macys_product_list_iphone5c.png"))
               background-repeat: no-repeat
               background-size: 100%
             &.image_5_4
-              +background(image-url("mcom_bcom/5_1_iphone_front_mcom.png"))
+              +background(image-url("mcom_bcom/5_4_macys_product_display_iphone5c.png"))
               background-repeat: no-repeat
               background-size: 100%
-
-
 
 
