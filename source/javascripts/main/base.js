@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
       
-      scrollingSpeed: 300,
+      scrollingSpeed: 200,
       cc3: true,
       easing: 'easeInOutQuart',
 
