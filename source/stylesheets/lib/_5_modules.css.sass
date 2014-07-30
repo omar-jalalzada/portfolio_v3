@@ -1,0 +1,125 @@
+.arrow_keys_outter_container
+  position: relative
+.arrow_keys_container
+  width: 490px
+  height: 390px
+  padding: 80px
+  margin: 0 auto
+  background-color: rgba(0,0,0,.8)
+  // opacity: .8
+  border-radius: 3px
+  position: absolute
+  z-index: 9999
+  top: 50%
+  left: 50%
+  margin-left: -325px
+  margin-top: -275px
+  .desc 
+    color: #fff
+    margin-bottom: 50px
+    display: block
+    text-transform: uppercase
+  .row
+    overflow: hidden
+    text-align: center
+    .arrow
+      width: 40px
+      height: 40px
+      padding: 50px
+      float: left
+      border: 1px solid #ddd
+      margin: 10px
+      border-radius: 3px
+      & > div 
+        width: 40px
+        height: 40px
+        margin: auto
+        border: 1px solid transparent
+        border-bottom-color: $oj_grey
+        border-left-color: $oj_grey
+        cursor: pointer
+        border-radius: 2px
+        +rotate(135deg)
+        text-indent: 9000px
+        &.a_up
+          margin-top: 10px
+        &.a_left
+          +rotate(45deg)
+          margin-left: 10px
+        &.a_down
+          +rotate(315deg)
+          margin-top: -10px
+        &.a_right
+          margin-right: 10px
+          +rotate(-135deg)
+      &.hide
+        visibility: hidden
+
+
+
+
+
+
+
+
+.phone_displays_in_row
+  .inner_slide_container
+    margin: 0 auto
+    display: block
+    max-width: 1224px
+    ul
+      +display-box
+      +box-orient(horizontal)
+      +box-align(stretch)
+      li
+        +box-flex(1)
+        .hover_container 
+          width: 100%
+          height: 100%
+          position: relative
+          overflow: hidden
+          .hover 
+            position: absolute
+            display: block
+            height: 600px
+            width: 100%
+            background-color: rgba(255,255,255,0.98)
+            z-index: 1000
+            top: 6px
+            left: 0
+            opacity: 0
+            .feature
+              text-align: center
+              max-width: 285px
+              margin: 60px auto 0 auto
+              .circle
+                width: 40px
+                height: 40px
+                margin: 20px auto
+                border-radius: 50%
+                border: 1px solid $oj_red
+                +translateY(6px)
+                +single-transition(all, .4s, cubic-bezier(.5,0,.5,.99))
+                
+              .text
+                padding: 0 30px
+                font-size: 14px
+                +translateY(6px)
+                +single-transition(all, .4s, cubic-bezier(.5,0,.5,.99))
+                +transition-delay(.1s)
+            &.active 
+              top: 0
+              opacity: 1
+              +single-transition(all, .3s, cubic-bezier(.5,0,.5,.99))
+              .circle 
+                +translateY(0px)
+              .text
+                +translateY(0px)
+
+          .image 
+            max-width: 285px
+            height: 600px
+            margin: 0 auto
+            background-color: #eee
+            z-index: 50
+            position: relative
