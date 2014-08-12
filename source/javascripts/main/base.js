@@ -24,7 +24,6 @@ $(document).ready(function() {
       //     if(index == '3'){
       //         alert("Section 3 ended loading");
       //     }
-
       // }
     });
 
@@ -46,7 +45,7 @@ $(document).ready(function() {
 if(!readCookie("schmoney_in_my_pocket")) {
   console.log("stay based.")
   $(function() {
-    $(".arrow_keys_container").addClass("show").delay(2000).queue(function(next){
+    $(".arrow_keys_container").addClass("show").delay(5000).queue(function(next){
         $(this).addClass("hide");
         $(this).delay(200).queue(function(next){
           $(this).remove();
