@@ -10,7 +10,7 @@ body_class: index
     = partial "projects/macys_and_bloomindales"
 
   %section.section.project_2{"data-menuanchor" => "secondPage"} 
-    = partial "projects/project_2"
+    = partial "projects/sfmoma"
 
   %section.section{"data-menuanchor" => "thirdPage"}
     = partial "projects/project_3"
@@ -22,9 +22,12 @@ body_class: index
     = partial "projects/project_5"
 
 #main_header
+
   .inner_main_header
     %a.logo_anchor{"href" => "/#firstPage"} 
       %span Omar Jalalzada's Portfolio
 
     %a.bio{"href" => "/pages/bio.html"} 
       %span Omar Jalalzada's Bio
+
+= partial "partials/arrow_key_guide"
