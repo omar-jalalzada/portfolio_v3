@@ -55,24 +55,9 @@
 
     .slide_3
       .inner_slide_container
-        max-width: 1200px
-        margin: 0 auto
         ul
-          +display-box
-          +box-orient(horizontal)
-          +box-align(stretch)
           li
-            +box-flex(1)
-            padding: 0 40px
-            font-size: 18px
-            text-align: center
             .circle
-              width: 350px
-              height: 350px
-              border-radius: 50%
-              background-color: #ddd
-              margin: auto auto 20px auto
-              position: relative
               &.c1
                 +background(image-url("mcom_bcom/3_1_image_circle.png"))
                 background-repeat: no-repeat
@@ -85,30 +70,6 @@
                 +background(image-url("mcom_bcom/3_3_image_circle.png"))
                 background-repeat: no-repeat
                 background-size: 100%
-              .inner_circle
-                width: 40px
-                height: 40px
-                text-align: center
-                border-radius: 50%
-                background-color: $oj_blue
-                color: white
-                line-height: 3
-                font-size: 14px
-                position: absolute
-                bottom: -20px
-                left: 50%
-                margin-left: -30px
-                font-weight: bold
-            .title
-              font-size: $sh_fs
-              font-weight: bold
-              text-transform: uppercase
-              margin: 60px auto 10px auto
-            .text
-              margin-bottom: 25px
-              font-size: $p_fs
-              color: $p_c
-              line-height: 1.6
 
     
     .slide_4
