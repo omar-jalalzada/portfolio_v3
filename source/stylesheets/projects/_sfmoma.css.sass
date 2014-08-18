@@ -20,3 +20,48 @@
           width: 500px
           font-size: 9px
           color: #ddd
+
+    .slide_2
+      +background(image-url("sfmoma/sfmoma_cover_image.jpg"))
+      background-repeat: no-repeat
+      background-attachment: fixed
+      background-size: cover
+      // .header, .body
+      //   color: #333
+      // .inner_slide_container
+      //   .left_content_block
+      //   .right_content_block
+      //     width: 650px
+      //     height: 500px
+      //     float: right
+      //     +background(image-url("mcom_bcom/2_iphone_isometric_bcom.png"))
+      //     background-repeat: no-repeat
+      //     background-size: 100%
+      //     margin-top: 250px
+      //     margin-right: 100px
+
+    
+    .slide_3
+      .inner_slide_container
+        ul
+          li
+            .circle
+              &.c1
+                +background(image-url("sfmoma/slide_3_c1.png"))
+                background-repeat: no-repeat
+                background-size: 100%
+              &.c2
+                +background(image-url("sfmoma/slide_3_c2.png"))
+                background-repeat: no-repeat
+                background-size: 100%
+              &.c3
+                +background(image-url("sfmoma/slide_3_c3.png"))
+                background-repeat: no-repeat
+                background-size: 100%
+
+      
+    .slide_4
+      .inner_slide_container
+        background-color: gold
+        height: 100%
+        width: 100%

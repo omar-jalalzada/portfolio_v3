@@ -7,8 +7,6 @@
   right: 12px
   overflow: hidden
   opacity: 0
-  // border: 1px solid green
-  // background-color: rgba(0,0,0,.8)
   z-index: 9999
   .desc 
     color: rgba(250,250,250,0.1)
@@ -94,18 +92,55 @@
           & > div
             +single-transition(all, 0.5s, cubic-bezier(.5,0,.5,.99))
             +translateY(20px)
-            // &.a_up
-            //   -webkit-transform: translate(0, -20px) rotate(135deg)
-            //   transform: translate(0, -20px) rotate(135deg)
-            // &.a_left
-            //   -webkit-transform: translate( 20px, 0) rotate(45deg)
-            //   transform: translate( -20px, 0) rotate(45deg)
-            // &.a_down
 
-            // &.a_right
-            //   -webkit-transform: translate( 20px, 0) rotate(-135deg)
-            //   transform: translate( 20px, 0) rotate(-135deg)
 
+
+
+.three_circles_h_P
+  .inner_slide_container
+    max-width: 1200px
+    margin: 0 auto
+    ul
+      +display-box
+      +box-orient(horizontal)
+      +box-align(stretch)
+      li
+        +box-flex(1)
+        padding: 0 40px
+        font-size: 18px
+        text-align: center
+        .circle
+          width: 350px
+          height: 350px
+          border-radius: 50%
+          border: 2px solid $oj_blue
+          background-color: #ddd
+          margin: auto auto 20px auto
+          position: relative
+          .inner_circle
+            width: 40px
+            height: 40px
+            text-align: center
+            border-radius: 50%
+            background-color: $oj_blue
+            color: white
+            line-height: 3
+            font-size: 14px
+            position: absolute
+            bottom: -20px
+            left: 50%
+            margin-left: -30px
+            font-weight: bold
+        .title
+          font-size: $sh_fs
+          font-weight: bold
+          text-transform: uppercase
+          margin: 60px auto 10px auto
+        .text
+          margin-bottom: 25px
+          font-size: $p_fs
+          color: $p_c
+          line-height: 1.6
 
 
 
@@ -127,19 +162,22 @@
             font-size: $h_fs
             font-weight: 700
             display: block
+            text-transform: uppercase
             &:before 
               display: block
               content: ' '
-              width: 40px
-              height: 40px
+              width: 30px
+              height: 30px
               border: 1px solid rgba(250,250,250,0.3)
               position: absolute
-              left: -60px
-              top: -2px
+              left: -45px
+              top: 2px
               border-radius: 50%
           .body
             font-size: $p_fs
-            font-weight: 300
+            font-weight: 100
+            b 
+              font-weight: 900
 
     
 
