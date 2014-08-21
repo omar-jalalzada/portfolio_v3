@@ -17,7 +17,7 @@ $(document).ready(function() {
 
       // verticalCentered: true,
       // resize : true,
-      loopHorizontal: false,
+      // loopHorizontal: false,
 
       // afterLoad: function(anchorLink, index){
       //     //using index
@@ -25,6 +25,26 @@ $(document).ready(function() {
       //         alert("Section 3 ended loading");
       //     }
       // }
+
+      afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+
+        //first slide of the second section
+        if(index == '2' && slideIndex == 3){
+
+
+          
+
+
+        }
+
+        //second slide of the second section (supposing #secondSlide is the
+        //anchor for the second slide
+        if(index == 2 && slideIndex == 'secondSlide'){
+            alert("Second slide loaded");
+        }
+      }
+
+
     });
 
    // adding the hover interaction for the phone displayes 
@@ -58,7 +78,22 @@ $(document).ready(function() {
 
 });
 
-
+// $(function(){
+//   $('#sfmoma_intro_video').okvideo({ source: '9bZkp7q19f0', 
+//     // volume: , 
+//     loop: true,
+//     hd:true, 
+//     adproof: true,
+//     annotations: false,
+//     onFinished: function() { console.log('finished') },
+//     unstarted: function() { console.log('unstarted') },
+//     onReady: function() { console.log('onready') },
+//     onPlay: function() { console.log('onplay') },
+//     onPause: function() { console.log('pause') },
+//     buffering: function() { console.log('buffering') },
+//     cued: function() { console.log('cued') },
+//   });
+// });
 
 // arrow key guide
 if(!readCookie("schmoney_in_my_pocket")) {

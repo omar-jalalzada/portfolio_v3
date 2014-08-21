@@ -129,8 +129,74 @@
             position: absolute
             bottom: -20px
             left: 50%
-            margin-left: -30px
+            margin-left: -20px
             font-weight: bold
+            display: none
+
+          .click_signal_circle 
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            background-color: $oj_blue
+            position: absolute
+            top: 50%
+            left: 50%
+            margin: -20px 0 0 -20px
+
+            font-weight: bold
+            line-height: 3
+            font-size: 14px
+            text-align: center
+            color: #fff
+            // color: $oj_blue
+            // &:before 
+            //   content: ' '
+            //   width: 40px
+            //   height: 2px
+            //   position: absolute
+            //   left: -150px
+            //   top: 145px
+            //   background-color: $oj_blue
+            //   z-index: -10
+            //   +rotate(-45deg)
+            // &:after 
+            //   content: ' '
+            //   width: 40px
+            //   height: 2px
+            //   position: absolute
+            //   right: -145px
+            //   top: -145px
+            //   background-color: $oj_blue
+            //   z-index: -10
+            //   +rotate(-45deg)
+            &:before 
+              content: ' '
+              width: 351px
+              height: 2px
+              position: absolute
+              left: -155px
+              top: 20px
+              background-color: $oj_blue
+              z-index: -10
+              +rotate(-45deg)
+              +single-transition(all, .1s, cubic-bezier(.5,0,.5,.99))
+
+          
+          &:hover 
+            border: 2px solid lighten($oj_blue, 15%)
+
+            .click_signal_circle 
+              // background-color: rgba($oj_blue, .2)
+              box-shadow: 0 4px 7px darken(rgba($oj_blue, .3), 50%), 0 2px 3px darken(rgba($oj_blue, .3), 50%)
+              &:before
+                width: 40px
+                left: 0px
+                opacity: .3
+                +rotate(-90deg)
+
+
+
+
         .title
           font-size: $sh_fs
           font-weight: bold
@@ -150,36 +216,57 @@
     height: 100%
     .list_with_circles_container
       float: left
-      width: 450px
-      padding: 150px 0 0 250px
+      width: 550px
+      padding: 12% 0 0 250px
       overflow: hidden
       ul
         color: #fff
         li
           display: block
-          padding: 0 0 50px
+          padding: 0 0 60px
           .header
-            font-size: $h_fs
-            font-weight: 700
+            // font-size: $h_fs
+            font-size: 14px
+            font-weight: bold
             display: block
             text-transform: uppercase
-            &:before 
-              display: block
-              content: ' '
-              width: 30px
-              height: 30px
-              border: 1px solid rgba(250,250,250,0.3)
-              position: absolute
-              left: -45px
-              top: 2px
-              border-radius: 50%
+            color: rgba(255,255,255,.4)
+            // &:before 
+            //   display: block
+            //   content: ' '
+            //   width: 30px
+            //   height: 30px
+            //   border: 1px solid rgba(250,250,250,0.3)
+            //   position: absolute
+            //   left: -45px
+            //   top: 2px
+            //   border-radius: 50%
           .body
-            font-size: $p_fs
+            // font-size: $p_fs
+            font-size: 22px
+            line-height: 1.6
             font-weight: 100
+            text-shadow: 0 1px 0 rgba(0,0,0,0.5)
             b 
-              font-weight: 900
+              font-weight: bold
 
-    
+    .right_content_block
+      width: 650px
+      height: 500px
+      float: right
+      margin-top: 250px
+      margin-right: 100px
+      position: relative 
+      &:before 
+        content: ' '
+        width: 1000px
+        height: 2px
+        background-color: rgba(250,250,250,0.4)
+        display: block
+        top: 294px
+        left: -100px
+        position: absolute
+        +rotate(-45deg)
 
 
 .phone_displays_in_row_slide

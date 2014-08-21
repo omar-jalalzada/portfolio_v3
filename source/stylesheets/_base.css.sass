@@ -12,24 +12,26 @@ body
     .inner_main_header
       a 
         display: block
-        width: 10px
-        height: 10px
-        +border-radius(50%)
-        border: 2px solid $oj_blue
+        width: 30px
+        height: 30px
+        
+        // border: 2px solid $oj_blue
         float: left
         margin: 18px
-        padding: 7px
         color: transparent
         overflow: hidden
         &.logo_anchor
-          background-color: #eee
+          +background(image-url("omar_jalalzada_logo.png"))
+          background-repeat: no-repeat
+          background-size: 100%
         &.bio
           float: right
           +background(image-url("omar_jalalzada.jpeg"))
           background-repeat: no-repeat
           background-size: 100%
           overflow: hidden
-          border: 2px solid $oj_red
+          +border-radius(50%)
+          // border: 2px solid $oj_red
 
 
   #fullpage
