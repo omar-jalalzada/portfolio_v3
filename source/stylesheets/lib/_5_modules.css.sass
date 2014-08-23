@@ -28,7 +28,7 @@
       float: left
       border: 1px solid rgba(0,0,0,0)
       margin: 5px
-      border-radius: 3px
+      border-radius: 3pxd
       & > div 
         width: 7px
         height: 7px
@@ -117,6 +117,7 @@
           background-color: #ddd
           margin: auto auto 20px auto
           position: relative
+          // +single-transition(border, .1s, cubic-bezier(.5,0,.5,.99), 0)
           .inner_circle
             width: 40px
             height: 40px
@@ -134,65 +135,84 @@
             display: none
 
           .click_signal_circle 
+
             width: 40px
             height: 40px
             border-radius: 50%
             background-color: $oj_blue
             position: absolute
-            top: 50%
+            bottom: -20px
             left: 50%
-            margin: -20px 0 0 -20px
+            margin-left: -20px
 
             font-weight: bold
             line-height: 3
             font-size: 14px
             text-align: center
             color: #fff
-            // color: $oj_blue
-            // &:before 
-            //   content: ' '
-            //   width: 40px
-            //   height: 2px
-            //   position: absolute
-            //   left: -150px
-            //   top: 145px
-            //   background-color: $oj_blue
-            //   z-index: -10
-            //   +rotate(-45deg)
-            // &:after 
-            //   content: ' '
-            //   width: 40px
-            //   height: 2px
-            //   position: absolute
-            //   right: -145px
-            //   top: -145px
-            //   background-color: $oj_blue
-            //   z-index: -10
-            //   +rotate(-45deg)
-            &:before 
-              content: ' '
-              width: 351px
-              height: 2px
-              position: absolute
-              left: -155px
-              top: 20px
-              background-color: $oj_blue
-              z-index: -10
-              +rotate(-45deg)
-              +single-transition(all, .1s, cubic-bezier(.5,0,.5,.99))
 
-          
+
           &:hover 
             border: 2px solid lighten($oj_blue, 15%)
-
             .click_signal_circle 
               // background-color: rgba($oj_blue, .2)
-              box-shadow: 0 4px 7px darken(rgba($oj_blue, .3), 50%), 0 2px 3px darken(rgba($oj_blue, .3), 50%)
-              &:before
-                width: 40px
-                left: 0px
-                opacity: .3
-                +rotate(-90deg)
+              // +single-transition(box-shadow, .1s, cubic-bezier(.5,0,.5,.99), 0)
+              // box-shadow: 0 4px 7px darken(rgba($oj_blue, .3), 50%), 0 2px 3px darken(rgba($oj_blue, .3), 50%)
+
+
+
+            // option #2
+            //   width: 40px
+            //   height: 40px
+            //   border-radius: 50%
+            //   background-color: $oj_blue
+            //   position: absolute
+            //   top: 50%
+            //   left: 50%
+            //   margin: -20px 0 0 -20px
+
+            //   font-weight: bold
+            //   line-height: 3
+            //   font-size: 14px
+            //   text-align: center
+            //   color: #fff
+
+            //   // option #1
+            //   // color: $oj_blue
+            //   // &:before 
+            //   //   content: ' '
+            //   //   width: 40px
+            //   //   height: 2px
+            //   //   position: absolute
+            //   //   left: -150px
+            //   //   top: 145px
+            //   //   background-color: $oj_blue
+            //   //   z-index: -10
+            //   //   +rotate(-45deg)
+            //   // &:after 
+            //   //   content: ' '
+            //   //   width: 40px
+            //   //   height: 2px
+            //   //   position: absolute
+            //   //   right: -145px
+            //   //   top: -145px
+            //   //   background-color: $oj_blue
+            //   //   z-index: -10
+            //   //   +rotate(-45deg)
+            //   &:before 
+            //     content: ' '
+            //     width: 351px
+            //     height: 2px
+            //     position: absolute
+            //     left: -155px
+            //     top: 20px
+            //     background-color: $oj_blue
+            //     z-index: -10
+            //     +rotate(-45deg)
+            //     +single-transition(all, .1s, cubic-bezier(.5,0,.5,.99))
+
+          
+
 
 
 
@@ -330,3 +350,14 @@
             background-color: #eee
             z-index: 50
             position: relative
+
+
+
+
+
+
+
+
+
+
+

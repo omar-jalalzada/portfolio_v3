@@ -64,6 +64,13 @@ $(document).ready(function() {
   $(".fancybox-thumb").fancybox({
     // prevEffect  : 'none',
     // nextEffect  : 'none',
+    scrollOutside: true,
+    beforeLoad: function() {
+      $.fn.fullpage.setKeyboardScrolling(false);
+    },
+    afterClose: function() {
+      $.fn.fullpage.setKeyboardScrolling(true);
+    },
     helpers : {
       title : {
         type: 'outside'
@@ -74,6 +81,7 @@ $(document).ready(function() {
       }
     }
   });
+
 
 
 });
