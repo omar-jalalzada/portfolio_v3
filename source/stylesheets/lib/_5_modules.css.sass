@@ -101,133 +101,79 @@
     max-width: 1200px
     margin: 0 auto
     ul
-      +display-box
-      +box-orient(horizontal)
-      +box-align(stretch)
+      // +display-box
+      // +box-orient(horizontal)
+      // +box-align(stretch)
+      overflow: hidden
+      display: block
+      border: 1px solid green
       li
-        +box-flex(1)
-        padding: 0 40px
+        width: 33%
+        float: left
+        overflow: hidden
+        // +box-flex(1)
+        // padding: 0 40px
         font-size: 18px
         text-align: center
-        .circle
-          width: 350px
-          height: 350px
-          border-radius: 50%
-          border: 2px solid $oj_blue
-          background-color: #ddd
-          margin: auto auto 20px auto
-          position: relative
-          // +single-transition(border, .1s, cubic-bezier(.5,0,.5,.99), 0)
-          .inner_circle
-            width: 40px
-            height: 40px
-            text-align: center
+        border: 1px solid red
+        a
+          border: 2px solid gold
+          display: block
+          .circle
+            width: 320px
+            height: 320px
             border-radius: 50%
-            background-color: $oj_blue
-            color: white
-            line-height: 3
-            font-size: 14px
-            position: absolute
-            bottom: -20px
-            left: 50%
-            margin-left: -20px
-            font-weight: bold
-            display: none
-
-          .click_signal_circle 
-
-            width: 40px
-            height: 40px
-            border-radius: 50%
-            background-color: $oj_blue
-            position: absolute
-            bottom: -20px
-            left: 50%
-            margin-left: -20px
-
-            font-weight: bold
-            line-height: 3
-            font-size: 14px
-            text-align: center
-            color: #fff
-
-
-          &:hover 
-            border: 2px solid lighten($oj_blue, 15%)
+            border: 2px solid $oj_blue
+            background-color: #ddd
+            margin: auto auto 20px auto
+            position: relative
+            .inner_circle
+              width: 40px
+              height: 40px
+              text-align: center
+              border-radius: 50%
+              background-color: $oj_blue
+              color: white
+              line-height: 3
+              font-size: 100%
+              position: absolute
+              bottom: -20px
+              left: 50%
+              margin-left: -20px
+              font-weight: bold
+              display: none
             .click_signal_circle 
-            // background-color: rgba($oj_blue, .2)
-            // +single-transition(box-shadow, .1s, cubic-bezier(.5,0,.5,.99), 0)
-            // box-shadow: 0 4px 7px darken(rgba($oj_blue, .3), 50%), 0 2px 3px darken(rgba($oj_blue, .3), 50%)
-
-
-
-            // option #2
-            //   width: 40px
-            //   height: 40px
-            //   border-radius: 50%
-            //   background-color: $oj_blue
-            //   position: absolute
-            //   top: 50%
-            //   left: 50%
-            //   margin: -20px 0 0 -20px
-
-            //   font-weight: bold
-            //   line-height: 3
-            //   font-size: 14px
-            //   text-align: center
-            //   color: #fff
-
-            //   // option #1
-            //   // color: $oj_blue
-            //   // &:before 
-            //   //   content: ' '
-            //   //   width: 40px
-            //   //   height: 2px
-            //   //   position: absolute
-            //   //   left: -150px
-            //   //   top: 145px
-            //   //   background-color: $oj_blue
-            //   //   z-index: -10
-            //   //   +rotate(-45deg)
-            //   // &:after 
-            //   //   content: ' '
-            //   //   width: 40px
-            //   //   height: 2px
-            //   //   position: absolute
-            //   //   right: -145px
-            //   //   top: -145px
-            //   //   background-color: $oj_blue
-            //   //   z-index: -10
-            //   //   +rotate(-45deg)
-            //   &:before 
-            //     content: ' '
-            //     width: 351px
-            //     height: 2px
-            //     position: absolute
-            //     left: -155px
-            //     top: 20px
-            //     background-color: $oj_blue
-            //     z-index: -10
-            //     +rotate(-45deg)
-            //     +single-transition(all, .1s, cubic-bezier(.5,0,.5,.99))
-
-          
-
-
-
-
-
-        .title
-          font-size: $sh_fs
-          font-weight: bold
-          text-transform: uppercase
-          margin: 60px auto 10px auto
-        .text
-          margin-bottom: 25px
-          font-size: $p_fs
-          color: $p_c
-          line-height: 1.6
-
+              width: 40px
+              height: 40px
+              border-radius: 50%
+              background-color: $oj_blue
+              position: absolute
+              bottom: -20px
+              left: 50%
+              margin-left: -20px
+              font-weight: bold
+              line-height: 3
+              font-size: 14px
+              text-align: center
+              color: #fff
+          .text_container
+            border: 2px solid cyan
+            padding: 0 20px
+            .title
+              font-size: $sh_fs
+              font-weight: bold
+              text-transform: uppercase
+              margin: 60px auto 10px auto
+            .text
+              margin-bottom: 25px
+              font-size: $p_fs
+              color: $p_c
+              line-height: 1.6
+          &:hover
+            .circle 
+              border: 2px solid lighten($oj_blue, 15%)
+              .click_signal_circle 
+                background-color: lighten($oj_blue, 10%)
 
 
 .cover_page_slide
@@ -236,9 +182,10 @@
     height: 100%
     .list_with_circles_container
       float: left
-      width: 550px
-      padding: 12% 0 0 250px
+      width: 60%
+      padding: 10% 0 0 20%
       overflow: hidden
+      // border: 1px solid red
       ul
         color: #fff
         li
@@ -246,7 +193,7 @@
           padding: 0 0 60px
           .header
             // font-size: $h_fs
-            font-size: 14px
+            font-size: 80%
             font-weight: bold
             display: block
             text-transform: uppercase
@@ -263,7 +210,7 @@
             //   border-radius: 50%
           .body
             // font-size: $p_fs
-            font-size: 22px
+            font-size: 120%
             line-height: 1.6
             font-weight: 100
             text-shadow: 0 1px 0 rgba(0,0,0,0.5)

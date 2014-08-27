@@ -6,6 +6,7 @@ $(document).ready(function() {
       scrollingSpeed: 200,
       cc3: true,
       easing: 'easeInOutQuart',
+      // resize: false,
 
       menu: true,
       menu: '#main_section_nav',
