@@ -64,6 +64,8 @@ $(document).ready(function() {
   $(".fancybox-thumb").fancybox({
     // prevEffect  : 'none',
     // nextEffect  : 'none',
+    openSpeed: 100,
+    nextSpeed: 100,
     scrollOutside: true,
     beforeLoad: function() {
       $.fn.fullpage.setKeyboardScrolling(false);
