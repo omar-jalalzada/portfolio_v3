@@ -1,0 +1,10 @@
+@mixin breakpoint($point)
+  @if $point == landscape_ipad
+    @media (max-width: 1024px)
+      @content
+  @else if $point == portrait_ipad
+    @media (max-width: 768px)
+      @content
+  // @else if $point == baby-bear
+  //   @media (max-width: 650px)
+  //     @content
