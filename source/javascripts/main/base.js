@@ -27,23 +27,19 @@ $(document).ready(function() {
       //     }
       // }
 
-      afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+      // afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
 
-        //first slide of the second section
-        if(index == '2' && slideIndex == 3){
+      //   //first slide of the second section
+      //   if(index == '2' && slideIndex == 3){
 
+      //   }
 
-          
-
-
-        }
-
-        //second slide of the second section (supposing #secondSlide is the
-        //anchor for the second slide
-        if(index == 2 && slideIndex == 'secondSlide'){
-            alert("Second slide loaded");
-        }
-      }
+      //   //second slide of the second section (supposing #secondSlide is the
+      //   //anchor for the second slide
+      //   if(index == 2 && slideIndex == 'secondSlide'){
+      //       alert("Second slide loaded");
+      //   }
+      // }
 
 
     });
@@ -76,7 +72,9 @@ $(document).ready(function() {
     },
     helpers : {
       title : {
-        type: 'outside'
+        type: 'outside',
+        position: 'top'
+
       },
       thumbs  : {
         width : 50,

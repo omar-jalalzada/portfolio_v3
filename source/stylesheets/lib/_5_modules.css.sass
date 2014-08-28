@@ -1,3 +1,6 @@
+////
+// The arrow keys that appear in begining
+////
 .arrow_keys_container
   +single-transition(opacity, .2s, cubic-bezier(.5,0,.5,.99))
   position: absolute
@@ -96,7 +99,76 @@
 
 
 
+////
+// Cover Page Design
+////
 
+.cover_page_slide
+  background-color: #333
+  .inner_slide_container
+    height: 100%
+    display: table
+    position: relative
+    .cover_container
+      display: table-cell
+      vertical-align: middle
+      width: 100%
+      font-size: 20px
+      ul
+        float: left
+        width: 60%
+        max-width: 700px
+        padding-left: 20%
+        overflow: hidden
+        color: #fff
+        z-index: 1000
+        position: relative
+        li
+          display: block
+          &.first 
+            padding-bottom: 6%
+          .header
+            font-size: 80%
+            font-weight: bold
+            display: block
+            text-transform: uppercase
+            color: rgba(255,255,255,.4)
+          .body
+            font-size: $p_fs
+            line-height: 1.6
+            font-weight: 100
+            text-shadow: 0 1px 0 rgba(0,0,0,0.5)
+            b 
+              font-weight: bold
+
+    .right_content_block
+      width: 550px
+      height: 450px
+      position: absolute
+      bottom: 20px
+      right: 20px
+      z-index: 100
+      .image
+        width: 100%
+        height: 100%
+        z-index: 10000
+        position: relative
+      .line
+        content: ' '
+        width: 200%
+        height: 2px
+        background-color: rgba(250,250,250,0.4)
+        display: block
+        margin-left: -250px
+        margin-top: -200px
+        z-index: 1000
+        +rotate(-45deg)
+
+
+
+////
+// The three cricle slideshow layout
+////
 .three_circles_h_P
   .inner_slide_container
     max-width: 1220px
@@ -167,64 +239,13 @@
               border: 2px solid lighten($oj_blue, 15%)
               .click_signal_circle 
                 background-color: lighten($oj_blue, 10%)
+            .text_container
+              opacity: .8
 
 
-.cover_page_slide
-  background-color: #333
-  border: 2px solid gold
-  .inner_slide_container
-    height: 100%
-    display: table
-    .cover_container
-      display: table-cell
-      vertical-align: middle
-      width: 100%
-      border: 1px solid gold
-      font-size: 20px
-      ul
-        float: left
-        width: 60%
-        max-width: 700px
-        padding-left: 20%
-        overflow: hidden
-        color: #fff
-        li
-          display: block
-          &.first 
-            padding-bottom: 6%
-          .header
-            font-size: 80%
-            font-weight: bold
-            display: block
-            text-transform: uppercase
-            color: rgba(255,255,255,.4)
-          .body
-            font-size: $p_fs
-            line-height: 1.6
-            font-weight: 100
-            text-shadow: 0 1px 0 rgba(0,0,0,0.5)
-            b 
-              font-weight: bold
-
-    // .right_content_block
-    //   width: 650px
-    //   height: 500px
-    //   float: right
-    //   margin-top: 250px
-    //   margin-right: 100px
-    //   position: relative 
-    //   &:before 
-    //     content: ' '
-    //     width: 1000px
-    //     height: 2px
-    //     background-color: rgba(250,250,250,0.4)
-    //     display: block
-    //     top: 294px
-    //     left: -100px
-    //     position: absolute
-    //     +rotate(-45deg)
-
-
+////
+// Phone in a row display
+////
 .phone_displays_in_row_slide
   .inner_slide_container
     margin: 0 auto
