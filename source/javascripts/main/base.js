@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 
-
     $('#fullpage').fullpage({
       scrollingSpeed: 200,
       cc3: true,
@@ -12,12 +11,11 @@ $(document).ready(function() {
       menu: '#main_section_nav',
       anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
       
-      // slidesColor: ['#fff', '#eee', '#ddd', '#ccc', '#bbb'],
       slidesNavigation: true,
       navigationTooltips: ['firstSlide', 'secondSlide'],
 
+      // slidesColor: ['#fff', '#eee', '#ddd', '#ccc', '#bbb'],
       // verticalCentered: true,
-      // resize : true,
       // loopHorizontal: false,
 
       // afterLoad: function(anchorLink, index){
@@ -40,11 +38,13 @@ $(document).ready(function() {
       //       alert("Second slide loaded");
       //   }
       // }
-
-
     });
 
-   // adding the hover interaction for the phone displayes 
+
+
+  //
+  // adding the hover interaction for the phone displays 
+  //
   $(".hover_container").hover(
     function () {
       $(this).find('.hover').addClass("active");
@@ -55,9 +55,10 @@ $(document).ready(function() {
   );
 
 
-  //
-  // $('.fancybox').fancybox();
 
+  //
+  // Fancy Box Slideswho
+  //
   $(".fancybox-thumb").fancybox({
     // prevEffect  : 'none',
     // nextEffect  : 'none',
@@ -73,7 +74,7 @@ $(document).ready(function() {
     helpers : {
       title : {
         type: 'outside',
-        position: 'top'
+        position: 'bottom'
 
       },
       thumbs  : {
@@ -83,9 +84,26 @@ $(document).ready(function() {
     }
   });
 
-
-
 });
+
+
+//
+// arrow key guide
+//
+if(!readCookie("schmoney_in_my_pocket")) {
+  console.log("stay based.")
+  $(function() {
+    $(".arrow_keys_container").addClass("show").delay(5000).queue(function(next){
+        $(this).addClass("hide");
+        $(this).delay(200).queue(function(next){
+          $(this).remove();
+        });
+        next();
+    });
+    createCookie("schmoney_in_my_pocket","cause_im_lit", 1);
+  });
+}
+
 
 // $(function(){
 //   $('#sfmoma_intro_video').okvideo({ source: '9bZkp7q19f0', 
@@ -104,17 +122,3 @@ $(document).ready(function() {
 //   });
 // });
 
-// arrow key guide
-if(!readCookie("schmoney_in_my_pocket")) {
-  console.log("stay based.")
-  $(function() {
-    $(".arrow_keys_container").addClass("show").delay(5000).queue(function(next){
-        $(this).addClass("hide");
-        $(this).delay(200).queue(function(next){
-          $(this).remove();
-        });
-        next();
-    });
-    createCookie("schmoney_in_my_pocket","cause_im_lit", 1);
-  });
-}

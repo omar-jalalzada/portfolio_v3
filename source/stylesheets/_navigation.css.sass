@@ -30,6 +30,8 @@
       +transition-property(text-indent, width)
       +transition-duration(.3s)
       +transition-timing-function(ease-out)
+      border-radius: 3px
+
 
     &.active
       opacity: 1
@@ -42,16 +44,18 @@
         
     &:hover
       opacity: 1
+
       +single-transition(all, .3s, cubic-bezier(0.94, 0.06, 0.50, 0.95))
       width: 160px
       &.first_project 
-        width: 210px
+        width: 226px
       &.second_project 
-        width: 155px
+        width: 205px
       &.third_project 
         width: 290px
       & > a 
         color: darken($oj_grey, 50%)
+        // border-radius: 0 3px 3px 0
         width: 100%
         text-indent: 15px
 
