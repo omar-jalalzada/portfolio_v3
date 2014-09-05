@@ -1,5 +1,5 @@
 #superContainer
-  +background(image-url("bio/himalayas_bg.jpg"))
+  // +background(image-url("bio/himalayas_bg.jpg"))
   +background(image-url("bio/omar_jalalzada_bg.jpg"))
   background-repeat: no-repeat
   background-size: cover
@@ -10,21 +10,40 @@
     background-color: rgba(0,0,0,0.3)
     display: table
     width: 100%
-    .main_paragraph
+    .inner_container
       display: table-cell
       vertical-align: middle
       width: 100%
-      h1
-        display: block
-        width: 50%
-        max-width: 700px
-        height: 300px
+      .content_holder
+        max-width: 600px
         margin-left: 20%
-        color: rgba(255,255,255,1)
-        line-height: 1.5
-        font-weight: 100
-        text-shadow: 0 1px 2px rgba(0,0,0,0.3)
-        // font-size: 20px
-        // +background(image-url("omar_jalalzada_logo.png"))
-        // background-repeat: no-repeat
-        // background-size: 100%
+        width: 60%
+        .main_paragraph
+          h1
+            // border: 1px solid gold
+            display: block
+            
+            // max-width: 700px
+            // height: 300px
+            // margin-left: 20%
+            color: #fff
+            line-height: 1.6
+            font-weight: 100
+            text-shadow: 0 1px 0px rgba(0,0,0,0.5)
+            font-size: 160%
+            // +background(image-url("omar_jalalzada_logo.png"))
+            // background-repeat: no-repeat
+            // background-size: 100%
+
+        .social_media_links
+          // border: 1px solid blue
+          .sm_inner
+            overflow: hidden
+            .sm_link
+              width: 40px
+              height: 40px
+              margin-right: 10px
+              border: 1px solid rgba(255,255,255,.5)
+              // background: red
+              border-radius: 50%
+              float: left

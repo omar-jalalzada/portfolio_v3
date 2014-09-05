@@ -8,14 +8,13 @@ body
 
   +breakpoint(portrait_ipad) 
     font-size: 14px
+  
   #main_header
 
     +breakpoint(landscape_ipad) 
-      background-color: yellow
-
+      border-top: 5px solid yellow
     +breakpoint(portrait_ipad) 
-      background-color: red
-
+      border-top: 5px solid red
     // @include breakpoint(mama-bear) { width: 80%; }
     // @include breakpoint(baby-bear) { width: 95%; }
 
@@ -26,12 +25,12 @@ body
     left: 0
     z-index: 100
     .inner_main_header
+      width: 100%
+      overflow: hidden
       a 
         display: block
         width: 30px
         height: 30px
-        
-        // border: 2px solid $oj_blue
         float: left
         margin: 18px
         color: transparent
@@ -40,6 +39,11 @@ body
           +background(image-url("omar_jalalzada_logo.png"))
           background-repeat: no-repeat
           background-size: 100%
+          &.bio_logo
+            +background(image-url("omar_jalalzada_logo_white.png"))
+            background-repeat: no-repeat
+            background-size: 100%
+
         &.bio
           float: right
           +background(image-url("omar_jalalzada.jpeg"))
