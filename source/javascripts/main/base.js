@@ -94,16 +94,54 @@ if(!readCookie("schmoney_in_my_pocket")) {
   console.log("stay based.")
   $(function() {
     $(".arrow_keys_container").addClass("show").delay(5000).queue(function(next){
-        $(this).addClass("hide");
+        // $(this).addClass("hide");
         $(this).delay(200).queue(function(next){
-          $(this).remove();
+          // $(this).remove();
         });
         next();
     });
-    createCookie("schmoney_in_my_pocket","cause_im_lit", 1);
+    // createCookie("schmoney_in_my_pocket","cause_im_lit", 1);
   });
 }
 
+function do_it(arrow_div) {
+  var selecta = ".arrow_keys_container " + arrow_div
+  console.log(selecta)
+  $(selecta).addClass("pressed")
+  setTimeout(function(){
+    $(selecta).removeClass("pressed")
+  }, 200)
+};
+
+$(window).keydown(function(e) {
+  key = e.keyCode
+  switch(key) {
+    case 38:
+      do_it(".a_1")
+    break;
+    case 37:
+      do_it(".a_2")
+    break;
+    case 39:
+      do_it(".a_4")
+    break;
+    case 40:
+      do_it(".a_3")
+    break;
+  }
+});
+
+// // var xTriggered = 0;
+// $( ".arrow_keys_container" ).keydown(function( event ) {
+//   if ( event.which == 38 ) {
+//    event.preventDefault();
+//    alert("hi")
+//   }
+//   // xTriggered++;
+//   // var msg = "Handler for .keydown() called " + xTriggered + " time(s).";
+//   // $.print( msg, "html" );
+//   // $.print( event );
+// });
 
 // $(function(){
 //   $('#sfmoma_intro_video').okvideo({ source: '9bZkp7q19f0', 
@@ -121,4 +159,3 @@ if(!readCookie("schmoney_in_my_pocket")) {
 //     cued: function() { console.log('cued') },
 //   });
 // });
-

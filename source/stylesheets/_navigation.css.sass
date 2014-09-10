@@ -1,4 +1,6 @@
+////
 // Left side section navigation
+////
 #main_section_nav
   display: block
   position: absolute
@@ -28,11 +30,9 @@
       text-indent: 10px
       color: #555
       +transition-property(text-indent, width)
-      +transition-duration(.3s)
-      +transition-timing-function(ease-out)
+      +transition-duration(.2s)
+      +transition-timing-function($custom_ease)
       border-radius: 3px
-
-
     &.active
       opacity: 1
       a 
@@ -40,11 +40,8 @@
         background-color: $oj_blue
         color: #fff !important
         width: 3px
-        
-        
     &:hover
       opacity: 1
-
       +single-transition(all, .3s, cubic-bezier(0.94, 0.06, 0.50, 0.95))
       width: 160px
       &.first_project 
@@ -55,12 +52,12 @@
         width: 290px
       & > a 
         color: darken($oj_grey, 50%)
-        // border-radius: 0 3px 3px 0
         width: 100%
         text-indent: 15px
 
-
+////
 // Bottom slide navigation
+////
 .fullPage-slidesNav
   position: absolute
   z-index: 4
@@ -102,19 +99,21 @@
           position: absolute
           z-index: 1
           +transition-property(all)
-          +transition-duration(.1s)
-          +transition-timing-function(cubic-bezier(0.94, 0.06, 0.50, 0.95))
-
+          +transition-duration(.2s)
+          +transition-timing-function($custom_ease)
         &.active span, &.active:hover span
           background: $oj_blue
-          +scale(1.5)
+          +scale(2)
         &.active:hover span
-          background-color: darken($oj_blue, 5%)
+          background-color: darken($oj_blue, 10%)
         &:hover span
-          background: $oj_grey
-          +scale(1.5)
+          background: darken($oj_grey, 10%)
+          +scale(2)
 
+
+////
 // Directional arrows on both sides
+////
 .controlArrow
   display: none !important
   width: 20px
@@ -131,3 +130,103 @@
   &.next
     +rotate(-135deg)
     right: 20px
+
+
+
+////
+// The arrow keys that appear in begining
+////
+.arrow_keys_container
+  +single-transition(opacity, .2s, cubic-bezier(.5,0,.5,.99))
+  position: absolute
+  width: 130px
+  height: 90px
+  bottom: 10px
+  right: 12px
+  overflow: hidden
+  opacity: 0
+  z-index: 9999
+  .desc 
+    color: rgba(250,250,250,0.1)
+    font-size: 12px
+    margin-top: 10px
+    display: block
+    opacity: 0
+    text-align: center
+    +single-transition(all, .4s, cubic-bezier(.5,0,.5,.99), .2s)
+    +translateY(20px)
+
+  .row
+    overflow: hidden
+    text-align: center
+    padding-left: 10px
+    .arrow
+      width: 4px
+      height: 4px
+      padding: 12px
+      float: left
+      margin: 3px
+      border-radius: 4px
+      opacity: .4
+      &.pressed 
+        // background-color: rgba(200,200,200,0.6) !important
+        // border-color: transparent !important
+        opacity: 1
+      & > div 
+        width: 7px
+        height: 7px
+        margin: auto
+        border: 1px solid transparent
+        border-bottom-color: $oj_dark_grey
+        border-left-color: $oj_dark_grey
+        border-radius: 2px
+        +rotate(135deg)
+        text-indent: 9000px
+        &.a_up
+          transform: translate(-2px, 30px) rotate(45deg)
+          -webkit-transform: translate(-2px, 30px) rotate(45deg)
+        &.a_left
+          transform: translate(40px, 0) rotate(85deg)
+          -webkit-transform: translate(40px, 0) rotate(85deg)
+        &.a_down
+          transform: translate( 0, -40px) rotate(230deg)
+          -webkit-transform: translate( 0, -40px) rotate(230deg)
+        &.a_right
+          transform: translate( -40px, 0) rotate(-105deg)
+          -webkit-transform: translate( -40px, 0) rotate(-105deg)
+      &.hide
+        visibility: hidden
+  &.show 
+    display: block
+    opacity: 1
+    .row
+      .arrow
+        background-color: rgba($oj_grey,0.3)
+        +single-transition(background-color, 1s, $custom_ease, .3s)
+        & > div
+          +single-transition(all, 0.8s, $custom_ease)
+          &.a_up
+            transform: translate(-2px, 0) rotate(135deg)
+            -webkit-transform: translate(-2px, 0) rotate(135deg)
+          &.a_left
+            transform: translate( 0, -2px) rotate(45deg)
+            -webkit-transform: translate( 0, -2px) rotate(45deg)
+          &.a_down
+            transform: translate( -2px, -4px) rotate(315deg)
+            -webkit-transform: translate( -2px, -4px) rotate(315deg)
+          &.a_right
+            transform: translate( -4px, -2px) rotate(-135deg)
+            -webkit-transform: translate( -4px, -2px) rotate(-135deg)
+    // &.hide
+    //   +single-transition(opacity, .4s, cubic-bezier(.5,0,.5,.99))
+    //   .desc 
+    //     +translateY(20px)
+    //     +single-transition(all, .2s, cubic-bezier(.5,0,.5,.99), 0)
+    //   .row
+    //     .arrow
+    //       +single-transition(all, 1s, cubic-bezier(.5,0,.5,.99))
+    //       border: 1px solid rgba(250,250,250,0)
+    //       +translateY(10px)
+    //       & > div
+    //         +single-transition(all, 0.5s, cubic-bezier(.5,0,.5,.99))
+    //         +translateY(20px)

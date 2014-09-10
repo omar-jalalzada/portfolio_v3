@@ -6,18 +6,22 @@
   //.fade_in
     // nothing here yet
   .animate_fade_right
-    +translateX(-20px)
+    +translateX(-10px)
   .animate_fade_left
-    +translateX(20px)
+    +translateX(10px)
   .animate_fade_down
-    +translateY(-20px)
+    +translateY(-10px)
   .animate_fade_up
-    +translateY(20px)
+    +translateY(10px)
 
 .slides .active
   .animate_fade_base  
     opacity: 1
-    +single-transition(all, .5s, cubic-bezier(.5,0,.5,.99))
+    // +single-transition(transform, .3s, cubic-bezier(.5,0,.5,.99))
+    +transition-property(transform, opacity)
+    +transition-duration(.4s)
+    +transition-timing-function($custom_ease)
+    +transition-delay(0)
     +translateX(0px)
     +translateY(0px)
 
