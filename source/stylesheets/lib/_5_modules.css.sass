@@ -16,9 +16,9 @@
       font-size: 20px
       ul
         float: left
-        width: 60%
+        width: 50%
         max-width: 700px
-        padding-left: 20%
+        padding-left: 15%
         overflow: hidden
         color: #fff
         // z-index: 1000
@@ -42,7 +42,7 @@
               font-weight: bold
 
     .right_content_block
-      width: 50%
+      width: 45%
       max-width: 500px
       height: 450px
       position: absolute
@@ -61,8 +61,8 @@
       .line
         content: ' '
         width: 200%
-        height: 2px
-        background-color: rgba(250,250,250,0.4)
+        height: 1px
+        background-color: rgba(255,255,255,0.2)
         display: block
         margin-left: -250px
         margin-top: -250px
@@ -81,7 +81,7 @@
     h3
       color: $oj_red
       text-align: center
-      margin: 0 auto 5% auto
+      margin: 0 auto 3% auto
       display: block
       text-transform: uppercase
       border-bottom: 1px solid $oj_light_grey
@@ -102,13 +102,14 @@
         text-align: center
         .anchor_container
           display: block
-          padding: 0 6%
+          padding: 0 10%
           .circle
             width: 20px
             height: 20px
             padding: 45%
             border-radius: 50%
-            border: 2px solid $oj_dark_grey
+            // border: 2px solid $oj_dark_grey
+            border: 2px solid $oj_blue
             background-color: #ddd
             margin: auto auto 20px auto
             position: relative
@@ -138,7 +139,8 @@
               background-repeat: no-repeat
               background-size: 60%
               background-position: center
-              background-color: $oj_dark_grey
+              // background-color: $oj_dark_grey
+              background-color: $oj_blue
 
           // text container
           .text_container
@@ -147,6 +149,7 @@
 
             .title
               font-size: $sh_fs
+              color: $oj_blue
               font-weight: bold
               text-transform: uppercase
               margin: 60px auto 10px auto
@@ -157,13 +160,13 @@
               line-height: 1.6
           &:hover
             .circle 
-              border: 2px solid $oj_blue
+              // border: 2px solid $oj_blue
               .click_signal_circle 
-                background-color: $oj_blue
+                // background-color: $oj_blue
             .text_container
               opacity: .9
               .title
-                color: $oj_red
+                // color: $oj_red
 
 
 ////
@@ -172,12 +175,15 @@
 .phone_displays_in_row_slide
   .inner_slide_container
     margin: 0 auto
+    padding: 0 50px
     display: block
     max-width: 1224px
     ul
       +display-box
       +box-orient(horizontal)
       +box-align(stretch)
+      cursor: cursor
+      user-select: none
       li
         +box-flex(1)
         .hover_container 
