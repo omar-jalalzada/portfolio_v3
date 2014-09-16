@@ -12,11 +12,10 @@
           width: 45%
           max-width: 255px
           height: 590px
-          background-color: #ddd
           margin: auto 45% auto auto
           z-index: 2
           position: relative
-          +background(image-url("mcom_bcom/2_iphone_bcom_main.png"))
+          +background-image(image-url("mcom_bcom/2_iphone_bcom_main.png"))
           background-repeat: no-repeat
           background-size: 100%
         .logo
@@ -27,7 +26,7 @@
           left: 50%
           margin-left: -24%
           z-index: 1
-          +background(image-url("mcom_bcom/2_main_logo.png"))
+          +background-image(image-url("mcom_bcom/2_main_logo.png"))
           background-repeat: no-repeat
           background-size: 100%
 
@@ -43,12 +42,7 @@
         .left_content_block
         .right_content_block
           .image
-            +background(image-url("mcom_bcom/2_iphone_isometric_bcom.png"))
-            background-repeat: no-repeat
-            background-size: 100%
-
-
-
+            +background-image(image-url("mcom_bcom/2_iphone_isometric_bcom.png"))
 
 
     .slide_3
@@ -57,62 +51,49 @@
           li
             .circle
               &.c1
-                +background(image-url("mcom_bcom/3_1_image_circle.png"))
-                background-repeat: no-repeat
-                background-size: 100%
+                +background-image(image-url("mcom_bcom/3_1_image_circle.png"))
               &.c2
-                +background(image-url("mcom_bcom/3_2_image_circle.png"))
-                background-repeat: no-repeat
-                background-size: 100%
+                +background-image(image-url("mcom_bcom/3_2_image_circle.png"))
               &.c3
-                +background(image-url("mcom_bcom/3_3_image_circle.png"))
-                background-repeat: no-repeat
-                background-size: 100%
-
+                +background-image(image-url("mcom_bcom/3_3_image_circle.png"))
     
-    .slide_4
-      .inner_slide_container
-        .hover_container
-          .image
-            &.image_4_1
-              +background(image-url("mcom_bcom/4_1_bloomindales_homepage_iphone5s.png"))
-              background-repeat: no-repeat
-              background-size: 100%
-            &.image_4_2
-              +background(image-url("mcom_bcom/4_2_bloomindales_look_iphone5s.png"))
-              background-repeat: no-repeat
-              background-size: 100%
-            &.image_4_3
-              +background(image-url("mcom_bcom/4_3_bloomindales_look_iphone5s.png"))
-              background-repeat: no-repeat
-              background-size: 100%
-
-            &.image_4_4
-              +background(image-url("mcom_bcom/4_4_bloomindales_inside_look_iphone5s.png"))
-              background-repeat: no-repeat
-              background-size: 100%
-
-
-
-    .slide_5 
+    .slide_4 
       .inner_slide_container
         .hover_container
           .image
             &.image_5_1
-              +background(image-url("mcom_bcom/5_1_macys_homepage_iphone5c.png"))
-              background-repeat: no-repeat
-              background-size: 100%
+              +background-image(image-url("mcom_bcom/5_1_macys_homepage_iphone5c.png"))
             &.image_5_2
-              +background(image-url("mcom_bcom/5_2_macys_category_list_iphone5c.png"))
-              background-repeat: no-repeat
-              background-size: 100%
+              +background-image(image-url("mcom_bcom/5_2_macys_category_list_iphone5c.png"))
             &.image_5_3
-              +background(image-url("mcom_bcom/5_3_macys_product_list_iphone5c.png"))
-              background-repeat: no-repeat
-              background-size: 100%
+              +background-image(image-url("mcom_bcom/5_3_macys_product_list_iphone5c.png"))
             &.image_5_4
-              +background(image-url("mcom_bcom/5_4_macys_product_display_iphone5c.png"))
-              background-repeat: no-repeat
-              background-size: 100%
+              +background-image(image-url("mcom_bcom/5_4_macys_product_display_iphone5c.png"))
 
 
+    .slide_5
+      .inner_slide_container
+        .hover_container
+          .image
+            &.image_4_1
+              +background-image(image-url("mcom_bcom/4_1_bloomindales_homepage_iphone5s.png"))
+            &.image_4_2
+              +background-image(image-url("mcom_bcom/4_2_bloomindales_look_iphone5s.png"))
+            &.image_4_3
+              +background-image(image-url("mcom_bcom/4_3_bloomindales_look_iphone5s.png"))
+            &.image_4_4
+              +background-image(image-url("mcom_bcom/4_4_bloomindales_inside_look_iphone5s.png"))
+
+
+
+
+    .slide_6
+      +background-image(image-url("mcom_bcom/6_0_macys_bottom_cover.png"))
+      background-repeat: no-repeat
+      background-attachment: fixed
+      background-size: cover
+      .inner_slide_container 
+        background-color: rgba(0,0,0,0.6)
+        .right_content_block
+          visibility: hidden
+          
