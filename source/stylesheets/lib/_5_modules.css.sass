@@ -32,7 +32,7 @@
             font-weight: bold
             display: block
             text-transform: uppercase
-            color: rgba(255,255,255,.4)
+            color: rgba(100,100,100,1)
           .body
             font-size: $p_fs
             line-height: 1.6
@@ -114,7 +114,8 @@
             margin: auto auto 20px auto
             position: relative
             background-repeat: no-repeat
-            background-size: 100%
+            background-size: 101%
+            background-position: -1px
             .inner_circle
               width: 40px
               height: 40px
@@ -168,23 +169,26 @@
 ////
 .phone_displays_in_row_slide
   .inner_slide_container
-    margin: 0 auto
-    padding: 0 100px
-    display: block
     max-width: 1224px
+    height: 90%
+    padding: 0 5%
     & > ul
       +display-box
       +box-orient(horizontal)
       +box-align(stretch)
       cursor: cursor
       user-select: none
-      li
+      height: 100%
+      & > li
         +box-flex(1)
+        height: 100%
+        padding: 0 10px
         .hover_container 
-          width: 100%
-          height: 100%
+          display: block
           position: relative
           overflow: hidden
+          height: 100%
+
           &.hover_active:after
             content: ' '
             width: 40px
@@ -192,16 +196,26 @@
             +border-radius(50%)
             display: block
             position: absolute
-            top: 10px
-            left: 10px
-            // left: 50%
-            // margin-left: -20px
+            bottom: 9%
+            left: 50%
+            margin-left: -20px
             z-index: 9999
             +background-image(image-url("mcom_bcom/icons/placeholder.png"))
             background-repeat: no-repeat
             background-size: 60%
             background-position: center
             background-color: $oj_blue
+
+          +breakpoint(landscape_ipad) 
+            &.hover_active:after
+              bottom: 19%
+              width: 30px
+              height: 30px
+              margin-left: -15px
+          +breakpoint(portrait_ipad)
+            font-size: 88%
+            &.hover_active:after
+              bottom: 25%
 
           .hover 
             position: absolute
@@ -238,12 +252,11 @@
                 +translateY(0px)
 
           .image 
-            max-width: 285px
-            height: 600px
-            margin: 0 autoe
+            height: 100%
             z-index: 50
             position: relative
             background-repeat: no-repeat
             background-size: 100%
+            background-position: center
 
 

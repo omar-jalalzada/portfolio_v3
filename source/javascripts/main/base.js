@@ -63,6 +63,7 @@ $(document).ready(function() {
     // prevEffect  : 'none',
     // nextEffect  : 'none',
     openSpeed: 100,
+    closeSpeed: 10,
     nextSpeed: 100,
     scrollOutside: true,
     beforeLoad: function() {
