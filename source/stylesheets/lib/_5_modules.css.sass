@@ -165,98 +165,134 @@
 
 
 ////
-// Phone in a row display
+// Phones in a row display
 ////
-.phone_displays_in_row_slide
+.phone_mockups_4_in_a_row
   .inner_slide_container
-    max-width: 1224px
-    height: 90%
-    padding: 0 5%
+    // background-color: blue
     & > ul
-      +display-box
-      +box-orient(horizontal)
-      +box-align(stretch)
-      cursor: cursor
-      user-select: none
-      height: 100%
+      overflow: hidden
+      display: block
+      padding: 0 40px
       & > li
-        +box-flex(1)
-        height: 100%
-        padding: 0 10px
-        .hover_container 
-          display: block
+        width: 21%
+        padding: 10px 2%
+        float: left
+        overflow: hidden
+        cursor: pointer
+        // background-color: green
+        .phone_container
+          // background-color: gold
+          width: 240px
+          height: 510px
+          border: 1px solid $oj_light_grey
+          border-radius: 30px
           position: relative
-          overflow: hidden
-          height: 100%
-
-          &.hover_active:after
-            content: ' '
-            width: 40px
-            height: 40px
-            +border-radius(50%)
-            display: block
-            position: absolute
-            bottom: 9%
-            left: 50%
-            margin-left: -20px
-            z-index: 9999
-            +background-image(image-url("mcom_bcom/icons/placeholder.png"))
-            background-repeat: no-repeat
-            background-size: 60%
-            background-position: center
-            background-color: $oj_blue
-
-          +breakpoint(landscape_ipad) 
-            &.hover_active:after
-              bottom: 19%
-              width: 30px
-              height: 30px
-              margin-left: -15px
-          +breakpoint(portrait_ipad)
-            font-size: 88%
-            &.hover_active:after
-              bottom: 25%
-
-          .hover 
-            position: absolute
-            display: block
-            height: 600px
-            width: 100%
-            background-color: rgba(255,255,255,0.98)
-            z-index: 1000
-            top: 6px
-            left: 0
-            opacity: 0
-            .feature
-              max-width: 285px
-              padding: 50px 5% 0 5%
-              .text_container
-                +translateY(6px)
-                +single-transition(all, .4s, cubic-bezier(.5,0,.5,.99))
-                +transition-delay(.1s)
-                p 
-                  border-bottom: 1px solid $oj_red
-                  padding-bottom: 10px
-              ul
-                padding-left: 20px
-                li 
-                  list-style-type: disc
-                  padding-bottom: 15px
-            &.active 
-              top: 0
-              opacity: 1
-              +single-transition(all, .3s, cubic-bezier(.5,0,.5,.99))
-              .circle 
-                +translateY(0px)
-              .text
-                +translateY(0px)
-
-          .image 
-            height: 100%
-            z-index: 50
-            position: relative
+          .screen
+            margin: 50px 10px 0 10px
+            height: 380px
+            // +background-image(image-url("mcom_bcom/5_1_macys_homepage_v2.jpg"))
+            background-color: #ddd
             background-repeat: no-repeat
             background-size: 100%
-            background-position: center
+            background-position: top center
+            border: 3px solid #333
+            border-radius: 2px
+          .info_icon
+            width: 5px
+            height: 5px
+            padding: 15px
+            background-color: $oj_blue
+            +single-transition(background-color, .1s, $custom_ease)
+            border-radius: 50%
+            position: absolute
+            bottom: 15px
+            left: 50%
+            margin-left: -20px
+            .dot
+              width: 2px
+              height: 2px
+              background-color: $oj_light_grey
+              border-radius: 50%
+              position: absolute
+              top: 10px
+              left: 17px
+              +single-transition(all, .3s, $custom_ease)
+            .line
+              width: 2px
+              height: 10px
+              background-color: $oj_light_grey
+              position: absolute
+              top: 15px
+              left: 17px
+              border-radius: 2px
+              +single-transition(all, .3s, $custom_ease)
+          .text
+            opacity: 0
+            // width: 90%
+            // height: 90%
+            padding-top: 60px
+            // +translateY(6px)
+            // +single-transition(all, .4s, cubic-bezier(.5,0,.5,.99))
+            // +transition-delay(.1s)
+            p 
+              border-bottom: 1px solid $oj_red
+              padding-bottom: 10px
+              margin: 0 0 10px 0
+            ul
+              padding-left: 20px
+              li 
+                list-style-type: disc
+                padding-bottom: 15px
 
+        // Hover state
+        &:hover 
+          .phone_container
+            border: 1px solid $oj_grey
+            .info_icon
+              background-color: darken($oj_blue, 10%)
+        // active state  
+        &.show
+          
+          .phone_container 
+            border-color: transparent
+            // +single-transition(all, .3s, $custom_ease)
+            .screen
+              display: none
+            .text 
+              opacity: 1
+            .info_icon
+              background-color: $oj_red
+              .dot
+                width: 2px
+                height: 18px
+                top: 9px
+                left: 17px
+                +rotate(45deg)
+                border-radius: 2px
+                background-color: white
+              .line
+                +rotate(-45deg)
+                height: 18px
+                top: 9px
+                background-color: white
+
+  +breakpoint(landscape_ipad)
+    .inner_slide_container > ul > li
+      .phone_container
+        width: 190px
+        height: 400px
+        font-size: 80%
+        .screen
+          height: 293px
+          margin-top: 40px
+  +breakpoint(portrait_ipad)
+    .inner_slide_container > ul > li
+      .phone_container
+        width: 150px
+        height: 320px
+        font-size: 80%
+        .screen
+          height: 220px
+          margin-top: 30px
 

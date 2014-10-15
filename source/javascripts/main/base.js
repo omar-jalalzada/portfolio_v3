@@ -45,14 +45,18 @@ $(document).ready(function() {
   //
   // adding the hover interaction for the phone displays 
   //
-  $(".hover_container").hover(
-    function () {
-      $(this).find('.hover').addClass("active");
-    },
-    function () {
-      $(this).find('.hover').removeClass("active"); 
-    }
-  );
+  // $(".hover_container").hover(
+  //   function () {
+  //     $(this).find('.hover').addClass("active");
+  //   },
+  //   function () {
+  //     $(this).find('.hover').removeClass("active"); 
+  //   }
+  // );
+  $(".phone_mockups_4_in_a_row li.contains_more_text").click(
+    function(){
+      $(this).toggleClass("show")
+  });
 
 
 
