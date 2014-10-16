@@ -87,24 +87,29 @@
   max-height: 100%
   //border-radius: 3px
 
-#fancybox-loading, .fancybox-close
-  background-image: url('../images/fancy/fancybox_sprite.png')
+// #fancybox-loading, .fancybox-close
+//   background-image: url('../images/fancy/fancybox_sprite.png')
 
 #fancybox-loading
   position: fixed
   top: 50%
   left: 50%
-  margin-top: -22px
-  margin-left: -22px
-  background-position: 0 -108px
-  opacity: 0.8
+  margin-top: -80px
+  margin-left: -80px
   cursor: pointer
   z-index: 8060
+  background-color: white
+  border-radius: 50%
+  padding: 40px
+  +box-shadow(0 50px 250px rgba(0, 0, 0, 0.6))
   div
-    width: 44px
-    height: 44px
-    background: url('../images/fancy/fancybox_loading.gif') center center no-repeat
-    border: 2px solid red
+    width: 60px
+    height: 60px
+    +background(image-url("fancy/loading_spinner_v2.gif"))
+    +rotate(90deg)
+    background-repeat: no-repeat
+    background-size: 100%
+    background-position: center
 
 .fancybox-close
   display: none
@@ -252,15 +257,15 @@
 
 //Retina graphics!
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
-  #fancybox-loading, .fancybox-close
-    background-image: url('../images/fancy/fancybox_sprite@2x.png')
-    background-size: 44px 152px
-    //The size of the normal image, half the size of the hi-res image
-  #fancybox-loading div
-    background-image: url('../images/fancy/fancybox_loading@2x.gif')
-    background-size: 24px 24px
-    //The size of the normal image, half the size of the hi-res image
+// @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
+//   #fancybox-loading, .fancybox-close
+//     background-image: url('../images/fancy/fancybox_sprite@2x.png')
+//     background-size: 44px 152px
+//     //The size of the normal image, half the size of the hi-res image
+//   #fancybox-loading div
+//     background-image: url('../images/fancy/fancybox_loading@2x.gif')
+//     background-size: 24px 24px
+//     //The size of the normal image, half the size of the hi-res image
 
 
 
