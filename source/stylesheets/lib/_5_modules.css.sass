@@ -3,6 +3,9 @@
 ////
 
 .cover_page_slide
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-size: cover
   background-color: #333
   .inner_slide_container
     height: 100%
@@ -13,16 +16,19 @@
       display: table-cell
       vertical-align: middle
       width: 100%
-      font-size: 20px
+      font-size: 120%
       ul
         float: left
-        width: 50%
+        width: 44%
         max-width: 700px
         padding-left: 15%
         overflow: hidden
         color: #fff
         // z-index: 1000
         position: relative
+        +breakpoint(portrait_ipad)
+          width: 80%
+          padding-left: 10%
         li
           display: block
           &.first 
@@ -73,13 +79,61 @@
 
 
 
+
+////
+// Info Icon
+////
+.info_icon
+  border-radius: 50%
+  position: absolute
+  bottom: -20px
+  left: 50%
+  margin-left: -20px
+  // border: 1px solid $oj_blue
+  // padding: 3px
+  +scale(.6)
+  opacity: .5
+  // +single-transition(bottom, .3s, $custom_ease)
+  .inner_circle
+    width: 5px
+    height: 5px
+    padding: 15px
+    background-color: $oj_blue
+    border-radius: 50%
+    +single-transition(background-color, .1s, $custom_ease)
+    position: relative
+  .dot
+    width: 2px
+    height: 2px
+    background-color: $oj_light_grey
+    border-radius: 50%
+    position: absolute
+    top: 10px
+    left: 17px
+    +single-transition(all, .3s, $custom_ease)
+  .line
+    width: 2px
+    height: 10px
+    background-color: $oj_light_grey
+    position: absolute
+    top: 15px
+    left: 17px
+    border-radius: 2px
+    +single-transition(all, .3s, $custom_ease)
+
+.slides .active
+  .info_icon
+    +scale(1)
+    opacity: 1
+    +single-transition(all, .3s, cubic-bezier(0.680, -0.550, 0.265, 1.550), .1s)
+
+
 ////
 // The three cricle slideshow layout
 ////
 .three_circles_h_P
   .main_header
     overflow: hidden
-    // background-color: blue
     h3
       color: $oj_red
       text-align: center
@@ -88,8 +142,6 @@
       text-transform: uppercase
       border-bottom: 1px solid $oj_light_grey
       max-width: 20%
-
-
   .inner_slide_container
     max-width: $custom_max_width
     margin: 0 auto
@@ -107,42 +159,15 @@
           .circle
             width: 20px
             height: 20px
-            padding: 45%
+            padding: 40%
             border-radius: 50%
-            border: 2px solid $oj_blue
+            border: 1px solid $oj_blue
             background-color: #ddd
-            margin: auto auto 20px auto
+            margin: auto auto 20px 0
             position: relative
             background-repeat: no-repeat
             background-size: 101%
             background-position: -1px
-            .inner_circle
-              width: 40px
-              height: 40px
-              border-radius: 50%
-              line-height: 3
-              position: absolute
-              bottom: -20px
-              left: 50%
-              margin-left: -20px
-              font-weight: bold
-              display: none
-            .click_signal_circle 
-              width: 40px
-              height: 40px
-              border-radius: 50%
-              position: absolute
-              bottom: -20px
-              left: 50%
-              margin-left: -20px
-              font-weight: bold
-              color: #fff
-              +background(image-url("mcom_bcom/icons/placeholder.png"))
-              background-repeat: no-repeat
-              background-size: 60%
-              background-position: center
-              background-color: $oj_blue
-
           // text container
           .text_container
             .title
@@ -157,11 +182,7 @@
               color: $p_c
               line-height: 1.6
           &:hover
-            .circle 
-              .click_signal_circle 
-            .text_container
-              opacity: .9
-              .title
+            opacity: .8
 
 
 ////
@@ -184,47 +205,20 @@
           width: 240px
           height: 510px
           border: 1px solid $oj_light_grey
-          border-radius: 30px
+          +border-radius(30px)
           position: relative
-          +single-transition(border, .2s, $custom_ease)
+          // +single-transition(border, .2s, $custom_ease)
           .screen
             margin: 50px 10px 0 10px
             height: 380px
             background-color: #ddd
             background-repeat: no-repeat
             background-size: 100%
-            background-position: top center
-            border: 3px solid #333
-            border-radius: 2px
+            backgroud-position: top center
+            border: 2px solid #777
+            +border-radius(3px)
           .info_icon
-            width: 5px
-            height: 5px
-            padding: 15px
-            background-color: $oj_blue
-            +single-transition(background-color, .1s, $custom_ease)
-            border-radius: 50%
-            position: absolute
             bottom: 15px
-            left: 50%
-            margin-left: -20px
-            .dot
-              width: 2px
-              height: 2px
-              background-color: $oj_light_grey
-              border-radius: 50%
-              position: absolute
-              top: 10px
-              left: 17px
-              +single-transition(all, .3s, $custom_ease)
-            .line
-              width: 2px
-              height: 10px
-              background-color: $oj_light_grey
-              position: absolute
-              top: 15px
-              left: 17px
-              border-radius: 2px
-              +single-transition(all, .3s, $custom_ease)
           .text
             opacity: 0
             padding-top: 60px
@@ -243,8 +237,8 @@
           cursor: pointer
           .phone_container
             border: 1px solid $oj_grey
-            .info_icon
-              // opacity: .8
+            .info_icon          
+              opacity: .8
         // active state  
         &.show
           &:hover .phone_container 
@@ -256,7 +250,9 @@
             .text 
               opacity: 1
             .info_icon
-              background-color: $oj_red
+              // border: 1px solid transparent
+              .inner_circle
+                background-color: $oj_red
               .dot
                 width: 2px
                 height: 18px

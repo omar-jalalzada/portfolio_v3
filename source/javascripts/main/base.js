@@ -95,19 +95,19 @@ $(document).ready(function() {
 //
 // arrow key guide
 //
-if(!readCookie("schmoney_in_my_pocket")) {
-  console.log("stay based.")
-  $(function() {
-    $(".arrow_keys_container").addClass("show").delay(5000).queue(function(next){
-        // $(this).addClass("hide");
-        $(this).delay(200).queue(function(next){
-          // $(this).remove();
-        });
-        next();
-    });
-    // createCookie("schmoney_in_my_pocket","cause_im_lit", 1);
-  });
-}
+// if(!readCookie("schmoney_in_my_pocket")) {
+//   console.log("stay based.")
+//   $(function() {
+//     $(".arrow_keys_container").addClass("show").delay(5000).queue(function(next){
+//         // $(this).addClass("hide");
+//         $(this).delay(200).queue(function(next){
+//           // $(this).remove();
+//         });
+//         next();
+//     });
+//     // createCookie("schmoney_in_my_pocket","cause_im_lit", 1);
+//   });
+// }
 
 function do_it(arrow_div) {
   var selecta = ".arrow_keys_container " + arrow_div

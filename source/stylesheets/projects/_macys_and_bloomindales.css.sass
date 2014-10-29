@@ -10,34 +10,32 @@
         margin: 0 auto
         .iphone_bcom_container
           width: 45%
-          max-width: 255px
+          max-width: 240px
           height: 590px
           margin: auto 45% auto auto
           z-index: 2
           position: relative
-          +background-image(image-url("mcom_bcom/2_iphone_bcom_main.png"))
+          +background-image(image-url("mcom_bcom/main/iphone_6_main.png"))
           background-repeat: no-repeat
           background-size: 100%
+          // border: 1px solid blue
         .logo
-          width: 50%
+          width: 160px
           height: 140px
           position: absolute
           top: 50%
-          left: 50%
-          margin-left: -24%
+          left: 65%
+          margin-left: -80px
+          margin-top: -60px
           z-index: 1
-          +background-image(image-url("mcom_bcom/2_main_logo.png"))
+          +background-image(image-url("mcom_bcom/main/mcom_bcom_logo.png"))
           background-repeat: no-repeat
           background-size: 100%
-
-          // margin: -250px auto 0 auto
+          // border: 1px solid red
 
 
     .slide_2
-      +background(image-url("mcom_bcom/2_bg_cover_2.png"))
-      background-repeat: no-repeat
-      background-attachment: fixed
-      background-size: cover
+      +background-image(image-url("mcom_bcom/2_bg_cover_2.png"))
       .inner_slide_container
         .left_content_block
         .right_content_block
