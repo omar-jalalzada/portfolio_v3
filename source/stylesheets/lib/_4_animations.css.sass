@@ -1,6 +1,6 @@
 @import compass/css3
 
-.slides
+.slides, .non_slide_pages
   .animate_fade_base
     opacity: 0
   //.fade_in
@@ -14,16 +14,16 @@
   .animate_fade_up
     +translateY(10px)
 
-.slides .active
-  .animate_fade_base  
-    opacity: 1
-    // +single-transition(transform, .3s, cubic-bezier(.5,0,.5,.99))
-    +transition-property(transform, opacity)
-    +transition-duration(.4s)
-    +transition-timing-function($custom_ease)
-    +transition-delay(0)
-    +translateX(0px)
-    +translateY(0px)
+  .active
+    .animate_fade_base  
+      opacity: 1
+      // +single-transition(transform, .3s, cubic-bezier(.5,0,.5,.99))
+      +transition-property(transform, opacity)
+      +transition-duration(.4s)
+      +transition-timing-function($custom_ease)
+      +transition-delay(0)
+      +translateX(0px)
+      +translateY(0px)
 
   .animate_seq_1
     +transition-delay(.1s !important) 

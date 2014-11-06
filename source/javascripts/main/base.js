@@ -58,7 +58,10 @@ $(document).ready(function() {
       $(this).toggleClass("show")
   });
 
-
+  setTimeout(
+    function() {
+      $(".non_slide_pages .content_holder").addClass("active")
+  }, 500);
 
   //
   // Fancy Box Slideswho
@@ -88,9 +91,11 @@ $(document).ready(function() {
       }
     }
   });
+  
+
+
 
 });
-
 
 //
 // arrow key guide

@@ -183,6 +183,11 @@
               line-height: 1.6
           &:hover
             opacity: .8
+  &.nope_its_two
+    ul
+      li.first_of_two
+        padding-left: 16%
+
 
 
 ////
@@ -266,6 +271,13 @@
                 height: 18px
                 top: 9px
                 background-color: white
+  &.android
+    ul li .phone_container
+      height: 480px
+      +border-radius(10px)
+      .screen
+        margin: 30px 10px 0 10px
+
 
   +breakpoint(landscape_ipad)
     .inner_slide_container > ul > li
@@ -276,13 +288,17 @@
         .screen
           height: 293px
           margin-top: 40px
+        .info_icon
   +breakpoint(portrait_ipad)
     .inner_slide_container > ul > li
       .phone_container
         width: 150px
-        height: 320px
+        height: 310px
         font-size: 80%
+        +border-radius(20px)
         .screen
-          height: 220px
+          height: 223px
           margin-top: 30px
+        .info_icon
+          bottom: 10px
 
