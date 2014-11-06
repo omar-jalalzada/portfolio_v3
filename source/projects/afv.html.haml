@@ -1,10 +1,182 @@
 %article.slide.slide_1
-  %h1 P4_Slider_1
-%article.slide.slide_2
-  %h1 P4_Slider_2
-%article.slide.slide_3
-  %h1 P4_Slider_3
-%article.slide.slide_4
-  %h1 P4_Slider_4
-%article.slide.slide_5
-  %h1 P4_Slider_5
+  .inner_slide_container
+    .nexus_container
+      .nexus_android_container.animate_fade_base.animate_fade_left
+      .text.animate_fade_base.animate_fade_right.animate_seq_1
+        %span
+          “A relic of a bygone time.”,
+        %span
+          “The uncoolest show on TV.”
+        %span
+          “Inexplicably never-ending, like a Cher farewell tour.”  — 
+        .nyt_logo
+
+
+
+%article.slide.slide_2.cover_page_slide
+  .inner_slide_container
+    .cover_container
+      %ul
+        %li.first
+          %span.c_1.header.animate_fade_base.animate_fade_right About the project:
+          %span.body.animate_fade_base.animate_fade_right.animate_seq_1
+            %b America's Funniest Home Videos
+            wanted to simplify and update their Android app.
+        %li.second
+          %span.c_2.header.animate_fade_base.animate_fade_right.animate_seq_1 My Role:
+          %span.body.animate_fade_base.animate_fade_right.animate_seq_2
+            Lead product designer
+    .right_content_block
+      .image.animate_fade_base.animate_seq_2
+      .line.animate_fade_base.animate_fade_down
+    / .animate_fade_base.animate_fade_up.animate_seq_1
+
+            
+    
+%article.slide.slide_3.three_circles_h_P.nope_its_two
+  .inner_slide_container
+    .main_header
+      %h3 The Process
+    %ul
+      %li.first_of_two
+        %a.anchor_container.fancybox-thumb{"href"=>"images/afv/process/wireframes_guide.png",  "rel"=>"fancybox-thumb-afv-process", "title"=>"Wireframe" }
+          .circle.c1.animate_fade_base.animate_fade_up
+            .info_icon
+              .inner_circle
+                .dot
+                .line
+          .text_container
+            .title.animate_fade_base.animate_fade_down Wireframes
+            .text.animate_fade_base.animate_fade_down
+              Humanized our efforts by 
+              %b re-framing the problems.
+              By taking a step back we understood the context better and did a brain-dump 
+      %li
+        %a.fancybox-thumb{"href"=>"images/afv/process/Wireframes_annotations_2.jpg",  "rel"=>"fancybox-thumb-afv-process", "title"=>"Annotated Wires" }
+        %a.fancybox-thumb{"href"=>"images/afv/process/Wireframes_annotations.jpg",  "rel"=>"fancybox-thumb-afv-process", "title"=>"Annotated Wires II" }
+        %a.anchor_container.fancybox-thumb{"href"=>"images/afv/process/guideline_1.png",  "rel"=>"fancybox-thumb-afv-process", "title"=>"Wireframing Prototypes" }
+          .circle.c2.animate_fade_base.animate_fade_up.animate_seq_1
+            .info_icon
+              .inner_circle
+                .dot
+                .line
+          .text_container
+            .title.animate_fade_base.animate_fade_down.animate_seq_1 App Guideline
+            .text.animate_fade_base.animate_fade_down.animate_seq_2  
+              Conducted in-person 
+              %b interviews with subject matter experts 
+              and users. It hepled us distill and analyze key themes and patterns to drive functionality.
+        %a.fancybox-thumb{"href"=>"images/afv/process/guideline_2.png",  "rel"=>"fancybox-thumb-afv-process", "title"=>"Annotated Wires II" }
+        %a.fancybox-thumb{"href"=>"images/afv/process/guideline_3.png",  "rel"=>"fancybox-thumb-afv-process", "title"=>"Annotated Wires II" }
+        %a.fancybox-thumb{"href"=>"images/afv/process/pixel_aligned_icons.png",  "rel"=>"fancybox-thumb-afv-process", "title"=>"Pixel fitting fun" }
+      / %li
+      /   %a.anchor_container.fancybox-thumb{"href"=>"images/sfmoma/process/guideline.png",  "rel"=>"fancybox-thumb-afv-process", "title"=>"Design Guidelines" }
+      /     .circle.c3.animate_fade_base.animate_fade_up.animate_seq_2
+      /       .info_icon
+      /         .inner_circle
+      /           .dot
+      /           .line
+      /     .text_container
+      /       .title.animate_fade_base.animate_fade_down.animate_seq_2  design guidelines
+      /       .text.animate_fade_base.animate_fade_down.animate_seq_3 
+      /         Defined a clear path to product based on the 
+      /         %b user-story 
+      /         and for each individual story we iterated through 
+      /         %b lo-fi wireframes.
+
+
+%article.slide.slide_4.phone_mockups_4_in_a_row.android
+  .inner_slide_container
+    %ul
+      %li.contains_more_text
+        .phone_container.animate_fade_base.animate_fade_up
+          .screen.s1
+          .text
+            %p 
+              A clutter free Home-screen with a clear eye path and a digestible overview
+            %ul
+              %li
+                Full-screen advertising to allow a thematic experience
+              %li
+                One tap access to Search, Scan, Shop and other prioritized CTAs
+              %li
+                Personalized content based on the users bio and shopping preferences
+          / .info_icon
+          /   .inner_circle
+          /     .dot
+          /     .line
+      %li.contains_more_text
+        .phone_container.animate_fade_base.animate_fade_up.animate_seq_1
+          .screen.s2
+          .text
+            %p 
+              A flat hierarchy that provides a more intuitive navigation
+            %ul
+              %li
+                Breaks content into bite-size pieces to prevent disorientation
+              %li
+                Contextually aware content for a richer in-store experience
+
+          / .info_icon
+          /   .inner_circle
+          /     .dot
+          /     .line
+      %li
+        .phone_container.animate_fade_base.animate_fade_up.animate_seq_1
+          .screen.s3
+          .text
+      %li.contains_more_text
+        .phone_container.animate_fade_base.animate_fade_up.animate_seq_2
+          .screen.s4
+          .text
+            %p 
+              Neatly organized Product Display Page with a focus on imagery and functional personalization
+            %ul
+              %li
+                Incorporating a full-screen image gallery with embedded videos
+              %li
+                Elevating key information outside of accordions for easy access
+              %li
+                Indicating in-store availability and product suggestions
+          / .info_icon
+          /   .inner_circle
+          /     .dot
+          /     .line
+
+%article.slide.slide_5.phone_mockups_4_in_a_row.android
+  .inner_slide_container
+    %ul
+      %li
+        .phone_container.animate_fade_base.animate_fade_up.animate_seq_1
+          .screen.s1
+          .text
+      %li
+        .phone_container.animate_fade_base.animate_fade_up.animate_seq_1
+          .screen.s2
+          .text
+      %li.landscape
+        .phone_container.animate_fade_base.animate_fade_up.animate_seq_1
+          .screen.s3
+          .text
+      %li.hide
+        .phone_container.animate_fade_base.animate_fade_up.animate_seq_2
+          .screen.s4
+          .text
+
+
+%article.slide.slide_6.cover_page_slide
+  .inner_slide_container
+    .cover_container
+      %ul
+        %li.first
+          %span.c_1.header.animate_fade_base.animate_fade_right Conclusion
+          %span.body.animate_fade_base.animate_fade_right.animate_seq_1
+            The design strategy 
+        %li.second
+          %span.c_2.header.animate_fade_base.animate_fade_right.animate_seq_1  Learnings & Footnotes:
+          %span.body.animate_fade_base.animate_fade_right.animate_seq_2
+            By conducting stakeholder 
+
+    .right_content_block
+      .image.animate_fade_base.animate_seq_2
+      .line.animate_fade_base.animate_fade_down

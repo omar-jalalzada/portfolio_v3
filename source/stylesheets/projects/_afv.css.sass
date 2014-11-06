@@ -1,0 +1,107 @@
+#fullpage
+  .project_3
+    .slide_1
+      .inner_slide_container
+        .nexus_container
+          // border: 1px solid red
+          overflow: hidden
+          max-width: 600px
+          margin: 0 auto
+          .nexus_android_container
+            // border: 1px solid green
+            width: 310px
+            height: 515px
+            float: left
+            +background-image(image-url("afv/afv_home.png"))
+            background-repeat: no-repeat
+            background-size: 100%
+
+          .text
+            // border: 1px solid blue
+            width: 280px
+            height: 120px
+            position: relative
+            float: right
+            margin-top: 160px
+            z-index: 1
+            font-style: italic
+            span
+              display: block
+              margin: 0 0 10px 0
+            .nyt_logo
+              width: 120px
+              height: 22px
+              position: absolute
+              right: 0
+              bottom: 0
+              +background-image(image-url("afv/nyt_logo.png"))
+              background-repeat: no-repeat
+              background-size: 100%
+              opacity: 0.2
+
+    .slide_2
+      +background-image(image-url("afv/main_cover_bg.jpg"))
+
+    .slide_3
+      .inner_slide_container
+        ul
+          li
+            .circle
+              &.c1
+                +background-image(image-url("afv/process/c1.png"))
+              &.c2
+                +background-image(image-url("afv/process/c2.png"))
+              &.c3
+                +background-image(image-url("sfmoma/slide_3_c3.png"))
+
+    .slide_4 
+      .inner_slide_container
+        .phone_container
+          .screen
+            &.s1
+              +background-image(image-url("afv/screens/0_1_onboarding.png"))
+            &.s2
+              +background-image(image-url("afv/screens/1_0_browse.png"))
+            &.s3
+              +background-image(image-url("afv/screens/1_1_browse_nav.png"))
+            &.s4
+              +background-image(image-url("afv/screens/3_0_kid_mode_settings.png"))
+    
+    .slide_5
+      .inner_slide_container
+        .phone_container
+          .screen
+            &.s1
+              +background-image(image-url("afv/screens/7_0_Upload.png"))
+            &.s2
+              
+              +background-image(image-url("afv/screens/2_0_player.png"))
+            &.s3
+              +background-image(image-url("afv/screens/2_1_player_landscape.png"))
+            &.s4
+              // +background-image(image-url("afv/screens/3_0_kid_mode_settings.png"))
+        & > ul > li
+          &.landscape
+            +transform(rotate(-90deg) translateY(100px))
+            
+            // +translateX(50px)
+            // border: 1px solid red
+            // width: 42%
+            // .phone_container
+            //   padding: 0
+            //   margin: 0
+            //   width: auto
+            //   height: auto
+            //   .screen
+            //     height: 300px
+            //     width: 460px
+            //     padding: 0
+            //     margin: 0
+            //     // height: 360px
+          &.hide
+            display: none
+
+
+
+    .slide_6
+      +background-image(image-url("afv/end_cover_bg.jpg"))
