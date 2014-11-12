@@ -137,6 +137,10 @@ $(document).ready(function() {
 });
 
 
+var w_loc = window.location.hash 
+if (w_loc == "#oj_bio" || w_loc ==  "") {
+  $("body").addClass("hide_nav")
+};
 
 
 
