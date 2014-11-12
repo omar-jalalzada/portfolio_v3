@@ -7,12 +7,19 @@ $(document).ready(function() {
       easing: 'easeInOutQuart',
       resize: false,
 
-      menu: true,
-      menu: '#main_section_nav',
-      anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-      
-      slidesNavigation: true,
-      navigationTooltips: ['firstSlide', 'secondSlide'],
+      // menu: true,
+      menu: '#main_bottom_nav',
+      anchors: ['oj_bio','iOS_App_Macys', 'Adaptive_Site_SFMOMA', 'Andriod_App_AFV', 'Branding_Moovweb', 'Arc_Al_Jazeera_Hackathon'],
+      autoScrolling: true,
+      loopHorizontal: false,
+      // continuousVertical: true,
+      keyboardScrolling: true,
+      // paddingBottom: '10px',
+      // slidesNavigation: true,
+
+      // navigationTooltips: ['firstSlide', 'secondSlide'],
+      // slidesNavigation: true,
+      // slidesNavPosition: 'bottom',
 
       // slidesColor: ['#fff', '#eee', '#ddd', '#ccc', '#bbb'],
       // verticalCentered: true,
@@ -58,10 +65,10 @@ $(document).ready(function() {
       $(this).toggleClass("show")
   });
 
-  setTimeout(
-    function() {
-      $(".non_slide_pages .content_holder").addClass("active")
-  }, 500);
+  // setTimeout(
+  //   function() {
+  //     $(".non_slide_pages .content_holder").addClass("active")
+  // }, 500);
 
   //
   // Fancy Box Slideswho
@@ -95,9 +102,47 @@ $(document).ready(function() {
 
 
 
+
+
+  // window.location.pathname
+
+  $(window).hashchange( function(){
+  // Alerts every time the hash changes!
+    // alert( location.hash );
+    $("#main_bottom_nav a").each(function(){
+      var c_url = $(this).attr("href")
+      
+      if(location.hash == c_url) {
+        $(this).addClass("active")
+        console.log(c_url)
+      } else {
+        $(this).removeClass("active")
+      }
+    });
+
+
+    if (location.hash == "#oj_bio") {
+      $("body").addClass("hide_nav")
+    } else {
+      $("body").removeClass("hide_nav")
+    };
+
+
+  });
+
+
+
+
+
 });
 
-//
+
+
+
+
+// $("#main_bottom_nav .slide_link_containers a").eac
+
+// //
 // arrow key guide
 //
 // if(!readCookie("schmoney_in_my_pocket")) {
@@ -114,32 +159,32 @@ $(document).ready(function() {
 //   });
 // }
 
-function do_it(arrow_div) {
-  var selecta = ".arrow_keys_container " + arrow_div
-  console.log(selecta)
-  $(selecta).addClass("pressed")
-  setTimeout(function(){
-    $(selecta).removeClass("pressed")
-  }, 200)
-};
+// function do_it(arrow_div) {
+//   var selecta = ".arrow_keys_container " + arrow_div
+//   console.log(selecta)
+//   $(selecta).addClass("pressed")
+//   setTimeout(function(){
+//     $(selecta).removeClass("pressed")
+//   }, 200)
+// };
 
-$(window).keydown(function(e) {
-  key = e.keyCode
-  switch(key) {
-    case 38:
-      do_it(".a_1")
-    break;
-    case 37:
-      do_it(".a_2")
-    break;
-    case 39:
-      do_it(".a_4")
-    break;
-    case 40:
-      do_it(".a_3")
-    break;
-  }
-});
+// $(window).keydown(function(e) {
+//   key = e.keyCode
+//   switch(key) {
+//     case 38:
+//       do_it(".a_1")
+//     break;
+//     case 37:
+//       do_it(".a_2")
+//     break;
+//     case 39:
+//       do_it(".a_4")
+//     break;
+//     case 40:
+//       do_it(".a_3")
+//     break;
+//   }
+// });
 
 // // var xTriggered = 0;
 // $( ".arrow_keys_container" ).keydown(function( event ) {

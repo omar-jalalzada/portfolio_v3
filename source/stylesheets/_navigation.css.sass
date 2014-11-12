@@ -58,7 +58,8 @@
 ////
 // Bottom slide navigation
 ////
-.fullPage-slidesNav
+
+.fp-slidesNav
   position: absolute
   z-index: 4
   left: 50%
@@ -99,20 +100,21 @@
 ////
 // Directional arrows on both sides
 ////
-.controlArrow
-  display: none !important
-  width: 20px
-  height: 20px
+.fp-controlArrow
+  // display: none !important
+  width: 10px
+  height: 10px
   border: 1px solid transparent
   border-bottom-color: $oj_grey
   border-left-color: $oj_grey
   position: absolute
   bottom: 20px
   cursor: pointer
-  &.prev
+  z-index: 9999999
+  &.fp-prev
     +rotate(45deg)
     left: 20px
-  &.next
+  &.fp-next
     +rotate(-135deg)
     right: 20px
 
@@ -216,3 +218,182 @@
   //   //       & > div
   //   //         +single-transition(all, 0.5s, cubic-bezier(.5,0,.5,.99))
   //   //         +translateY(20px)
+
+
+
+
+
+
+
+
+
+
+
+// === Hi ===
+
+#main_bottom_nav
+  overflow: hidden
+  position: absolute
+  bottom: 20px
+  left: 50%
+  margin-left: 15%
+  margin-left: -300px
+  z-index: 9999
+  li
+    overflow: hidden
+    float: left
+    .section_link_container_bio
+      width: 36px
+      height: 36px
+      display: block
+      +border-radius(20px)
+      border: 1px solid $oj_grey
+      overflow: hidden
+      color: transparent
+      +background(image-url("omar_jalalzada.jpeg"))
+      background-repeat: no-repeat
+      background-size: 100%
+
+
+    // Not Active Section Link Container
+    .section_link_container
+      width: 36px
+      height: 36px
+      margin-left: 20px
+      position: relative
+      display: block
+      float: left
+      +border-radius(20px)
+      border: 1px solid $oj_grey
+      white-space: nowrap
+      color: $oj_grey
+      text-indent: 500px
+      +transition-property(width)
+      +transition-duration(.2s)
+      +transition-timing-function($custom_ease)
+
+      // the little circle inside the big one
+      &:after
+        content: ' '
+        display: block
+        width: 12px
+        height: 12px
+        position: absolute
+        top: 12px
+        left: 12px
+        background-color: $oj_grey
+        +border-radius(100px)
+        +scale(.5)
+        +transition-property(all)
+        +transition-duration(.2s)
+        +transition-timing-function($custom_ease)
+      // the line before the big circle to connect them
+      &:before
+        content: ' '
+        display: block
+        position: absolute
+        width: 20px
+        height: 1px
+        background-color: $oj_grey
+        top: 18px
+        left: -21px
+
+      // when the browser is on the main landing page
+      &.active
+        color: $oj_blue
+        font-weight: bold
+      // on hover
+      &:hover
+        border: 1px solid $oj_blue
+        color: darken($oj_blue, 10%)
+        &:after
+          background-color: darken($oj_blue, 10%)
+          +scale(.7)
+
+    
+
+    // Active Section Link Container
+    &.active
+      .section_link_container
+        text-align: center
+        width: 190px
+        line-height: 1.2
+        text-indent: 10px
+        border: 1px solid transparent
+        border-left-color: $oj_grey
+        height: 19px
+        +border-radius(0px)
+        margin-top: 9px
+        &:after
+          display: none
+        &:before
+          top: 8px
+
+
+
+      .slide_link_containers
+        overflow: hidden
+        margin-top: 3px
+        position: relative
+        .bracket
+          display: block
+          position: absolute
+          width: 1px
+          height: 20px
+          background-color: $oj_grey
+          top: 6px
+          right: 0px
+        a
+          display: block
+          float: left
+          margin-right: 2px
+          padding: 10px
+          span
+            display: block
+            width: 12px
+            height: 12px
+            background: $oj_grey
+            +scale(.5)
+            +border-radius(100px)
+            +transition-property(all)
+            +transition-duration(.2s)
+            +transition-timing-function($custom_ease)
+          &.active span, &.active:hover span
+            background: $oj_blue
+            +scale(1)
+          &.active:hover span
+            background-color: darken($oj_blue, 10%)
+          &:hover span
+            background: darken($oj_grey, 20%)
+            +scale(.7)
+    &.first_link
+      &.active
+        .section_link_container
+          border-left-color: transparent
+          &:before
+            background-color: transparent
+  
+
+
+    // manually sizing some of the nav text
+    &.project_1.active
+      .section_link_container
+        width: 150px
+    &.project_2.active
+      .section_link_container
+        width: 210px
+    &.project_3.active
+      .section_link_container
+        width: 170px
+    &.project_5.active
+      .section_link_container
+        width: 220px
+
+
+
+.hide_nav #main_bottom_nav 
+  display: none !important
+
+
+
+

@@ -6,20 +6,23 @@ body_class: index
 = partial "partials/navigation"
 
 #fullpage
-  %section.section.project_1{"data-menuanchor" => "firstPage", "class" => "active"} 
+  %section.section.project_0{"data-menuanchor" => "oj_bio", "class" => "active"} 
+    = partial "pages/bio"
+
+  %section.section.project_1{"data-menuanchor" => "iOS_App_Macys"} 
     = partial "projects/macys_and_bloomindales"
 
-  %section.section.project_2{"data-menuanchor" => "secondPage"} 
+  %section.section.project_2{"data-menuanchor" => "Adaptive_Site_SFMOMA"} 
     = partial "projects/sfmoma"
 
-  %section.section.project_3{"data-menuanchor" => "thirdPage"}
+  %section.section.project_3{"data-menuanchor" => "Andriod_App_AFV"}
     = partial "projects/afv"
 
-  %section.section.project_4{"data-menuanchor" => "fourthPage"} 
+  %section.section.project_4{"data-menuanchor" => "Branding_Moovweb"} 
     = partial "projects/moovweb"
   
-  / %section.section{"data-menuanchor" => "lastPage"} 
-  /   = partial "projects/project_5"
+  %section.section{"data-menuanchor" => "Arc_Al_Jazeera_Hackathon"} 
+    = partial "projects/arc"
 
 #main_header
 
