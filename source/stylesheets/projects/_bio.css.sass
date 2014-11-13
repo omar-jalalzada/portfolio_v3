@@ -3,7 +3,7 @@
     width: 100%
     .slide_1
       // +background(image-url("bio/himalayas_bg.jpg"))
-      +background(image-url("bio/omar_jalalzada_bg.jpg"))
+      +background(image-url("bio/omar_jalalzada_bg_v4.jpg"))
       background-repeat: no-repeat
       background-size: cover
       // +breakpoint(landscape_ipad)
@@ -15,7 +15,7 @@
         overflow: hidden
         height: 100%
         width: 100%
-        +background(image-url("dots_v2.png"))
+        +background(image-url("ui_elements/dots_v2.png"))
         background-color: rgba(0,0,0,0.3)
         .main_bio_container
           // display: table
@@ -48,14 +48,15 @@
                   width: 30px
                   height: 30px
                   margin-right: 10px
-                  background-color: rgba(255,255,255,.2)
+                  // background-color: rgba(255,255,255,.1)
+                  border: 1px solid rgba(255,255,255,.2)
                   +border-radius(20px)
                   float: left
                   padding: 5px
                   &:hover 
                     background-color: rgba(255,255,255,.4)
                   .icon
-                    +background-image(image-url("social_bio_icons.png"))
+                    +background-image(image-url("ui_elements/social_bio_icons.png"))
                     background-repeat: no-repeat
                     background-size: 150px 30px
                     width: 30px

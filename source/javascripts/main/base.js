@@ -35,8 +35,8 @@ $(document).ready(function() {
       // afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
 
       //   //first slide of the second section
-      //   if(index == '2' && slideIndex == 3){
-
+      //   if(index == '1' && slideIndex == 2){
+      //     alert("hi");
       //   }
 
       //   //second slide of the second section (supposing #secondSlide is the
@@ -45,6 +45,20 @@ $(document).ready(function() {
       //       alert("Second slide loaded");
       //   }
       // }
+
+
+
+      //----------------------------------------
+      // hide nav from the homepage after everything is loaded.
+      afterRender: function(){
+        // alert("The resulting DOM stucture is ready");
+        var w_loc = window.location.hash 
+        if (w_loc == "#oj_bio" || w_loc ==  "") {
+          $("body").addClass("hide_nav")
+        };
+      }
+      //----------------------------------------
+
     });
 
 
@@ -103,9 +117,9 @@ $(document).ready(function() {
 
 
 
-
-  // window.location.pathname
-
+  //----------------------------------------
+  // add active class to navigation
+  
   $(window).hashchange( function(){
   // Alerts every time the hash changes!
     // alert( location.hash );
@@ -126,21 +140,13 @@ $(document).ready(function() {
     } else {
       $("body").removeClass("hide_nav")
     };
-
-
   });
-
-
-
+  //----------------------------------------
 
 
 });
 
 
-var w_loc = window.location.hash 
-if (w_loc == "#oj_bio" || w_loc ==  "") {
-  $("body").addClass("hide_nav")
-};
 
 
 
