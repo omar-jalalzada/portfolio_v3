@@ -1,7 +1,6 @@
 ////
 // Cover Page Design
 ////
-
 .cover_page_slide
   background-repeat: no-repeat
   background-attachment: fixed
@@ -18,18 +17,10 @@
       width: 100%
       font-size: 120%
       ul
-        // float: left
-        // width: 44%
         max-width: 600px
-        // padding-left: 15%
         overflow: hidden
         color: #fff
-        // z-index: 1000
         position: relative
-        // +breakpoint(portrait_ipad)
-        //   width: 80%
-        //   padding-left: 10%
-        // border: 1px solid red
         margin: auto
         li
           display: block
@@ -49,38 +40,6 @@
             b 
               font-weight: bold
 
-    // .right_content_block
-    //   width: 45%
-    //   max-width: 500px
-    //   height: 450px
-    //   position: absolute
-    //   bottom: 2%
-    //   right: 2%
-    //   z-index: 100
-    //   +breakpoint(landscape_ipad)
-    //     bottom: -100px
-    //   +breakpoint(portrait_ipad)
-    //     display: none
-    //   .image
-    //     width: 100%
-    //     height: 100%
-    //     z-index: 10000
-    //     position: relative
-    //     background-repeat: no-repeat
-    //     background-size: 100%
-    //   .line
-    //     content: ' '
-    //     width: 200%
-    //     height: 1px
-    //     background-color: rgba(255,255,255,0.2)
-    //     display: block
-    //     margin-left: -250px
-    //     margin-top: -250px
-    //     z-index: 1000
-    //     +rotate(-45deg)
-
-
-
 
 ////
 // Info Icon
@@ -91,11 +50,10 @@
   bottom: -20px
   left: 50%
   margin-left: -20px
-  // border: 1px solid $oj_blue
-  // padding: 3px
   +scale(.6)
   opacity: .5
-  // +single-transition(bottom, .3s, $custom_ease)
+  border: 2px solid white
+  +box-shadow(0px 0px 0px 40px rgba($oj_blue, .2))
   .inner_circle
     width: 5px
     height: 5px
@@ -104,10 +62,16 @@
     border-radius: 50%
     +single-transition(background-color, .1s, $custom_ease)
     position: relative
+    +background-image(image-url("ui_elements/tap_icon.png"))
+    background-repeat: no-repeat
+    background-size: 60%
+    background-position: 10px 10px
+
+    
   .dot
     width: 2px
     height: 2px
-    background-color: $oj_light_grey
+    // background-color: $oj_light_grey
     border-radius: 50%
     position: absolute
     top: 10px
@@ -116,7 +80,7 @@
   .line
     width: 2px
     height: 10px
-    background-color: $oj_light_grey
+    // background-color: $oj_light_grey
     position: absolute
     top: 15px
     left: 17px
@@ -127,7 +91,11 @@
   .info_icon
     +scale(1)
     opacity: 1
-    +single-transition(all, .3s, cubic-bezier(0.680, -0.550, 0.265, 1.550), .1s)
+    // +single-transition(all, .5s, cubic-bezier(0.680, -0.550, 0.265, 1.550), .1s)
+    +single-transition(all, .5s, $custom_ease)
+    +box-shadow(0px 0px 0px 1px rgba($oj_blue, .6))
+    .inner_circle
+      
 
 
 ////
@@ -144,6 +112,7 @@
       text-transform: uppercase
       border-bottom: 1px solid $oj_light_grey
       max-width: 20%
+      // border: 1px solid red
   .inner_slide_container
     max-width: $custom_max_width
     margin: 0 auto
@@ -172,6 +141,7 @@
             background-position: -1px
           // text container
           .text_container
+            // text-align: center
             .title
               font-size: $sh_fs
               color: $oj_blue
@@ -189,7 +159,6 @@
     ul
       li.first_of_two
         padding-left: 16%
-
 
 
 ////
@@ -214,14 +183,13 @@
           border: 1px solid $oj_light_grey
           +border-radius(30px)
           position: relative
-          // +single-transition(border, .2s, $custom_ease)
           .screen
             margin: 50px 10px 0 10px
             height: 380px
             background-color: #ddd
             background-repeat: no-repeat
             background-size: 100%
-            backgroud-position: top center
+            background-position: top center
             border: 2px solid #777
             +border-radius(3px)
           .info_icon
@@ -238,18 +206,22 @@
               li 
                 list-style-type: disc
                 padding-bottom: 15px
-
         // Hover state
         &.contains_more_text:hover 
           cursor: pointer
           .phone_container
             border: 1px solid $oj_grey
-            .info_icon          
-              opacity: .8
+            .info_icon
+              .inner_circle
+                background-color: lighten($oj_blue, 10%)          
         // active state  
         &.show
           &:hover .phone_container 
             border-color: transparent
+            .info_icon
+              +box-shadow(0px 0px 0px 1px rgba($oj_red, .6))
+              .inner_circle
+                background-color: lighten($oj_red, 10%)   
           .phone_container 
             border-color: transparent
             .screen
@@ -257,9 +229,10 @@
             .text 
               opacity: 1
             .info_icon
-              // border: 1px solid transparent
+              +box-shadow(0px 0px 0px 1px rgba($oj_red, .6))
               .inner_circle
                 background-color: $oj_red
+                background-image: none
               .dot
                 width: 2px
                 height: 18px
@@ -279,7 +252,6 @@
       +border-radius(10px)
       .screen
         margin: 30px 10px 0 10px
-
 
   +breakpoint(landscape_ipad)
     .inner_slide_container > ul > li
@@ -305,9 +277,9 @@
           bottom: 10px
 
 
-
-
-
+////
+// PDF Containers & Links
+////
 .pdf_link_module_slide
   .pdf_link_module
     display: block
