@@ -1,5 +1,4 @@
 body 
-  // font-family: "museo-sans",sans-serif
   font-family: "proxima-nova",sans-serif
   color: #555
   min-width: 768px
@@ -10,50 +9,47 @@ body
     font-size: 14px
   
   #main_header
-
     +breakpoint(landscape_ipad) 
       border-top: 5px solid yellow
     +breakpoint(portrait_ipad) 
       border-top: 5px solid red
-    // @include breakpoint(mama-bear) { width: 80%; }
-    // @include breakpoint(baby-bear) { width: 95%; }
+      
+    // position: absolute
+    // width: 100%
+    // height: 70px
+    // top: 0
+    // left: 0
+    // z-index: 100
+    // .inner_main_header
+    //   display: none
+    //   width: 100%
+    //   overflow: hidden
+    //   a 
+    //     display: block
+    //     width: 30px
+    //     height: 30px
+    //     float: left
+    //     margin: 14px
+    //     color: transparent
+    //     overflow: hidden
+    //     &.logo_anchor
+    //       +background(image-url("omar_jalalzada_logo.png"))
+    //       background-repeat: no-repeat
+    //       background-size: 100%
+    //       &.bio_logo
+    //         display: none
+    //         // +background(image-url("omar_jalalzada_logo_white.png"))
+    //         // background-repeat: no-repeat
+    //         // background-size: 100%
 
-    position: absolute
-    width: 100%
-    height: 70px
-    top: 0
-    left: 0
-    z-index: 100
-    .inner_main_header
-      display: none
-      width: 100%
-      overflow: hidden
-      a 
-        display: block
-        width: 30px
-        height: 30px
-        float: left
-        margin: 14px
-        color: transparent
-        overflow: hidden
-        &.logo_anchor
-          +background(image-url("omar_jalalzada_logo.png"))
-          background-repeat: no-repeat
-          background-size: 100%
-          &.bio_logo
-            display: none
-            // +background(image-url("omar_jalalzada_logo_white.png"))
-            // background-repeat: no-repeat
-            // background-size: 100%
-
-        &.bio
-          float: right
-          +background(image-url("omar_jalalzada.jpeg"))
-          background-repeat: no-repeat
-          background-size: 100%
-          overflow: hidden
-          +border-radius(50%)
-          // border: 2px solid $oj_red
+    //     &.bio
+    //       float: right
+    //       +background(image-url("omar_jalalzada.jpeg"))
+    //       background-repeat: no-repeat
+    //       background-size: 100%
+    //       overflow: hidden
+    //       +border-radius(50%)
+    //       // border: 2px solid $oj_red
 
 
   #fullpage
