@@ -1,116 +1,165 @@
+///
+// The bottom navigation
 ////
-// Left side section navigation
-////
-#main_section_nav
-  display: block
-  position: absolute
-  height: 220px
-  top: 50%
-  left: 0
-  margin-top: -110px
-  z-index: 999
-  padding: 0
-  li 
-    margin-top: 10px
-    margin-left: 20px
-    display: block
-    width: 50px
-    opacity: .7
-    a
-      white-space: nowrap
-      word-break: keep-all
-      text-decoration: none
-      display: block
-      background-color: $oj_grey
-      width: 1px
-      height: 30px
-      font-size: 14px
-      line-height: 2.1
-      overflow: hidden
-      text-indent: 10px
-      color: #555
-      +transition-property(text-indent, width)
-      +transition-duration(.2s)
-      +transition-timing-function($custom_ease)
-      border-radius: 3px
-    &.active
-      opacity: 1
-      a 
-        font-weight: bold
-        background-color: $oj_blue
-        color: #fff !important
-        width: 3px
-    &:hover
-      opacity: 1
-      +single-transition(all, .3s, cubic-bezier(0.94, 0.06, 0.50, 0.95))
-      width: 160px
-      &.first_project 
-        width: 226px
-      &.second_project 
-        width: 205px
-      &.third_project 
-        width: 290px
-      & > a 
-        color: darken($oj_grey, 50%)
-        width: 100%
-        text-indent: 15px
+.hide_nav #main_bottom_nav 
+  display: none !important
 
-////
-// Bottom slide navigation
-////
-
-.fp-slidesNav
+.nav_numba_twaaa
   position: absolute
-  z-index: 4
+  bottom: 40px
   left: 50%
-  opacity: 1
-  &.bottom
-    bottom: 0px
-  // &.top
-  //   // top: 17px
-  ul
-    margin: 0
-    padding: 0
-    li
-      display: inline-block
-      a
-        display: block
-        cursor: pointer
-        padding: 10px
-        span
+  margin-left: -25%
+  width: 630px
+  height: 30px
+  z-index: 9999
+  ul.section_container
+    overflow: hidden
+    & > li
+      float: left
+      overflow: hidden
+      height: 30px
+      border: 1px solid $oj_light_grey
+      cursor: pointer
+      +single-transition(all, .3s, $custom_ease)
+      &.bio
+        background-color: $oj_blue
+        border-width: 0px
+        &:hover
+          background-color: darken($oj_blue, 5%)
+          border-width: 0px !important
+      &.content 
+        width: 30px
+        +border-radius(40px)
+        a.section_link
+          width: 30px
+          height: 30px
           display: block
-          width: 12px
-          height: 12px
-          background: $oj_grey
-          +scale(.5)
-          +border-radius(100px)
-          +transition-property(all)
-          +transition-duration(.2s)
-          +transition-timing-function($custom_ease)
-        &.active span, &.active:hover span
-          background: $oj_blue
-          +scale(1)
-        &.active:hover span
-          background-color: darken($oj_blue, 10%)
-        &:hover span
-          background: darken($oj_grey, 20%)
-          +scale(.7)
+          overflow: hidden
+          color: transparent
+          position: relative
+          +single-transition(all, .3s, $custom_ease)
+          text-indent: 100px
+          .inner_c
+            +single-transition(all, .2s, $custom_ease)
+            width: 16px
+            height: 16px
+            position: absolute
+            top: 7px
+            right: 7px
+            +scale(.5)
+            background-color: $oj_light_grey
+            display: block
+            +border-radius(50%)
+      &:hover
+        border: 1px solid $oj_grey
+        a.section_link
+          .inner_c
+            background-color: $oj_grey
+            +scale(2)
+      &.active
+        width: 350px
+        // just to cancel out the main hover
+        &:hover
+          a.section_link
+            .inner_c
+              background-color: $oj_light_grey
+              +scale(.5)
+        a.section_link
+          width: 150px
+          float: left
+          color: $oj_grey
+          line-height: 2.1
+          font-size: 90%
+          text-indent: 20px
+          &:hover
+            .inner_c
+              background-color: $oj_grey
+              +scale(.8)
+          &.anchor_active
+            .inner_c
+              +scale(1)
+              background-color: $oj_blue
+          // .inner_c
+          //   +scale(1)
+          //   background-color: $oj_blue
+        a.slide_link
+          display: block
+          float: left
+          margin-right: 2px
+          width: 30px
+          height: 30px
+          float: left
+          margin-right: 2px
+          position: relative
+          text-indent: 0
+          .sub_c
+            width: 16px
+            height: 16px
+            position: absolute
+            top: 7px
+            left: 7px
+            +border-radius(50%)
+            +scale(.5)
+            background-color: $oj_light_grey
+            display: block
+            +single-transition(all, .1s, $custom_ease)
+          &:hover
+            .sub_c
+              +scale(.8)
+              background-color: $oj_grey
+          &.anchor_active
+            .sub_c
+              +scale(1)
+              background-color: $oj_blue
+
+
+      &.seperator
+        width: 15px
+        height: 1px
+        margin-top: 14px
+        background-color: $oj_light_grey
+        border-width: 0px    
+      &.mcom
+        &.active
+          width: 300px
+          a.section_link
+            width: 160px
+      &.sfmoma
+        &.active
+          width: 380px
+          a.section_link
+            width: 210px
+      &.afv
+        &.active
+          width: 340px
+          a.section_link
+            width: 170px
+      &.moovweb
+        &.active
+          width: 330px
+          a.section_link
+            width: 190px
+      &.arc
+        &.active
+          width: 330px
+          a.section_link
+            width: 230px
 
 
 ////
 // Directional arrows on both sides
 ////
 .fp-controlArrow
-  // display: none !important
-  width: 10px
-  height: 10px
+  width: 30px
+  height: 30px
   border: 1px solid transparent
   border-bottom-color: $oj_grey
   border-left-color: $oj_grey
   position: absolute
   bottom: 32px
+  bottom: 50%
   cursor: pointer
-  z-index: 9999999
+  z-index: 9999
   &.fp-prev
     +rotate(45deg)
     left: 30px
@@ -119,281 +168,166 @@
     right: 30px
 
 
-
 ////
 // The arrow keys that appear in begining
 ////
 .arrow_keys_container
-  display: none
-  // +single-transition(opacity, .2s, cubic-bezier(.5,0,.5,.99))
-  // position: absolute
-  // width: 130px
-  // height: 90px
-  // bottom: -5px
-  // right: -2px
-  // overflow: hidden
-  // opacity: 0
-  // z-index: 9999
-  // .desc 
-  //   color: rgba(250,250,250,0.1)
-  //   font-size: 12px
-  //   margin-top: 10px
-  //   display: block
-  //   opacity: 0
-  //   text-align: center
-  //   +single-transition(all, .4s, cubic-bezier(.5,0,.5,.99), .2s)
-  //   +translateY(20px)
-
-  // .row
-  //   overflow: hidden
-  //   text-align: center
-  //   padding-left: 10px
-  //   .arrow
-  //     width: 4px
-  //     height: 4px
-  //     padding: 12px
-  //     float: left
-  //     margin: 3px
-  //     border-radius: 4px
-  //     opacity: .4
-  //     &.pressed 
-  //       // background-color: rgba(200,200,200,0.6) !important
-  //       // border-color: transparent !important
-  //       opacity: 1
-  //     & > div 
-  //       width: 7px
-  //       height: 7px
-  //       margin: auto
-  //       border: 1px solid transparent
-  //       border-bottom-color: $oj_dark_grey
-  //       border-left-color: $oj_dark_grey
-  //       border-radius: 2px
-  //       +rotate(135deg)
-  //       text-indent: 9000px
-  //       &.a_up
-  //         transform: translate(-2px, 30px) rotate(45deg)
-  //         -webkit-transform: translate(-2px, 30px) rotate(45deg)
-  //       &.a_left
-  //         transform: translate(40px, 0) rotate(85deg)
-  //         -webkit-transform: translate(40px, 0) rotate(85deg)
-  //       &.a_down
-  //         transform: translate( 0, -40px) rotate(230deg)
-  //         -webkit-transform: translate( 0, -40px) rotate(230deg)
-  //       &.a_right
-  //         transform: translate( -40px, 0) rotate(-105deg)
-  //         -webkit-transform: translate( -40px, 0) rotate(-105deg)
-  //     &.hide
-  //       visibility: hidden
-  // &.show 
-  //   display: block
-  //   opacity: 1
-  //   .row
-  //     .arrow
-  //       background-color: rgba($oj_grey,0.3)
-  //       +single-transition(background-color, 1s, $custom_ease, .3s)
-  //       & > div
-  //         +single-transition(all, 0.8s, $custom_ease)
-  //         &.a_up
-  //           transform: translate(-2px, 0) rotate(135deg)
-  //           -webkit-transform: translate(-2px, 0) rotate(135deg)
-  //         &.a_left
-  //           transform: translate( 0, -2px) rotate(45deg)
-  //           -webkit-transform: translate( 0, -2px) rotate(45deg)
-  //         &.a_down
-  //           transform: translate( -2px, -4px) rotate(315deg)
-  //           -webkit-transform: translate( -2px, -4px) rotate(315deg)
-  //         &.a_right
-  //           transform: translate( -4px, -2px) rotate(-135deg)
-  //           -webkit-transform: translate( -4px, -2px) rotate(-135deg)
-  //   // &.hide
-  //   //   +single-transition(opacity, .4s, cubic-bezier(.5,0,.5,.99))
-  //   //   .desc 
-  //   //     +translateY(20px)
-  //   //     +single-transition(all, .2s, cubic-bezier(.5,0,.5,.99), 0)
-  //   //   .row
-  //   //     .arrow
-  //   //       +single-transition(all, 1s, cubic-bezier(.5,0,.5,.99))
-  //   //       border: 1px solid rgba(250,250,250,0)
-  //   //       +translateY(10px)
-  //   //       & > div
-  //   //         +single-transition(all, 0.5s, cubic-bezier(.5,0,.5,.99))
-  //   //         +translateY(20px)
-
-
-
-
-
-
-
-
-
-
-
-// === Hi ===
-
-#main_bottom_nav
-  overflow: hidden
+  display: block
+  +single-transition(opacity, .2s, cubic-bezier(.5,0,.5,.99))
   position: absolute
-  bottom: 20px
-  left: 50%
-  margin-left: 15%
-  margin-left: -300px
+  width: 370px
+  height: 70px
+  bottom: 5px
+  left: 15%
+  overflow: hidden
   z-index: 9999
-  li
-    overflow: hidden
+  .desc 
+    color: rgba(250,250,250,0.5)
+    font-size: 12px
+    display: block
     float: left
-    .section_link_container_bio
-      width: 36px
-      height: 36px
-      display: block
-      +border-radius(20px)
-      border: 1px solid $oj_grey
+    border-left: 1px solid rgba(250,250,250,0.1)
+    padding: 14px 0 20px 20px
+    margin-left: 20px
+  .arrow_keys_inner_container
+    float: left
+    .row
       overflow: hidden
-      color: transparent
-      +background(image-url("ui_elements/omar_jalalzada.jpeg"))
-      background-repeat: no-repeat
-      background-size: 100%
-
-
-    // Not Active Section Link Container
-    .section_link_container
-      width: 36px
-      height: 36px
-      margin-left: 20px
-      position: relative
-      display: block
-      float: left
-      +border-radius(20px)
-      border: 1px solid $oj_grey
-      white-space: nowrap
-      color: $oj_grey
-      text-indent: 500px
-      +transition-property(width)
-      +transition-duration(.2s)
-      +transition-timing-function($custom_ease)
-
-      // the little circle inside the big one
-      &:after
-        content: ' '
-        display: block
-        width: 12px
-        height: 12px
-        position: absolute
-        top: 12px
-        left: 12px
-        background-color: $oj_grey
-        +border-radius(100px)
-        +scale(.5)
-        +transition-property(all)
-        +transition-duration(.2s)
-        +transition-timing-function($custom_ease)
-      // the line before the big circle to connect them
-      &:before
-        content: ' '
-        display: block
-        position: absolute
-        width: 20px
-        height: 1px
-        background-color: $oj_grey
-        top: 18px
-        left: -21px
-
-      // when the browser is on the main landing page
-      &.active
-        color: $oj_blue
-        font-weight: bold
-      // on hover
-      &:hover
-        border: 1px solid $oj_blue
-        color: darken($oj_blue, 10%)
-        &:after
-          background-color: darken($oj_blue, 10%)
-          +scale(.7)
-
-    
-
-    // Active Section Link Container
-    &.active
-      .section_link_container
-        text-align: center
-        width: 190px
-        line-height: 1.2
-        text-indent: 10px
-        border: 1px solid transparent
-        border-left-color: $oj_grey
-        height: 19px
-        +border-radius(0px)
-        margin-top: 9px
-        &:after
-          display: none
-        &:before
-          top: 8px
-
-
-
-      .slide_link_containers
-        overflow: hidden
-        margin-top: 3px
-        position: relative
-        .bracket
-          display: block
-          position: absolute
-          width: 1px
-          height: 20px
-          background-color: $oj_grey
-          top: 6px
-          right: 0px
-        a
-          display: block
-          float: left
-          margin-right: 2px
-          padding: 10px
-          span
-            display: block
-            width: 12px
-            height: 12px
-            background: $oj_grey
-            +scale(.5)
-            +border-radius(100px)
-            +transition-property(all)
-            +transition-duration(.2s)
-            +transition-timing-function($custom_ease)
-          &.active span, &.active:hover span
-            background: $oj_blue
-            +scale(1)
-          &.active:hover span
-            background-color: darken($oj_blue, 10%)
-          &:hover span
-            background: darken($oj_grey, 20%)
-            +scale(.7)
-    &.first_link
-      &.active
-        .section_link_container
-          border-left-color: transparent
-          &:before
-            background-color: transparent
-  
-
-
-    // manually sizing some of the nav text
-    &.project_1.active
-      .section_link_container
-        width: 150px
-    &.project_2.active
-      .section_link_container
-        width: 210px
-    &.project_3.active
-      .section_link_container
-        width: 170px
-    &.project_5.active
-      .section_link_container
-        width: 220px
-
-
-
-.hide_nav #main_bottom_nav 
-  display: none !important
+      text-align: center
+      .arrow
+        width: 4px
+        height: 4px
+        padding: 12px
+        float: left
+        margin: 3px
+        border-radius: 4px
+        opacity: .4
+        background-color: rgba($oj_grey,0.3)
+        &.pressed 
+          opacity: 1
+        & > div
+          width: 7px
+          height: 7px
+          margin: auto
+          border: 1px solid transparent
+          border-bottom-color: white
+          border-left-color: white
+          border-radius: 2px
+          +rotate(135deg)
+          text-indent: 9000px
+          &.a_up
+            transform: translate(-2px, 0) rotate(135deg)
+            -webkit-transform: translate(-2px, 0) rotate(135deg)
+          &.a_left
+            transform: translate( 0, -2px) rotate(45deg)
+            -webkit-transform: translate( 0, -2px) rotate(45deg)
+          &.a_down
+            transform: translate( -2px, -4px) rotate(315deg)
+            -webkit-transform: translate( -2px, -4px) rotate(315deg)
+          &.a_right
+            transform: translate( -4px, -2px) rotate(-135deg)
+            -webkit-transform: translate( -4px, -2px) rotate(-135deg)
+        &.hide
+          visibility: hidden
 
 
 
 
+
+
+////
+// Left side section navigation
+////
+// #main_section_nav
+//   display: block
+//   position: absolute
+//   height: 220px
+//   top: 50%
+//   left: 0
+//   margin-top: -110px
+//   z-index: 999
+//   padding: 0
+//   li 
+//     margin-top: 10px
+//     margin-left: 20px
+//     display: block
+//     width: 50px
+//     opacity: .7
+//     a
+//       white-space: nowrap
+//       word-break: keep-all
+//       text-decoration: none
+//       display: block
+//       background-color: $oj_grey
+//       width: 1px
+//       height: 30px
+//       font-size: 14px
+//       line-height: 2.1
+//       overflow: hidden
+//       text-indent: 10px
+//       color: #555
+//       +transition-property(text-indent, width)
+//       +transition-duration(.2s)
+//       +transition-timing-function($custom_ease)
+//       border-radius: 3px
+//     &.active
+//       opacity: 1
+//       a 
+//         font-weight: bold
+//         background-color: $oj_blue
+//         color: #fff !important
+//         width: 3px
+//     &:hover
+//       opacity: 1
+//       +single-transition(all, .3s, cubic-bezier(0.94, 0.06, 0.50, 0.95))
+//       width: 160px
+//       &.first_project 
+//         width: 226px
+//       &.second_project 
+//         width: 205px
+//       &.third_project 
+//         width: 290px
+//       & > a 
+//         color: darken($oj_grey, 50%)
+//         width: 100%
+//         text-indent: 15px
+
+////
+// Bottom slide navigation
+////
+// .fp-slidesNav
+//   position: absolute
+//   z-index: 4
+//   left: 50%
+//   opacity: 1
+//   &.bottom
+//     bottom: 0px
+//   // &.top
+//   //   // top: 17px
+//   ul
+//     margin: 0
+//     padding: 0
+//     li
+//       display: inline-block
+//       a
+//         display: block
+//         cursor: pointer
+//         padding: 10px
+//         span
+//           display: block
+//           width: 12px
+//           height: 12px
+//           background: $oj_grey
+//           +scale(.5)
+//           +border-radius(100px)
+//           +transition-property(all)
+//           +transition-duration(.2s)
+//           +transition-timing-function($custom_ease)
+//         &.active span, &.active:hover span
+//           background: $oj_blue
+//           +scale(1)
+//         &.active:hover span
+//           background-color: darken($oj_blue, 10%)
+//         &:hover span
+//           background: darken($oj_grey, 20%)
+//           +scale(.7)
