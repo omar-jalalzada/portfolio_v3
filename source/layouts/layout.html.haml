@@ -31,7 +31,9 @@
     
 
     //Stylesheet
-    = stylesheet_link_tag 'application'
+    %link(rel="stylesheet" media="screen and (max-device-width: 480px)" href="/stylesheets/application_mobile.css.css" )
+    %link(rel="stylesheet" media="screen and (min-device-width: 481px)" href="/stylesheets/application.css.css" )
+    // = stylesheet_link_tag 'application'
 
     //Typekit
     :javascript 
