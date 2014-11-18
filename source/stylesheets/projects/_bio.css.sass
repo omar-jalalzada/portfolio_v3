@@ -1,17 +1,18 @@
 #fullpage
   .project_0
     width: 100%
+    height: 100%
+    background-color: $oj_blue
     .slide_1
-      +background(image-url("bio/omar_jalalzada_bg_v4.jpg"))
+      +background(image-url("bio/omar_jalalzada_bg_v6.jpg"))
       background-repeat: no-repeat
       background-size: cover
       background-position: fixed
-      // +breakpoint(landscape_ipad)
-      //   background-position-x: -400px
-      // +breakpoint(portrait_ipad)
-      //   background-position-x: -600px
+      +breakpoint(landscape_ipad)
+        background-position-x: -200px
+      +breakpoint(portrait_ipad)
+        background-position-x: -400px
       width: 100%
-      background-color: $oj_blue
       .inner_slide_container
         overflow: hidden
         height: 100%

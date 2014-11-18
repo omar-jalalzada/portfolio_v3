@@ -52,26 +52,23 @@
   margin-left: -20px
   +scale(.6)
   opacity: .5
-  border: 2px solid white
-  +box-shadow(0px 0px 0px 40px rgba($oj_blue, .2))
+  border: 2px solid transparent
+  +box-shadow(0px 0px 0px 40px rgba($oj_red, .2))
   .inner_circle
     width: 5px
     height: 5px
     padding: 15px
-    background-color: $oj_blue
+    background-color: $oj_red
     border-radius: 50%
     +single-transition(background-color, .1s, $custom_ease)
     position: relative
     +background-image(image-url("ui_elements/tap_icon.png"))
     background-repeat: no-repeat
     background-size: 60%
-    background-position: 10px 10px
-
-    
+    background-position: 10px 8px
   .dot
     width: 2px
     height: 2px
-    // background-color: $oj_light_grey
     border-radius: 50%
     position: absolute
     top: 10px
@@ -80,7 +77,6 @@
   .line
     width: 2px
     height: 10px
-    // background-color: $oj_light_grey
     position: absolute
     top: 15px
     left: 17px
@@ -93,7 +89,7 @@
     opacity: 1
     // +single-transition(all, .5s, cubic-bezier(0.680, -0.550, 0.265, 1.550), .1s)
     +single-transition(all, .5s, $custom_ease)
-    +box-shadow(0px 0px 0px 1px rgba($oj_blue, .6))
+    +box-shadow(0px 0px 0px 1px rgba($oj_red, .6))
     .inner_circle
       
 
@@ -155,6 +151,8 @@
               line-height: 1.6
           &:hover
             opacity: .8
+            .info_icon
+              +box-shadow(0px 0px 0px 1px rgba($oj_red, 0))
   &.nope_its_two
     ul
       li.first_of_two
@@ -212,8 +210,10 @@
           .phone_container
             border: 1px solid $oj_grey
             .info_icon
+              +box-shadow(0px 0px 0px 1px rgba($oj_red, 0))
               .inner_circle
-                background-color: lighten($oj_blue, 10%)          
+                // background-color: lighten($oj_red, 10%)    
+
         // active state  
         &.show
           &:hover .phone_container 
@@ -221,7 +221,8 @@
             .info_icon
               +box-shadow(0px 0px 0px 1px rgba($oj_red, .6))
               .inner_circle
-                background-color: lighten($oj_red, 10%)   
+                background-color: lighten($oj_red, 10%) 
+                +box-shadow(0px 0px 0px 1px rgba($oj_red, .6))  
           .phone_container 
             border-color: transparent
             .screen
