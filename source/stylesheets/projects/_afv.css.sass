@@ -3,21 +3,17 @@
     .slide_1
       .inner_slide_container
         .nexus_container
-          // border: 1px solid red
           overflow: hidden
           max-width: 600px
           margin: 0 auto
           .nexus_android_container
-            // border: 1px solid green
             width: 310px
             height: 515px
             float: left
             +background-image(image-url("afv/afv_home.png"))
             background-repeat: no-repeat
             background-size: 100%
-
           .text
-            // border: 1px solid blue
             width: 280px
             height: 120px
             position: relative
@@ -78,30 +74,12 @@
               +background-image(image-url("afv/screens/2_0_player.png"))
             &.s3
               +background-image(image-url("afv/screens/2_1_player_landscape.png"))
-            &.s4
-              // +background-image(image-url("afv/screens/3_0_kid_mode_settings.png"))
+            // &.s4
         & > ul > li
           &.landscape
             +transform(rotate(-90deg) translateY(100px))
-            
-            // +translateX(50px)
-            // border: 1px solid red
-            // width: 42%
-            // .phone_container
-            //   padding: 0
-            //   margin: 0
-            //   width: auto
-            //   height: auto
-            //   .screen
-            //     height: 300px
-            //     width: 460px
-            //     padding: 0
-            //     margin: 0
-            //     // height: 360px
           &.hide
             display: none
-
-
 
     .slide_6
       +background-image(image-url("afv/end_cover_bg.jpg"))

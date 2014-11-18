@@ -12,6 +12,15 @@
   width: 630px
   height: 30px
   z-index: 9999
+  +breakpoint(landscape_ipad) 
+    +scale(1.2)
+    left: 20%
+    margin-left: 0
+  +breakpoint(portrait_ipad) 
+    left: 15%
+    margin-left: 0
+    +scale(1.2)
+
   ul.section_container
     overflow: hidden
     & > li
