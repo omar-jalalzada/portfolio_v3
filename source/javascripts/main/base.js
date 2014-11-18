@@ -25,27 +25,40 @@ $(document).ready(function() {
     loopHorizontal: false,
     continuousVertical: true,
     keyboardScrolling: true,
+
     
-    // afterLoad: function(anchorLink, index){
-    //   if(index == 1){
-    //     alert("hi");
-    //   }
-    // },
-
-
     afterRender: function(){
-
-
       //----------------------------------------
       //////////
-      // hide nav from the homepage after everything is loaded.
+      // Show nav, if the user comes in not through the homepage
       //////////
-      var w_loc = window.location.hash 
-      if (w_loc == "#oj_bio" || w_loc ==  "") {
-        $("body").addClass("hide_nav")
-      };
+      if (window.location.hash.length > 8) {
+        $(".nav_numba_twaaa").addClass("show")
+      }
       //----------------------------------------
-
+      //----------------------------------------
+      //////////
+      // add active class to navigation if not on homepage
+      // Using lib/hashchange.js
+      //////////
+      $(window).hashchange( function(){
+        $("#main_bottom_nav a").each(function(){
+          var c_url = $(this).attr("href")
+          if(location.hash == c_url) {
+            $(this).addClass("anchor_active")
+            // console.log(c_url)
+          } else {
+            $(this).removeClass("anchor_active")
+          }
+        });
+        console.log("hashchageLenght=" + location.hash.length, "hashchageName=" + location.hash)
+        if (location.hash.length > 8) {
+          $(".nav_numba_twaaa").addClass("show")
+        } else {
+          $(".nav_numba_twaaa").removeClass("show")
+        }
+      });
+      //----------------------------------------
 
 
       //----------------------------------------
@@ -85,7 +98,7 @@ $(document).ready(function() {
       //////////
       function do_it(arrow_div) {
         var selecta = ".arrow_keys_container " + arrow_div
-        console.log(selecta)
+        // console.log(selecta)
         $(selecta).addClass("pressed")
         setTimeout(function(){
           $(selecta).removeClass("pressed")
@@ -120,26 +133,6 @@ $(document).ready(function() {
 
 
 
-  // //----------------------------------------
-  // //////////
-  // // adding the hover interaction for the phone displays 
-  // //////////
-  // // $(".hover_container").hover(
-  // //   function () {
-  // //     $(this).find('.hover').addClass("active");
-  // //   },
-  // //   function () {
-  // //     $(this).find('.hover').removeClass("active"); 
-  // //   }
-  // // );
-  // $(".phone_mockups_4_in_a_row li.contains_more_text").click(
-  //   function(){
-  //     $(this).toggleClass("show")
-  // });
-  // //----------------------------------------
-
-
-
   //----------------------------------------
   //////////
   // Fancy Box Slideswhow
@@ -171,44 +164,11 @@ $(document).ready(function() {
   });
   //----------------------------------------
 
-
-
-
-  //----------------------------------------
-  //////////
-  // add active class to navigation
-  //////////
-  
-  $(window).hashchange( function(){
-  // Alerts every time the hash changes!
-    // alert( location.hash );
-    $("#main_bottom_nav a").each(function(){
-      var c_url = $(this).attr("href")
-      
-      if(location.hash == c_url) {
-        $(this).addClass("anchor_active")
-        console.log(c_url)
-      } else {
-        $(this).removeClass("anchor_active")
-      }
-    });
-
-
-    if (location.hash == "#oj_bio") {
-      $("body").addClass("hide_nav")
-    } else {
-      $("body").removeClass("hide_nav")
-    };
-  });
-  //----------------------------------------
-
 });
 
 
 
 
-
-// $("#main_bottom_nav .slide_link_containers a").eac
 
 //
 // arrow key guide
@@ -230,8 +190,6 @@ $(document).ready(function() {
 //     // createCookie("schmoney_in_my_pocket","cause_im_lit", 1);
 //   });
 // }
-
-
 
 // // var xTriggered = 0;
 // $( ".arrow_keys_container" ).keydown(function( event ) {
@@ -263,38 +221,37 @@ $(document).ready(function() {
 // });
 
 
+// afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+//   if(index == 1){
+//     alert("hi");
 
-    // afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-    //   if(index == 1){
-    //     alert("hi");
+//     // $(window).keypress(function( event ) {
+//     //   if ( event.which == 39 ) {
+//     //     // event.preventDefault();
+//     //     // alert("oh hay boy" + index)
+//     //   }
+//     //   // xTriggered++;
+//     //   // var msg = "Handler for .keypress() called " + xTriggered + " time(s).";
+//     //   // $.print( msg, "html" );
+//     //   // $.print( event );
+//     // });
+//     // $(window).keydown(function(e) {
 
-    //     // $(window).keypress(function( event ) {
-    //     //   if ( event.which == 39 ) {
-    //     //     // event.preventDefault();
-    //     //     // alert("oh hay boy" + index)
-    //     //   }
-    //     //   // xTriggered++;
-    //     //   // var msg = "Handler for .keypress() called " + xTriggered + " time(s).";
-    //     //   // $.print( msg, "html" );
-    //     //   // $.print( event );
-    //     // });
-    //     // $(window).keydown(function(e) {
+//     //   key = e.keyCode
+//     //   if (key == 39) {
+//     //     alert("oh hay boy" + index)
+//     //     $.fn.fullpage.moveTo(index + 1, 0);
+//     //   }
+//     // });
+//   }
+//   if(index == 2 && slideIndex == 0){
+//     alert("yo oma")
+//   }
+// },
 
-    //     //   key = e.keyCode
-    //     //   if (key == 39) {
-    //     //     alert("oh hay boy" + index)
-    //     //     $.fn.fullpage.moveTo(index + 1, 0);
-    //     //   }
-    //     // });
-    //   }
-    //   if(index == 2 && slideIndex == 0){
-    //     alert("yo oma")
-    //   }
-    // },
-
-    //   //second slide of the second section (supposing #secondSlide is the
-    //   //anchor for the second slide
-    //   if(index == 2 && slideIndex == 'secondSlide'){
-    //       alert("Second slide loaded");
-    //   }
-    // }
+//   //second slide of the second section (supposing #secondSlide is the
+//   //anchor for the second slide
+//   if(index == 2 && slideIndex == 'secondSlide'){
+//       alert("Second slide loaded");
+//   }
+// }
