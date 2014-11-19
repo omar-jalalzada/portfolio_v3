@@ -41,8 +41,10 @@
   +box-shadow(0 2px 3px rgba(0,0,0,0.5))
   .fancybox-outer
     position: relative
+    z-index: 999999
     .fancybox-inner
       position: relative
+      z-index: 999999
       overflow: hidden
       -webkit-overflow-scrolling: touch
 
@@ -92,6 +94,7 @@
     background-repeat: no-repeat
     background-size: 100%
     background-position: center
+    z-index: 9999999
 
 .fancybox-close
   display: none
@@ -163,7 +166,7 @@
   left: 0
   overflow: hidden
   display: none
-  z-index: 9999
+  z-index: 999
   //background: url('fancybox_overlay.png');
   +background(image-url("ui_elements/dots.png"))
   background-color: rgba(0, 0, 0, 0.7)

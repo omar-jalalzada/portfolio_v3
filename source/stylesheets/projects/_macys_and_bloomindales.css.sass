@@ -8,13 +8,14 @@
         position: relative
         max-width: 1024px
         margin: 0 auto
+        // +background(image-url("fancy/loading_spinner_v2.gif"))
         .iphone_bcom_container
           width: 230px
           height: 550px
           margin: auto
           // +background-image(image-url("mcom_bcom/main/iphone_6_main.png"))
-          background-repeat: no-repeat
-          background-size: 100%
+          +background(image-url("fancy/loading_spinner_v2.gif"))
+
     .slide_6
       // +background-image(image-url("mcom_bcom/6_0_macys_bottom_cover.png"))
       background-repeat: no-repeat
@@ -29,6 +30,8 @@
     &.load_z_god_damn_images
       .slide_1 .iphone_bcom_container
         +background-image(image-url("mcom_bcom/main/iphone_6_main.png"))
+        background-repeat: no-repeat
+        background-size: 100%
       .slide_2
         +background-image(image-url("mcom_bcom/2_bg_cover_2.png"))
       .slide_3
