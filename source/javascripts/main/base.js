@@ -26,6 +26,37 @@
     continuousVertical: true,
     keyboardScrolling: true,
 
+    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+      //----------------------------------------
+      //////////
+      // Add the SFMOMA prototype video
+      //////////
+      if(index == 3 && slideIndex == 3){
+        console.log("Index 3 & SlideIndex 3 Is LOADED! Include YouTube iFrame");
+        // check if its already created
+        if($("#youtube_iframe_tag").length == 0) {
+          // create the iframe
+          var iframe_tag = document.createElement('iframe')
+          var iframe_tag_fs_att = document.createAttribute("allowfullscreen")
+          var iframe_tag_fb_att = document.createAttribute("frameborder")
+          iframe_tag_fb_att.value = "0";
+          iframe_tag.src = "//www.youtube.com/embed/CxjTBXxEsoU?controls=2&modestbranding=1&showinfo=0&theme=light"
+          iframe_tag.width = "100%"
+          iframe_tag.height = "100%"
+          iframe_tag.setAttributeNode(iframe_tag_fs_att)
+          iframe_tag.setAttributeNode(iframe_tag_fb_att)
+          iframe_tag.id = "youtube_iframe_tag"
+          // add the iframe
+          $("#sfmoma_intro_video").append(iframe_tag)
+        }
+      }
+      //----------------------------------------
+    },
+
+
+    // onSlideLeave: function(anchorLink, index, slideIndex, direction){},
+
+
     afterRender: function(){
       //----------------------------------------
       //////////
@@ -95,11 +126,16 @@
       // Late laoding images
       //////////
       setTimeout(function(){
+        $(".section.active").addClass("load_z_god_damn_images")
+      }, 1000);
+
+      setTimeout(function(){
         $(".project_1, .project_2").addClass("load_z_god_damn_images")
       }, 2000);
+
       setTimeout(function(){
-        $(".project_3.project_4, .project_5").addClass("load_z_god_damn_images")
-      }, 3000);
+        $(".project_3, .project_4, .project_5").addClass("load_z_god_damn_images")
+      }, 4000);
 
 
 
@@ -269,3 +305,5 @@
 //       alert("Second slide loaded");
 //   }
 // }
+
+
