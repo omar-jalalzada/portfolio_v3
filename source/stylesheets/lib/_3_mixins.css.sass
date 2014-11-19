@@ -8,3 +8,6 @@
   @else if $point == portrait_phone
     @media (max-width: 374px)
       @content
+  @else if $point == all_but_mobile
+    @media (min-width: 374px)
+      @content
