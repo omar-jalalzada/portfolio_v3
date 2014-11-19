@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
   //----------------------------------------
   //////////
@@ -89,20 +89,20 @@ $(document).ready(function() {
       }, 3000);
 
       setTimeout(function(){
-        $(".project_1").addClass("load_z_god_damn_images")
+        $(".project_1, .project_2, .project_3, .project_4").addClass("load_z_god_damn_images")
       }, 2000);
 
-      setTimeout(function(){
-        $(".project_2").addClass("load_z_god_damn_images")
-      }, 3000);
+      // setTimeout(function(){
+      //   $(".project_2").addClass("load_z_god_damn_images")
+      // }, 3000);
 
-      setTimeout(function(){
-        $(".project_3").addClass("load_z_god_damn_images")
-      }, 4000);
+      // setTimeout(function(){
+      //   $(".project_3").addClass("load_z_god_damn_images")
+      // }, 4000);
 
-      setTimeout(function(){
-        $(".project_4").addClass("load_z_god_damn_images")
-      }, 5000);
+      // setTimeout(function(){
+      //   $(".project_4").addClass("load_z_god_damn_images")
+      // }, 5000);
 
 
 
@@ -181,7 +181,7 @@ $(document).ready(function() {
   });
   //----------------------------------------
 
-});
+// });
 
 
 
