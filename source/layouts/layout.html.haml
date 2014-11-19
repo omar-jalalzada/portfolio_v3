@@ -52,12 +52,12 @@
 
     // = javascript_include_tag 'application'
     :javascript
-      // alert("is it mobile = " + isMobile.phone)
-      // alert("is it tablet = " + isMobile.tablet)
-      if (isMobile.mobile){
-        console.log("Homie using a mobile device" + navigator.userAgent)
+      console.log(isMobile)
+      if (isMobile.phone){
+        console.log(isMobile)
+        console.log("Based God is using a mobile browser:" + navigator.userAgent)
       } else {
-        console.log("Homie using a desktop")
+        console.log("Based God using a desktop/tablet browser: " + navigator.userAgent + " #TYBG")
         var script = document.createElement('script');
         script.setAttribute('src', 'javascripts/application.js');
         script.setAttribute('type', 'text/javascript');
