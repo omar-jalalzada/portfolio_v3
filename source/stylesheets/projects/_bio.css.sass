@@ -1,18 +1,34 @@
+
+html
+  &.wf-loading, &.wf-inactive
+    body 
+      .main_paragraph h1
+        color: transparent !important
+        text-shadow: none !important
+        margin-top: 0 !important
+        // +single-transition(all, .3s, $custom_ease, .2s)
+      .social_media_links
+        opacity: 0 !important
+        margin-top: 0 !important
+        // +single-transition(all, .3s, $custom_ease, .3s)
+             
+
 #fullpage
   .project_0
     width: 100%
     height: 100%
     background-color: $oj_blue
     .slide_1
-      +background(image-url("bio/omar_jalalzada_bg_v6.jpg"))
+      +background(image-url("bio/omar_jalalzada_bg_v8.jpg"))
       background-repeat: no-repeat
       background-size: cover
       background-position: fixed
       +breakpoint(landscape_ipad)
-        background-position-x: -200px
+        background-position-x: -100px
       +breakpoint(portrait_ipad)
-        background-position-x: -400px
+        background-position-x: -200px
       width: 100%
+      height: 100%
       .inner_slide_container
         overflow: hidden
         height: 100%
@@ -27,6 +43,7 @@
             margin-top: 180px
             width: 60%
             .main_paragraph
+              border: 1px solid transparent
               h1
                 display: block
                 color: #fff
@@ -34,7 +51,12 @@
                 font-weight: 100
                 text-shadow: 0 1px 1px rgba(0,0,0,0.2)
                 font-size: 130%
+                margin: 0
+                margin-top: 10px
+                +single-transition(all, .3s, $custom_ease, .2s)
             .social_media_links
+              margin-top: 20px
+              +single-transition(all, .2s, $custom_ease, 1s)
               .sm_inner
                 overflow: hidden
                 .sm_link

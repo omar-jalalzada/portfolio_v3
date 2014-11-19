@@ -12,57 +12,11 @@
           width: 230px
           height: 550px
           margin: auto
-          +background-image(image-url("mcom_bcom/main/iphone_6_main.png"))
+          // +background-image(image-url("mcom_bcom/main/iphone_6_main.png"))
           background-repeat: no-repeat
           background-size: 100%
-
-
-    .slide_2
-      +background-image(image-url("mcom_bcom/2_bg_cover_2.png"))
-
-    .slide_3
-      .inner_slide_container
-        ul
-          li
-            .circle
-              &.c1
-                +background-image(image-url("mcom_bcom/3_1_image_circle.png"))
-              &.c2
-                +background-image(image-url("mcom_bcom/3_2_image_circle.png"))
-              &.c3
-                +background-image(image-url("mcom_bcom/3_3_image_circle.png"))
-    
-
-    .slide_4 
-      .inner_slide_container
-        .phone_container
-          .screen
-            &.s1
-              +background-image(image-url("mcom_bcom/5_1_macys_homepage.jpg"))
-            &.s2
-              +background-image(image-url("mcom_bcom/5_2_macys_category_list.jpg"))
-            &.s3
-              +background-image(image-url("mcom_bcom/5_3_macys_product_list.jpg"))
-            &.s4
-              +background-image(image-url("mcom_bcom/5_4_macys_product_display.jpg"))
-
-
-    .slide_5
-      .inner_slide_container
-        .phone_container
-          .screen
-            &.s1
-              +background-image(image-url("mcom_bcom/4_1_bloomindales_homepage.jpg"))
-            &.s2
-              +background-image(image-url("mcom_bcom/4_2_bloomindales_look.jpg"))
-            &.s3
-              +background-image(image-url("mcom_bcom/4_3_bloomindales_look.jpg"))
-            &.s4
-              +background-image(image-url("mcom_bcom/4_4_bloomindales_inside_look.jpg"))
-
-
     .slide_6
-      +background-image(image-url("mcom_bcom/6_0_macys_bottom_cover.png"))
+      // +background-image(image-url("mcom_bcom/6_0_macys_bottom_cover.png"))
       background-repeat: no-repeat
       background-attachment: fixed
       background-size: cover
@@ -70,3 +24,50 @@
         background-color: rgba(0,0,0,0.6)
         .right_content_block
           visibility: hidden
+
+
+    &.load_z_god_damn_images
+      .slide_1 .iphone_bcom_container
+        +background-image(image-url("mcom_bcom/main/iphone_6_main.png"))
+      .slide_2
+        +background-image(image-url("mcom_bcom/2_bg_cover_2.png"))
+      .slide_3
+        ul li .circle
+          &.c1
+            +background-image(image-url("mcom_bcom/3_1_image_circle.png"))
+          &.c2
+            +background-image(image-url("mcom_bcom/3_2_image_circle.png"))
+          &.c3
+            +background-image(image-url("mcom_bcom/3_3_image_circle.png"))
+      .slide_4 
+        .inner_slide_container
+          .phone_container
+            .screen
+              &.s1
+                +background-image(image-url("mcom_bcom/5_1_macys_homepage.jpg"))
+              &.s2
+                +background-image(image-url("mcom_bcom/5_2_macys_category_list.jpg"))
+              &.s3
+                +background-image(image-url("mcom_bcom/5_3_macys_product_list.jpg"))
+              &.s4
+                +background-image(image-url("mcom_bcom/5_4_macys_product_display.jpg"))
+      .slide_5
+        .inner_slide_container
+          .phone_container
+            .screen
+              &.s1
+                +background-image(image-url("mcom_bcom/4_1_bloomindales_homepage.jpg"))
+              &.s2
+                +background-image(image-url("mcom_bcom/4_2_bloomindales_look.jpg"))
+              &.s3
+                +background-image(image-url("mcom_bcom/4_3_bloomindales_look.jpg"))
+              &.s4
+                +background-image(image-url("mcom_bcom/4_4_bloomindales_inside_look.jpg"))
+      .slide_6
+        +background-image(image-url("mcom_bcom/6_0_macys_bottom_cover.png"))
+
+
+
+
+
+

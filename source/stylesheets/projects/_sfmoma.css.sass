@@ -13,7 +13,7 @@
           .ipad_holder
             width: 560px
             height: 440px
-            +background-image(image-url("sfmoma/main/ipad_v2.png"))
+            // +background-image(image-url("sfmoma/main/ipad_v2.png"))
             background-repeat: no-repeat
             background-size: 100%
             float: left
@@ -22,7 +22,7 @@
             width: 290px
             height: 220px
             margin-top: 90px
-            +background-image(image-url("sfmoma/main/Alexander_Calder_Double_Gong.png"))
+            // +background-image(image-url("sfmoma/main/Alexander_Calder_Double_Gong.png"))
             background-repeat: no-repeat
             background-size: 100%
             float: left
@@ -36,20 +36,6 @@
           font-size: 9px
           color: #bbb
 
-    .slide_2
-      +background-image(image-url("sfmoma/sfmoma_cover_image.jpg"))
-    
-    .slide_3
-      .inner_slide_container
-        ul
-          li
-            .circle
-              &.c1
-                +background-image(image-url("sfmoma/slide_3_c1.png"))
-              &.c2
-                +background-image(image-url("sfmoma/slide_3_c2.png"))
-              &.c3
-                +background-image(image-url("sfmoma/slide_3_c3.png"))
 
       
     .slide_4
@@ -87,11 +73,43 @@
             display: block
             width: 100%
             height: 100%
-            +background-image(image-url("sfmoma/designs/1_homepage.jpg"))
+            // +background-image(image-url("sfmoma/designs/1_homepage.jpg"))
             border: 2px solid #777777
             +border-radius(3px)
             background-repeat: no-repeat
-            background-size: 100%
 
-    .slide_6
-      +background-image(image-url("sfmoma/sfmoma_end_cover_image.jpg"))
+    &.load_z_god_damn_images
+
+      .slide_1
+        .inner_slide_container
+          .art_work_sfmoma
+            .ipad_holder
+              +background-image(image-url("sfmoma/main/ipad_v2.png"))
+            .art_work_holder
+              +background-image(image-url("sfmoma/main/Alexander_Calder_Double_Gong.png"))
+              
+      .slide_2
+        +background-image(image-url("sfmoma/sfmoma_cover_image.jpg"))
+
+      .slide_3
+        .inner_slide_container
+          ul
+            li
+              .circle
+                &.c1
+                  +background-image(image-url("sfmoma/slide_3_c1.png"))
+                &.c2
+                  +background-image(image-url("sfmoma/slide_3_c2.png"))
+                &.c3
+                  +background-image(image-url("sfmoma/slide_3_c3.png"))
+                    
+      .slide_5
+        .inner_slide_container
+          .main_thumb
+            a.browser
+              +background-image(image-url("sfmoma/designs/1_homepage.jpg"))
+              
+      .slide_6
+        +background-image(image-url("sfmoma/sfmoma_end_cover_image.jpg"))
+
+

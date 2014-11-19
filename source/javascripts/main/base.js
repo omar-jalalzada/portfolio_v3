@@ -26,7 +26,6 @@ $(document).ready(function() {
     continuousVertical: true,
     keyboardScrolling: true,
 
-    
     afterRender: function(){
       //----------------------------------------
       //////////
@@ -77,7 +76,7 @@ $(document).ready(function() {
         function(){
           $(this).toggleClass("show")
       });
-      //----------------------------------------
+      //----------------------------------------afv
 
 
    
@@ -86,8 +85,26 @@ $(document).ready(function() {
       // Show arrow key guid on the bio slide
       //////////
       setTimeout(function(){
-        $(".arrow_keys_container").addClass("show")  
+        $(".arrow_keys_container").addClass("show")
+      }, 3000);
+
+      setTimeout(function(){
+        $(".project_1").addClass("load_z_god_damn_images")
+      }, 2000);
+
+      setTimeout(function(){
+        $(".project_2").addClass("load_z_god_damn_images")
+      }, 3000);
+
+      setTimeout(function(){
+        $(".project_3").addClass("load_z_god_damn_images")
       }, 4000);
+
+      setTimeout(function(){
+        $(".project_4").addClass("load_z_god_damn_images")
+      }, 5000);
+
+
 
 
 
