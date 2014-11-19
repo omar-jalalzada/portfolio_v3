@@ -33,7 +33,7 @@ html
               max-width: 450px
               margin: 0 auto
               margin-left: 15%
-              margin-top: 180px
+              margin-top: 15%
               width: 60%
               .main_paragraph
                 border: 1px solid transparent
@@ -60,14 +60,16 @@ html
                   .sm_link
                     width: 30px
                     height: 30px
+                    margin: 2px
                     margin-right: 10px
-                    border: 1px solid rgba(255,255,255,.2)
+                    +box-shadow(0 0 0 1px rgba(255,255,255,.4))
                     +border-radius(20px)
                     float: left
                     padding: 5px
+                    +single-transition(all, .1s, $custom_ease)
                     &:hover 
                       background-color: rgba(255,255,255,.4)
-                      border: 1px solid transparent
+                      +box-shadow(0 2px 1px rgba(0,0,0,.2))
                     .icon
                       +background-image(image-url("ui_elements/social_bio_icons.png"))
                       background-repeat: no-repeat
