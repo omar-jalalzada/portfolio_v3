@@ -12,6 +12,8 @@
       if (isMobile.apple.phone || isMobile.android.phone){
         console.log("Homie using a mobile device")
       } else {
+      	alert("is it mobile = " + isMobile.phone)
+      	alert("is it tablet = " + isMobile.tablet)
         console.log("Homie using a desktop")
         var script = document.createElement('script');
         script.setAttribute('src', 'javascripts/application.js');
