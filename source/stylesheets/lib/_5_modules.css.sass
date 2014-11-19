@@ -10,7 +10,7 @@
     height: 100%
     display: table
     position: relative
-    +background(image-url("ui_elements/dots_v2.png"))
+    // +background(image-url("ui_elements/dots_v2.png"))
     .cover_container
       display: table-cell
       vertical-align: middle
@@ -41,6 +41,7 @@
               font-weight: bold
 
 
+
 ////
 // Info Icon
 ////
@@ -62,7 +63,7 @@
     border-radius: 50%
     +single-transition(background-color, .1s, $custom_ease)
     position: relative
-    +background-image(image-url("ui_elements/tap_icon.png"))
+    // +background-image(image-url("ui_elements/tap_icon.png"))
     background-repeat: no-repeat
     background-size: 60%
     background-position: 10px 8px
@@ -296,6 +297,20 @@
       position: absolute
       left: -30px
       bottom: 60px
-      +background-image(image-url("ui_elements/pdf_icon.png"))
+      // +background-image(image-url("ui_elements/pdf_icon.png"))
       background-repeat: no-repeat
       background-size: 100%
+
+
+
+
+.load_z_god_damn_images
+  .pdf_link_module_slide
+    .pdf_link_module_icon
+      +background-image(image-url("ui_elements/pdf_icon.png"))
+  .info_icon
+    .inner_circle
+      +background-image(image-url("ui_elements/tap_icon.png"))
+  .cover_page_slide
+    .inner_slide_container
+      +background(image-url("ui_elements/dots_v2.png"))
