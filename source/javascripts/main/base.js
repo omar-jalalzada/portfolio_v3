@@ -21,7 +21,7 @@
     resize: false,
     verticalCentered: true,
     menu: '#main_bottom_nav',
-    anchors: ['oj_bio','iOS_App_Macys', 'Adaptive_Site_SFMOMA', 'Andriod_App_AFV', 'Branding_Moovweb', 'Arc_Al_Jazeera_Hackathon'],
+    anchors: ['oj_bio','iOS_App_Macys', 'Adaptive_Site_SFMOMA', 'Arc_Al_Jazeera_Hackathon', 'Andriod_App_AFV', 'Branding_Moovweb'],
     loopHorizontal: false,
     continuousVertical: true,
     keyboardScrolling: true,
