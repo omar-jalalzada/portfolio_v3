@@ -33,6 +33,24 @@
             display: block
             text-transform: uppercase
             color: rgba(100,100,100,1)
+            overflow: hidden
+            span.icon
+              display: block
+              width: 18px
+              height: 16px
+              float: left
+              margin-right: 5px
+              // +background-image(image-url("ui_elements/cover_page_icons.png"))
+              background-repeat: no-repeat
+              background-size: 72px 16px 
+              &.project_icon
+              &.role_icon
+                background-position-x: -18px
+              &.conclusion_icon
+                background-position-x: -36px
+              &.learnings_icon
+                background-position-x: -54px
+
           .body
             font-size: $p_fs
             line-height: 1.6
@@ -139,6 +157,8 @@
             background-repeat: no-repeat
             background-size: 101%
             background-position: -1px
+            .info_icon
+              +single-transition(all, .3s, $custom_ease)
           // text container
           .text_container
             // text-align: center
@@ -153,10 +173,11 @@
               font-size: $p_fs
               color: $p_c
               line-height: 1.6
-          &:hover
-            opacity: .8
-            .info_icon
-              +box-shadow(0px 0px 0px 1px rgba($oj_red, 0))
+      &:hover
+        // opacity: .8
+        .info_icon
+          +scale(1.2)
+          +box-shadow(0px 3px 5px $oj_grey)
   &.nope_its_two
     ul
       li.first_of_two
@@ -317,3 +338,5 @@
   .cover_page_slide
     .inner_slide_container
       +background(image-url("ui_elements/dots_v2.png"))
+      .header span.icon
+        +background-image(image-url("ui_elements/cover_page_icons.png"))
