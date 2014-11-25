@@ -15,9 +15,9 @@
 
 
   $('#fullpage').fullpage({
-    scrollingSpeed: 200,
+    scrollingSpeed: 400,
     cc3: true,
-    easing: 'easeInOutQuart',
+    easing: 'swing',
     resize: false,
     verticalCentered: true,
     menu: '#main_bottom_nav',
@@ -25,6 +25,10 @@
     loopHorizontal: false,
     continuousVertical: true,
     keyboardScrolling: true,
+
+    touchSensitivity: 5,
+    normalScrollElementTouchThreshold: 2,
+
 
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
       //----------------------------------------

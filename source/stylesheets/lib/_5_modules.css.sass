@@ -18,13 +18,18 @@
       width: 100%
       font-size: 120%
       ul
-        max-width: 600px
-        overflow: hidden
+        max-width: 560px
+        // padding-left: 20px
+        // overflow: hidden
+
         color: #fff
         position: relative
         margin: auto
+
         li
           display: block
+          // border: 1px solid red
+          padding-left: 20px
           &.first 
             padding-bottom: 6%
           .header
@@ -61,7 +66,31 @@
             a
               color: lighten($oj_blue, 15%)
 
-
+////
+// Centred Slide Titles
+////
+.inner_slide_container
+  .slide_title_container
+    &.max_600
+      max-width: 600px
+      margin: auto
+    .slide_title
+      color: $oj_red
+      display: block
+      border-bottom: 1px solid $oj_light_grey
+      // text-align: center
+      // margin: 0 auto 3% auto
+      // margin: 50px
+      // text-transform: uppercase
+      // max-width: 30%
+      // padding-bottom: 10px
+      // margin-bottom: 20px
+      .sub_slide_title
+        font-size: 80%
+        color: $oj_grey
+        font-weight: normal
+        display: block
+      // border: 1px solid red
 
 ////
 // Info Icon
@@ -120,17 +149,13 @@
 // The three cricle slideshow layout
 ////
 .three_circles_h_P
+  .slide_title_container
+    max-width: 300px
+    margin: 0 auto
+    padding: 0 50px
+    text-align: center
   .main_header
     overflow: hidden
-    h3
-      color: $oj_red
-      text-align: center
-      margin: 0 auto 3% auto
-      display: block
-      text-transform: uppercase
-      border-bottom: 1px solid $oj_light_grey
-      max-width: 20%
-      // border: 1px solid red
   .inner_slide_container
     max-width: $custom_max_width
     margin: 0 auto
@@ -152,7 +177,7 @@
             border-radius: 50%
             border: 1px solid $oj_blue
             background-color: #ddd
-            margin: auto auto 20px 0
+            margin: auto auto 20px auto
             position: relative
             background-repeat: no-repeat
             background-size: 101%
@@ -311,16 +336,17 @@
     display: block
     width: 600px
     height: 400px
-    border: 1px solid $oj_light_grey
+    border: 1px solid $oj_grey
     +border-radius(3px)
     margin: auto
     position: relative
     .pdf_link_module_icon
-      width: 60px
-      height: 56px
+      width: 30px
+      height: 30px
+      // border: 1px solid red
       position: absolute
-      left: -30px
-      bottom: 60px
+      left: 10px
+      bottom: 10px
       // +background-image(image-url("ui_elements/pdf_icon.png"))
       background-repeat: no-repeat
       background-size: 100%
