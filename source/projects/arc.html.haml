@@ -10,60 +10,90 @@
     .cover_container
       %ul
         %li.first
-          %span.c_1.header.animate_fade_base.animate_fade_right About the project:
+          %span.c_1.header.animate_fade_base.animate_fade_right
+            %span.icon.project_icon
+            %span.text About the project:
           %span.body.animate_fade_base.animate_fade_right.animate_seq_1
-            [need content]
-            %b ARC
-            Al Jazeera Hackathon.
+            The Innovation and Research group at
+            %b Al Jazeera 
+            wanted to challenge storytellers, developers, and designers to come up with the most innovative nonlinear storytelling application. 
         %li.second
-          %span.c_2.header.animate_fade_base.animate_fade_right.animate_seq_1 My Role:
+          %span.c_2.header.animate_fade_base.animate_fade_right.animate_seq_1
+            %span.icon.role_icon
+            %span.text My Role:
           %span.body.animate_fade_base.animate_fade_right.animate_seq_2
-            [need content] Creator and Designer
-    .right_content_block
-      .image.animate_fade_base.animate_seq_2
-      .line.animate_fade_base.animate_fade_down
-    / .animate_fade_base.animate_fade_up.animate_seq_1
+            In response, I created Arc. Its built on the principle that each narrative should have complementary stories that focus entirely on the humans involved or impacted by the main narrative. Further, it enables nonlinear storytelling to interweave these stories and create a truly compelling read.
+            %br
+            %br
+            We won the 
+            %a{"href"=>"http://aljazeera.challengepost.com/updates/1966-announcing-the-winners-of-the-al-jazeera-innovation-challenge", "target"=>"_blank"}second prize.
+
 
             
 
 %article.slide.slide_3.pdf_link_module_slide
   .inner_slide_container
-    %a.pdf_link_module{"href"=>"#iOS_App_Macys"}
+    .slide_title_container.max_600
+      %h3.slide_title
+        What is Arc? 
+        %span.sub_slide_title Product pitch keynote
+    %a.pdf_link_module{"href"=>"images/non_image_assets/arc_preso/arc_keynote.html", "target"=>"_blank"}
       .pdf_link_module_icon
+      .info_icon
+        .inner_circle
+          .dot
+          .line
 
 
 %article.slide.slide_4.phone_mockups_4_in_a_row
   .inner_slide_container
     %ul
-      %li.contains_more_text
+      %li
         .phone_container.animate_fade_base.animate_fade_up
           .screen.s1
+      %li.contains_more_text
+        .phone_container.animate_fade_base.animate_fade_up.animate_seq_1
+          .screen.s2
           .text
             %p 
-              The home screen introduces look-books, a more editorial approach to m-commerce. Highly personalized content keeps the user coming back to the app.
+              Pinch anywhere on the homescreen for a more condensed view of the story feed.
             %ul
               %li
-                Search/scan is minimized in an editorial and look-book experience
-              %li
-                Each content block is a link to a campaign, look-book, PDP or editorial content item
-              %li
-                Use of large full screen visuals with color, depth, clarity, and visual detail
+                Swipe left on an individual story to reveal bookmarking and the ability to share the story.
           .info_icon
             .inner_circle
               .dot
               .line
-      %li
-        .phone_container.animate_fade_base.animate_fade_up.animate_seq_1
-          .screen.s2
-          .text
-      %li
+      %li.contains_more_text
         .phone_container.animate_fade_base.animate_fade_up.animate_seq_1
           .screen.s3
           .text
-      %li
+            %p 
+              Press and hold anywhere in the app to access the navigation panel 
+            %ul
+              %li
+                Removing bars and navigation buttons preserves more space for content.
+              %li
+                From here, the user can easily navigate to the home page, search field, profile page, *share, *bookmark and the *Reading Control Center.
+              %li
+                *(only on story page)
+          .info_icon
+            .inner_circle
+              .dot
+              .line
+      %li.contains_more_text
         .phone_container.animate_fade_base.animate_fade_up.animate_seq_2
           .screen.s4
           .text
+            %p 
+              This will keep track of the user’s reading history and lets them access any bookmarked stories or notifications.
+            %ul
+              %li
+                When a user creates a profile, their reading history can be tracked to enhance the logic of Compass cards. The more data we get, the smarter the suggestions will be. 
+          .info_icon
+            .inner_circle
+              .dot
+              .line
 
 %article.slide.slide_5.phone_mockups_4_in_a_row
   .inner_slide_container
@@ -73,40 +103,58 @@
           .screen.s1
           .text
             %p 
-              The home screen introduces look-books, a more editorial approach to m-commerce. Highly personalized content keeps the user coming back to the app.
+              All the components of the story housed in one cohesive narrative. 
             %ul
               %li
-                Search/scan is minimized in an editorial and look-book experience
-              %li
-                Each content block is a link to a campaign, look-book, PDP or editorial content item
-              %li
-                Use of large full screen visuals with color, depth, clarity, and visual detail
+                Each story can contain any of the following: Social API component (Twitter, FB, Soundcloud, etc), image gallery component, interactive map, discussion board, etc
           .info_icon
             .inner_circle
               .dot
               .line
-      %li
+      %li.contains_more_text
         .phone_container.animate_fade_base.animate_fade_up.animate_seq_1
           .screen.s2
           .text
-      %li.contains_more_text
-        .phone_container.animate_fade_base.animate_fade_up
-          .screen.s1
-          .text
             %p 
-              The home screen introduces look-books, a more editorial approach to m-commerce. Highly personalized content keeps the user coming back to the app.
+              Lets the user customize the reading experience to their preference. The user can only access it from a Story view. 
             %ul
               %li
-                Search/scan is minimized in an editorial and look-book experience
-              %li
-                Each content block is a link to a campaign, look-book, PDP or editorial content item
-              %li
-                Use of large full screen visuals with color, depth, clarity, and visual detail
+                The user can adjust screen brightness, pick a serif or sans serif font or resize it, pick a color themes and turn on tilt to scroll
           .info_icon
             .inner_circle
               .dot
               .line
       %li
+        .phone_container.animate_fade_base.animate_fade_up
+          .screen.s3
+      %li
         .phone_container.animate_fade_base.animate_fade_up.animate_seq_2
           .screen.s4
-          .text
+
+
+%article.slide.slide_6.cover_page_slide
+  .inner_slide_container
+    .cover_container
+      %ul
+        %li.first
+          %span.c_1.header.animate_fade_base.animate_fade_right
+            %span.icon.conclusion_icon
+            %span.text Conclusion
+          %span.body.animate_fade_base.animate_fade_right.animate_seq_1
+            Getting the second prize is a good feeling but its not the first prize. 
+            The all-expenses-paid hackathon trip to Doha, Qatar and the cash prize definitely helped me to overcome that feeling a little bit but I do feel we could've done better :)
+
+        %li.second
+          %span.c_2.header.animate_fade_base.animate_fade_right.animate_seq_1 
+            %span.icon.learnings_icon
+            %span.text Learnings & Footnotes:
+          %span.body.animate_fade_base.animate_fade_right.animate_seq_2
+            Its important to properly assess a side project and fully understand the amount of work it takes, from ideation to actual conception. 
+            %br
+            %br
+            Thanks to Hari Ananth, Lauren Willey and Justin Megahan for all their help. 
+
+
+
+
+

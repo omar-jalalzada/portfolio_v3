@@ -10,6 +10,9 @@
           background-repeat: no-repeat
           background-size: 100%
 
+    .slide_2
+      // +background-image(image-url("arc/bg.jpg"))
+      // background-color: #fba918
     .slide_3
       .pdf_link_module
         // +background-image(image-url("arc/submission_pdf_thumb.jpg"))
@@ -21,6 +24,34 @@
         .arc_main
           .arc_phone
             +background-image(image-url("arc/main_arc_phone.png"))
+      .slide_2
+        +background-image(image-url("arc/start_cover_bg.jpg"))
       .slide_3
         .pdf_link_module
-          // +background-image(image-url("arc/submission_pdf_thumb.jpg"))
+          +background-image(image-url("arc/submission_pdf_thumb.jpg"))
+      .slide_4 
+        .inner_slide_container
+          .phone_container
+            .screen
+              &.s1
+                +background-image(image-url("arc/screens/home_stroy_block.jpg"))
+              &.s2
+                +background-image(image-url("arc/screens/home_condensed.jpg"))
+              &.s3
+                +background-image(image-url("arc/screens/nav.jpg"))
+              &.s4
+                +background-image(image-url("arc/screens/profile_page.jpg"))
+      .slide_5
+        .inner_slide_container
+          .phone_container
+            .screen
+              &.s1
+                +background-image(image-url("arc/screens/story_cover.jpg"))
+              &.s2
+                +background-image(image-url("arc/screens/rcc.jpg"))
+              &.s3
+                +background-image(image-url("arc/screens/story_interactive_map.jpg"))
+              &.s4
+                +background-image(image-url("arc/screens/story_comments.jpg"))
+      .slide_6
+        +background-image(image-url("arc/end_cover_bg.jpg"))
