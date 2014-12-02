@@ -64,6 +64,7 @@ configure :build do
   ignore 'stylesheets/vendor/*'
   ignore 'javascripts/lib/*'
   ignore 'javascripts/vendor/*'
+  ignore 'images/non_image_assets'
 
   # For example, change the Compass output style for deployment
   activate :minify_css
