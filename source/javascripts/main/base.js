@@ -76,6 +76,8 @@
       // Using lib/hashchange.js
       //////////
       $(window).hashchange( function(){
+
+
         $("#main_bottom_nav a").each(function(){
           var c_url = $(this).attr("href")
           if(location.hash == c_url) {
@@ -85,12 +87,30 @@
             $(this).removeClass("anchor_active")
           }
         });
-        console.log("hashchageLenght=" + location.hash.length, "hashchageName=" + location.hash)
+
+        console.log("hashchageLenght: " + location.hash.length, "hashchageName: " + location.hash)
         if (location.hash.length > 8) {
           $(".nav_numba_twaaa").addClass("show")
         } else {
           $(".nav_numba_twaaa").removeClass("show")
         }
+
+
+
+        // // find out the widths of all content and assign it to the parent
+        // var width_total = 0;
+        // $(".section_container li").each(function(){
+        //   width_total += $(this).width()
+        //   // console.log("li widths:" + $(this).width())
+        // })
+        // var wt_with_added = parseInt(width_total + 10);
+        // console.log("width total: " + width_total)
+        // console.log("width added total: " + wt_with_added)
+        // console.log("margin-left total: " + width_total / 2)
+        // $("#main_bottom_nav").attr("added_class", location.hash)
+
+
+
       });
       //----------------------------------------
 
