@@ -4,13 +4,13 @@
   //////////
   // Turn off mouse scroll
   //////////
-  $('body').on({
-  'mousewheel': function(e) {
-      if (e.target.id == 'el') return;
-      e.preventDefault();
-      e.stopPropagation();
-      }
-  })
+  // $('body').on({
+  // 'mousewheel': function(e) {
+  //     if (e.target.id == 'el') return;
+  //     e.preventDefault();
+  //     e.stopPropagation();
+  //     }
+  // })
   //----------------------------------------
 
 
