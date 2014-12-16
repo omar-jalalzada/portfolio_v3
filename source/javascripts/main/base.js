@@ -55,7 +55,32 @@
         }
       }
       //----------------------------------------
+      //////////
+      // Add the harlemshake video
+      //////////
+      if(index == 6 && slideIndex == 4){
+        // console.log("Index 3 & SlideIndex 3 Is LOADED! Include YouTube iFrame");
+        // check if its already created
+        if($("#youtube_iframe_tag").length == 0) {
+          // create the iframe
+          var iframe_tag = document.createElement('iframe')
+          var iframe_tag_fs_att = document.createAttribute("allowfullscreen")
+          var iframe_tag_fb_att = document.createAttribute("frameborder")
+          iframe_tag_fb_att.value = "0";
+          iframe_tag.src = "//www.youtube.com/embed/90BcQJ3GRyM?controls=2&modestbranding=1&showinfo=0&theme=light"
+          iframe_tag.width = "100%"
+          iframe_tag.height = "100%"
+          iframe_tag.setAttributeNode(iframe_tag_fs_att)
+          iframe_tag.setAttributeNode(iframe_tag_fb_att)
+          iframe_tag.id = "youtube_iframe_tag"
+          // add the iframe
+          $("#harlemshake_video").append(iframe_tag)
+        }
+      }
+      //----------------------------------------
     },
+
+
 
 
     // onSlideLeave: function(anchorLink, index, slideIndex, direction){},
@@ -76,7 +101,9 @@
       // Using lib/hashchange.js
       //////////
       $(window).hashchange( function(){
-
+        
+        // google analytics test:
+        ga('send', 'pageview');
 
         $("#main_bottom_nav a").each(function(){
           var c_url = $(this).attr("href")
