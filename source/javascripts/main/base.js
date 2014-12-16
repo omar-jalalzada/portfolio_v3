@@ -105,6 +105,10 @@
         // google analytics test:
         // ga('send', 'pageview');
 
+        ga('send', 'pageview', {
+         'page': location.pathname + location.search  + location.hash
+        });
+
         $("#main_bottom_nav a").each(function(){
           var c_url = $(this).attr("href")
           if(location.hash == c_url) {
