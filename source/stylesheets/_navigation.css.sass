@@ -32,7 +32,7 @@
       float: left
       overflow: hidden
       height: 30px
-      border: 1px solid $oj_light_grey
+      border: 1px solid $oj_grey
       cursor: pointer
       +single-transition(all, .3s, $custom_ease)
       &.content 
@@ -55,15 +55,15 @@
             top: 7px
             right: 7px
             +scale(.5)
-            background-color: $oj_light_grey
+            background-color: $oj_grey
             display: block
             +border-radius(50%)
       &:hover
-        border: 1px solid $oj_grey
+        border: 1px solid darken($oj_grey, 20%)
         a.section_link
           .inner_c
-            background-color: $oj_grey
-            +scale(2)
+            background-color: darken($oj_grey, 20%)
+            +scale(1)
       &.active
         width: 350px
         // just to cancel out the main hover
@@ -105,7 +105,7 @@
             position: absolute
             top: 7px
             left: 7px
-            background-color: $oj_light_grey
+            background-color: $oj_grey
             display: block
             +border-radius(50%)
             +scale(.5)
@@ -114,7 +114,7 @@
           &:hover
             .sub_c
               +scale(.7)
-              background-color: $oj_grey
+              background-color: darken($oj_grey, 20%)
           &.anchor_active
             .sub_c
               +scale(.8)
@@ -159,7 +159,7 @@
             width: 180px
       &.moovweb
         &.active
-          width: 330px
+          width: 360px
           a.section_link
             width: 190px
       &.arc
