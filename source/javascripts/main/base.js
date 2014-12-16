@@ -103,7 +103,7 @@
       $(window).hashchange( function(){
         
         // google analytics test:
-        ga('send', 'pageview');
+        // ga('send', 'pageview');
 
         $("#main_bottom_nav a").each(function(){
           var c_url = $(this).attr("href")
