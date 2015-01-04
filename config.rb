@@ -24,6 +24,7 @@ activate :livereload
 # page "/path/to/file.html", :layout => false
 page "robots.txt", :layout => false
 page "humans.txt", :layout => false
+page "pages/mobile_layout.html", :layout => :m_layout
 
 #
 # With alternative layout

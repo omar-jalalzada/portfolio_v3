@@ -1,35 +1,203 @@
-html
-  height: 560px
-  background-color: $oj_red
 body
-  // overflow: auto !important
-  background-color: $oj_red
   min-width: 100px !important
   padding: 0 !important
   margin: 0 !important
-  .nav_numba_twaaa, .arrow_keys_container, .project_1, .project_2, .project_3, .project_4, .project_5
-    display: none !important
+  .fp-slidesNav
+    position: absolute
+    z-index: 4
+    left: 50%
+    opacity: 1
+    height: 40px
+    &.bottom
+      bottom: 0px
+    &.top
+      top: 0px
+  #fp-nav 
+    position: fixed
+    z-index: 100
+    margin-top: -32px
+    top: 50%
+    opacity: 1
+    width: 40px
+    &.right
+      right: 0px
+    &.left
+      left: 0px
+
+  #fp-nav, .fp-slidesNav
+    ul
+      margin: 0
+      padding: 0
+      li
+        display: block
+        a
+          display: block
+          position: relative
+          z-index: 1
+          width: 20px
+          height: 20px
+          padding: 10px
+          cursor: pointer
+          text-decoration: none
+          span 
+            display: block
+            width: 100%
+            height: 100%
+            background: rgba(50, 50, 50, .2)
+            +scale(.4)
+            +border-radius(50%)
+            +single-transition(all, .3s, $custom_ease)
+          &.active
+            span
+              background: rgba(50, 50, 50, 1)
+              +scale(.8)
+
+  .fp-slidesNav 
+    background-color: rgba($oj_grey, .5)
+    margin-bottom: 10px
+    +border-radius(24px)
+    ul li
+      display: inline-block
+
+
 #fullpage
   .project_0
+    
+    // General
+    .margin_bottom_20px
+      margin-bottom: 20px
+    
+    // Intro
+    .s_intro
+      .label
+        // font-size: 80%
+        font-weight: bold
+        display: block
+        text-transform: uppercase
+        color: rgba(120, 120, 120, 1)
+        overflow: hidden
+        opacity: .7
+        span.icon
+          display: block
+          width: 18px
+          height: 16px
+          float: left
+          margin-right: 5px
+          +background-image(image-url("ui_elements/cover_page_icons.png"))
+          background-repeat: no-repeat
+          background-size: 72px 16px 
+          // opacity: .8
+          // &.project_icon
+          &.role_icon
+            background-position-x: -18px
+          &.conclusion_icon
+            background-position-x: -36px
+          &.learnings_icon
+            background-position-x: -54px
+      .body_text
+        font-size: 130%
+        line-height: 1.6
+        font-weight: 100
+        color: $oj_light_grey
+        b 
+          font-weight: bold
+        a
+          color: lighten($oj_blue, 15%)
+
+    // headers
+    .p_header
+      border-bottom: 1px solid rgba(200, 200, 200, 0.3)
+      font-size: 140%
+      color: white
+      padding-bottom: 5px
+      font-weight: bold
+      margin-bottom: 20px
+      text-align: center
+
+    // sections
+    .m_sec
+      display: block
+      padding: 40px
+      .thumb_base
+        position: relative
+        overflow: hidden
+        width: 100%
+        margin-bottom: 20px
+        .image
+          position: absolute
+          left: 50%
+          background-repeat: no-repeat
+          background-size: 100%         
+          background-position: center 
+        .title
+          font-weight: bold
+          z-index: 1000
+          color: #fff
+          font-size: 120%
+          width: 100%
+          position: absolute
+          bottom: 0
+          text-align: center
+      // sections -> process
+      &.process
+        border: 1px solid transparent
+        overflow: hidden
+        .thumb_base
+          height: 280px
+          .image
+            height: 250px
+            width: 250px
+            margin-left: -125px
+      // sections -> mobile screens
+      &.mobile_screen
+        border: 1px solid transparent
+        overflow: hidden
+        .thumb_base
+          width: 240px
+          height: 510px
+          border: 1px solid $oj_dark_grey
+          +border-radius(30px)
+          margin: 40px auto
+          .image
+            margin: 50px 10px 0 -110px !important
+            height: 380px
+            width: 220px
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: top center
+            border: 2px solid #777
+            +border-radius(3px)
+      &.ipad_screen
+        border: 1px solid transparent
+        overflow: hidden
+        .thumb_base
+          width: 310px
+          height: 230px
+          +border-radius(8px)
+          margin: 40px auto
+
+    // main_view
     .slide_1
+      background-color: $oj_red
       .inner_slide_container
+        padding-bottom: 0 !important
         .main_bio_container
+          padding: 40px 40px 0 40px
           .bio_content_holder
             .main_paragraph
               .mobile_logo
                 width: 30px
                 height: 30px
                 +border-radius(50%)
-                margin: 40px 0 0 40px
+                margin-bottom: 40px
                 +background-image(image-url("ui_elements/social_bio_icons.png"))
                 background-repeat: no-repeat
                 background-size: 180px 30px
               h1
                 display: block
                 color: #fff
-                padding: 40px 40px 0 40px
+                margin-bottom: 40px
                 font-size: 120%
-                margin: 0
                 font-weight: 300 
                 max-width: 280px
                 span
@@ -37,49 +205,196 @@ body
                   margin-bottom: 10px
                 .spiel
                   display: none
-    .social_media_links
-      margin-top: 0
-      +single-transition(all, .2s, $custom_ease, 1s)
-      .sm_inner
-        overflow: hidden
-        // width: 200px
-        // margin: auto
-        // padding: 0 20px
-        padding: 0 40px 40px 40px
-        max-width: 280px
-        .sm_link
-          width: 100%
-          height: 30px
-          +border-radius(30px)
-          padding: 5px 0
-          margin: 15px 0
-          display: block
-          color: #fff
-          font-weight: bold
-          line-height: 2.2
-          +box-shadow(0 0 0 1px rgba(255,255,255,.4))
-          +background-image(none)
-          &.portfolio
-            display: none
-          &:hover 
-            background-color: rgba(255,255,255,.4)
-            +box-shadow(0 2px 1px rgba(0,0,0,.2))
-          .icon
-            +background-image(image-url("ui_elements/social_bio_icons.png"))
-            background-repeat: no-repeat
-            background-size: 180px 30px
-            width: 30px
+      .social_media_links
+        margin-top: 0
+        +single-transition(all, .2s, $custom_ease, 1s)
+        .sm_inner
+          .sm_link
+            width: 100%
             height: 30px
-            float: left
-            margin-left: 10px
-            margin-right: 10px
-            &.dribbble
-              background-position-x: -30px
-            &.linkedin
-              background-position-x: -60px
-            &.twitter
-              background-position-x: -90px
-            &.vsco
-              background-position-x: -120px
-            &.medium
-              background-position-x: -150px
+            +border-radius(30px)
+            padding: 5px 0
+            margin-bottom: 20px
+            display: block
+            color: #fff
+            font-weight: bold
+            line-height: 2.2
+            +box-shadow(0 0 0 1px rgba(255,255,255,.4))
+            +background-image(none)
+            &.portfolio
+              display: none
+            .text
+              text-indent: 5px
+            &:hover 
+              background-color: rgba(255,255,255,.4)
+              +box-shadow(0 2px 1px rgba(0,0,0,.2))
+            .icon
+              +background-image(image-url("ui_elements/social_bio_icons.png"))
+              background-repeat: no-repeat
+              background-size: 180px 30px
+              width: 30px
+              height: 30px
+              float: left
+              margin-left: 5px
+              &.dribbble
+                background-position-x: -30px
+              &.linkedin
+                background-position-x: -60px
+              &.twitter
+                background-position-x: -90px
+              &.vsco
+                background-position-x: -120px
+              &.medium
+                background-position-x: -150px
+
+    // Macys
+    .slide_2
+      background-color: darken($oj_dark_grey, 20%)
+      .main_thumb
+        width: 230px
+        height: 550px
+        margin: auto
+        +background-image(image-url("mcom_bcom/main/iphone_6_main.png"))
+        background-repeat: no-repeat
+        background-size: 100%
+        padding: 0
+        // padding-bottom: 40px
+      .process
+        background-color: darken($oj_dark_grey, 10%)
+        .thumb_base
+          &.thumb1
+            .image
+              +background-image(image-url("mcom_bcom/3_1_image_circle.png"))
+          &.thumb2
+            .image
+              +background-image(image-url("mcom_bcom/3_2_image_circle.png"))
+          &.thumb3
+            .image 
+              +background-image(image-url("mcom_bcom/3_3_image_circle.png"))
+      .mobile_screen
+        background-color: darken($oj_dark_grey, 30%)
+        .p_header
+          color: $oj_dark_grey
+          margin-top: 40px
+        &.mcom
+          .thumb1
+            .image
+              +background-image(image-url("mcom_bcom/5_1_macys_homepage.jpg"))
+          .thumb2
+            .image
+              +background-image(image-url("mcom_bcom/5_2_macys_category_list.jpg"))
+          .thumb3
+            .image 
+              +background-image(image-url("mcom_bcom/5_3_macys_product_list.jpg"))
+          .thumb4
+            .image 
+              +background-image(image-url("mcom_bcom/5_4_macys_product_display.jpg"))
+        &.bcom
+          .thumb1
+            .image
+              +background-image(image-url("mcom_bcom/4_1_bloomindales_homepage.jpg"))
+          .thumb2
+            .image
+              +background-image(image-url("mcom_bcom/4_2_bloomindales_look.jpg"))
+          .thumb3
+            .image 
+              +background-image(image-url("mcom_bcom/4_3_bloomindales_look.jpg"))
+          .thumb4
+            .image 
+              +background-image(image-url("mcom_bcom/4_4_bloomindales_inside_look.jpg"))
+
+    // arc
+    .slide_3
+      .s_intro
+        .body_text
+          color: #555
+      .main_thumb
+        width: 308px
+        height: 500px
+        margin: auto
+        +background-image(image-url("arc/main_arc_phone.png"))
+        background-repeat: no-repeat
+        background-size: 100%
+        padding: 0
+      .mobile_screen
+        background-color: $oj_blue
+        .thumb_base
+          border: 1px solid lighten($oj_blue, 12%)
+          .image
+            border: 2px solid darken($oj_blue, 5%)
+        .thumb1 .image
+          +background-image(image-url("arc/screens/home_stroy_block.jpg"))
+        .thumb2 .image
+          +background-image(image-url("arc/screens/home_condensed.jpg"))
+        .thumb3 .image
+          +background-image(image-url("arc/screens/nav.jpg"))
+        .thumb4 .image
+          +background-image(image-url("arc/screens/profile_page.jpg"))
+        .thumb5 .image
+          +background-image(image-url("arc/screens/story_cover.jpg"))
+        .thumb6 .image
+          +background-image(image-url("arc/screens/rcc.jpg"))
+        .thumb7 .image
+          +background-image(image-url("arc/screens/story_interactive_map.jpg"))
+        .thumb8 .image
+          +background-image(image-url("arc/screens/story_comments.jpg"))
+    
+    //sfmoma
+    .slide_4
+      .s_intro
+        .body_text
+          color: #555
+      .main_thumb
+        width: 310px
+        height: 260px
+        margin: auto
+        +background-image(image-url("sfmoma/main/ipad.png"))
+        background-repeat: no-repeat
+        background-size: 100%
+        padding: 0
+
+      .process
+        background-color: darken($oj_dark_grey, 10%)
+        .thumb_base
+          .image
+            +border-radius(50%)
+          &.thumb1
+            .image
+              +background-image(image-url("sfmoma/slide_3_c1.png"))
+          &.thumb2
+            .image
+              +background-image(image-url("sfmoma/slide_3_c2.png"))
+          &.thumb3
+            .image 
+              +background-image(image-url("sfmoma/slide_3_c3.png"))
+
+      .ipad_screen
+        background-color: $oj_blue
+        padding: 0
+        .p_header
+          margin: 40px
+        .thumb_base
+          background-repeat: no-repeat
+          background-size: 100%
+          background-position: top center
+          border: 2px solid darken($oj_blue, 5%)
+        .thumb1
+          +background-image(image-url("sfmoma/designs/1_homepage.jpg"))
+        .thumb2
+          +background-image(image-url("sfmoma/designs/2_building_landing.jpg"))
+        .thumb3
+          +background-image(image-url("sfmoma/designs/3_building_inside.jpg"))
+        .thumb4
+          +background-image(image-url("sfmoma/designs/4_building_inside_navopen.jpg"))
+        .thumb5
+          +background-image(image-url("sfmoma/designs/5_building_inside_galleryopen.jpg"))
+        .thumb6
+          +background-image(image-url("sfmoma/designs/6_get_involved.jpg"))
+
+
+  .project_1, .project_2, .project_3, .project_4, .project_5
+    background-color: $oj_dark_grey
+    .inner_slide_container
+      background-color: yellow
+
+
