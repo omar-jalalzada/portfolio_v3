@@ -29,7 +29,9 @@ body
       margin: 0
       padding: 0
       li
-        display: block
+        // display: block
+        width: 40px
+        height: 40px
         a
           display: block
           position: relative
@@ -56,14 +58,19 @@ body
     background-color: rgba($oj_grey, .5)
     margin-bottom: 10px
     +border-radius(24px)
+    // border: 1px solid red !important
+    width: 244px
     ul li
       display: inline-block
 
 
 #fullpage
   .project_0
-    
+
     // General
+    .inner_slide_container
+      padding-bottom: 0 !important
+    
     .margin_bottom_20px
       margin-bottom: 20px
     
@@ -98,7 +105,7 @@ body
         font-size: 130%
         line-height: 1.6
         font-weight: 100
-        color: $oj_light_grey
+        color: #555
         b 
           font-weight: bold
         a
@@ -113,6 +120,7 @@ body
       font-weight: bold
       margin-bottom: 20px
       text-align: center
+
 
     // sections
     .m_sec
@@ -138,12 +146,13 @@ body
           position: absolute
           bottom: 0
           text-align: center
+          margin-top: 10px
       // sections -> process
       &.process
         border: 1px solid transparent
         overflow: hidden
         .thumb_base
-          height: 280px
+          height: 290px
           .image
             height: 250px
             width: 250px
@@ -167,6 +176,7 @@ body
             background-position: top center
             border: 2px solid #777
             +border-radius(3px)
+
       &.ipad_screen
         border: 1px solid transparent
         overflow: hidden
@@ -179,32 +189,30 @@ body
     // main_view
     .slide_1
       background-color: $oj_red
-      .inner_slide_container
-        padding-bottom: 0 !important
-        .main_bio_container
-          padding: 40px 40px 0 40px
-          .bio_content_holder
-            .main_paragraph
-              .mobile_logo
-                width: 30px
-                height: 30px
-                +border-radius(50%)
-                margin-bottom: 40px
-                +background-image(image-url("ui_elements/social_bio_icons.png"))
-                background-repeat: no-repeat
-                background-size: 180px 30px
-              h1
+      .main_bio_container
+        padding: 40px 40px 0 40px
+        .bio_content_holder
+          .main_paragraph
+            .mobile_logo
+              width: 30px
+              height: 30px
+              +border-radius(50%)
+              margin-bottom: 40px
+              +background-image(image-url("ui_elements/social_bio_icons.png"))
+              background-repeat: no-repeat
+              background-size: 180px 30px
+            h1
+              display: block
+              color: #fff
+              margin-bottom: 40px
+              font-size: 120%
+              font-weight: 300 
+              max-width: 280px
+              span
                 display: block
-                color: #fff
-                margin-bottom: 40px
-                font-size: 120%
-                font-weight: 300 
-                max-width: 280px
-                span
-                  display: block
-                  margin-bottom: 10px
-                .spiel
-                  display: none
+                margin-bottom: 10px
+              .spiel
+                display: none
       .social_media_links
         margin-top: 0
         +single-transition(all, .2s, $custom_ease, 1s)
@@ -249,7 +257,7 @@ body
 
     // Macys
     .slide_2
-      background-color: darken($oj_dark_grey, 20%)
+      // background-color: darken($oj_dark_grey, 20%)
       .main_thumb
         width: 230px
         height: 550px
@@ -258,7 +266,6 @@ body
         background-repeat: no-repeat
         background-size: 100%
         padding: 0
-        // padding-bottom: 40px
       .process
         background-color: darken($oj_dark_grey, 10%)
         .thumb_base
@@ -305,9 +312,6 @@ body
 
     // arc
     .slide_3
-      .s_intro
-        .body_text
-          color: #555
       .main_thumb
         width: 308px
         height: 500px
@@ -341,18 +345,14 @@ body
     
     //sfmoma
     .slide_4
-      .s_intro
-        .body_text
-          color: #555
       .main_thumb
         width: 310px
-        height: 260px
+        height: 220px
         margin: auto
         +background-image(image-url("sfmoma/main/ipad.png"))
         background-repeat: no-repeat
         background-size: 100%
         padding: 0
-
       .process
         background-color: darken($oj_dark_grey, 10%)
         .thumb_base
@@ -391,10 +391,93 @@ body
         .thumb6
           +background-image(image-url("sfmoma/designs/6_get_involved.jpg"))
 
+    // afv
+    .slide_5
+      // background-color: darken($oj_dark_grey, 20%)
+      .main_thumb
+        width: 280px
+        height: 470px
+        margin: auto
+        +background-image(image-url("afv/afv_home.png"))
+        background-repeat: no-repeat
+        background-size: 100%
+        padding: 0
+        // padding-bottom: 40px
+      .process
+        background-color: darken($oj_dark_grey, 10%)
 
-  .project_1, .project_2, .project_3, .project_4, .project_5
-    background-color: $oj_dark_grey
-    .inner_slide_container
-      background-color: yellow
+        .thumb_base
+          .image
+            +border-radius(50%)
+            height: 248px
+          &.thumb1
+            .image
+              +background-image(image-url("afv/process/c1.png"))
+          &.thumb2
+            .image
+              +background-image(image-url("afv/process/c2.png"))
+      .mobile_screen
+        background-color: darken($oj_dark_grey, 30%)
+        .p_header
+          color: $oj_dark_grey
+          margin-top: 40px
+        .thumb1 .image
+          +background-image(image-url("afv/screens/0_1_onboarding.png"))
+        .thumb2 .image
+          +background-image(image-url("afv/screens/1_0_browse.png"))
+        .thumb3 .image
+          +background-image(image-url("afv/screens/1_1_browse_nav.png"))
+        .thumb4 .image
+          +background-image(image-url("afv/screens/3_0_kid_mode_settings.png"))
+        .thumb5 .image
+          +background-image(image-url("afv/screens/7_0_Upload.png"))
+        .thumb6 .image
+          +background-image(image-url("afv/screens/2_0_player.png"))
 
+    // Moovweb
+    .slide_6
+      .main_thumb
+        width: 320px
+        height: 180px
+        margin: auto
+        +background-image(image-url("moovweb/main_moovweb_site.png"))
+        background-repeat: no-repeat
+        background-size: 100%
+        padding: 0
+      .ipad_screen
+        background-color: $oj_blue
+        padding: 0
+        .p_header
+          margin: 40px
+        .thumb_base
+          background-repeat: no-repeat
+          background-size: 100%
+          background-position: top center
+          border: 2px solid darken($oj_blue, 5%)
+          width: 310px
+          height: 200px
+        .thumb1
+          +background-image(image-url("moovweb/brand/brand_thumb.png"))
+        .thumb2
+          +background-image(image-url("moovweb/brand/colors.png"))
+        .thumb3
+          +background-image(image-url("moovweb/brand/iconography.png"))
+        .thumb4
+          +background-image(image-url("moovweb/brand/iconography_2.png"))
+        .thumb5
+          +background-image(image-url("moovweb/brand/typography.png"))
+        .thumb6
+          +background-image(image-url("moovweb/brand/notifications.png"))
 
+        .thumb7
+          +background-image(image-url("moovweb/corp_site/corporate_site_thumb.jpg"))
+        .thumb8
+          +background-image(image-url("moovweb/corp_site/pricing.jpg"))
+        .thumb9
+          +background-image(image-url("moovweb/corp_site/case_studies.jpg"))
+        .thumb10
+          +background-image(image-url("moovweb/corp_site/partners.jpg"))
+        .thumb11
+          +background-image(image-url("moovweb/corp_site/product_page.jpg"))
+        .thumb12
+          +background-image(image-url("moovweb/corp_site/blog_0.jpg"))
