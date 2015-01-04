@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#fullpage").fullpage({scrollingSpeed:400,cc3:!0,verticalCentered:!1,slidesNavigation:!0,slidesNavPosition:"bottom",scrollOverflow:!0})});
