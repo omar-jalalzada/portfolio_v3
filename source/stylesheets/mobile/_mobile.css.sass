@@ -29,7 +29,6 @@ body
       margin: 0
       padding: 0
       li
-        // display: block
         width: 40px
         height: 40px
         a
@@ -51,13 +50,13 @@ body
             +single-transition(all, .3s, $custom_ease)
           &.active
             span
-              background: rgba(50, 50, 50, 1)
+              background: $oj_blue
               +scale(.8)
 
   .fp-slidesNav 
-    background-color: rgba($oj_grey, .5)
+    background-color: rgba( 0, 0, 0, .2)
     margin-bottom: 10px
-    +border-radius(24px)
+    +border-radius(25px)
     // border: 1px solid red !important
     width: 244px
     ul li
@@ -151,6 +150,7 @@ body
       &.process
         border: 1px solid transparent
         overflow: hidden
+        background-color: darken($oj_dark_grey, 10%)
         .thumb_base
           height: 290px
           .image
@@ -161,10 +161,11 @@ body
       &.mobile_screen
         border: 1px solid transparent
         overflow: hidden
+        background-color: $oj_blue
         .thumb_base
           width: 240px
           height: 510px
-          border: 1px solid $oj_dark_grey
+          border: 1px solid lighten($oj_blue, 12%)
           +border-radius(30px)
           margin: 40px auto
           .image
@@ -174,12 +175,13 @@ body
             background-repeat: no-repeat
             background-size: 100%
             background-position: top center
-            border: 2px solid #777
+            border: 2px solid darken($oj_blue, 5%)
             +border-radius(3px)
 
       &.ipad_screen
         border: 1px solid transparent
         overflow: hidden
+        background-color: $oj_blue
         .thumb_base
           width: 310px
           height: 230px
@@ -201,17 +203,14 @@ body
               +background-image(image-url("ui_elements/social_bio_icons.png"))
               background-repeat: no-repeat
               background-size: 180px 30px
-            h1
+            span
               display: block
               color: #fff
               margin-bottom: 40px
               font-size: 120%
               font-weight: 300 
               max-width: 280px
-              span
-                display: block
-                margin-bottom: 10px
-              .spiel
+              &.spiel
                 display: none
       .social_media_links
         margin-top: 0
@@ -267,7 +266,6 @@ body
         background-size: 100%
         padding: 0
       .process
-        background-color: darken($oj_dark_grey, 10%)
         .thumb_base
           &.thumb1
             .image
@@ -279,9 +277,9 @@ body
             .image 
               +background-image(image-url("mcom_bcom/3_3_image_circle.png"))
       .mobile_screen
-        background-color: darken($oj_dark_grey, 30%)
+        // background-color: darken($oj_dark_grey, 30%)
         .p_header
-          color: $oj_dark_grey
+          // color: $oj_dark_grey
           margin-top: 40px
         &.mcom
           .thumb1
@@ -321,11 +319,10 @@ body
         background-size: 100%
         padding: 0
       .mobile_screen
-        background-color: $oj_blue
         .thumb_base
-          border: 1px solid lighten($oj_blue, 12%)
+          // border: 1px solid lighten($oj_blue, 12%)
           .image
-            border: 2px solid darken($oj_blue, 5%)
+            
         .thumb1 .image
           +background-image(image-url("arc/screens/home_stroy_block.jpg"))
         .thumb2 .image
@@ -369,7 +366,7 @@ body
               +background-image(image-url("sfmoma/slide_3_c3.png"))
 
       .ipad_screen
-        background-color: $oj_blue
+        // background-color: $oj_blue
         padding: 0
         .p_header
           margin: 40px
@@ -377,7 +374,7 @@ body
           background-repeat: no-repeat
           background-size: 100%
           background-position: top center
-          border: 2px solid darken($oj_blue, 5%)
+          
         .thumb1
           +background-image(image-url("sfmoma/designs/1_homepage.jpg"))
         .thumb2
@@ -404,8 +401,7 @@ body
         padding: 0
         // padding-bottom: 40px
       .process
-        background-color: darken($oj_dark_grey, 10%)
-
+        // background-color: darken($oj_dark_grey, 10%)
         .thumb_base
           .image
             +border-radius(50%)
@@ -417,9 +413,11 @@ body
             .image
               +background-image(image-url("afv/process/c2.png"))
       .mobile_screen
-        background-color: darken($oj_dark_grey, 30%)
+        // background-color: darken($oj_dark_grey, 30%)
+        .thumb_base
+          height: 480px
         .p_header
-          color: $oj_dark_grey
+          // color: $oj_dark_grey
           margin-top: 40px
         .thumb1 .image
           +background-image(image-url("afv/screens/0_1_onboarding.png"))
@@ -445,7 +443,7 @@ body
         background-size: 100%
         padding: 0
       .ipad_screen
-        background-color: $oj_blue
+        // background-color: $oj_blue
         padding: 0
         .p_header
           margin: 40px
